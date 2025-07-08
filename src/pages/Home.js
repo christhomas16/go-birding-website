@@ -1,0 +1,143 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { 
+  MicrophoneIcon, 
+  CpuChipIcon, 
+  MapPinIcon, 
+  CloudIcon,
+  HeartIcon,
+  DevicePhoneMobileIcon
+} from '@heroicons/react/24/outline';
+
+const Home = () => {
+  const features = [
+    {
+      icon: MicrophoneIcon,
+      title: 'Voice-Powered Search',
+      description: 'Simply speak your birding needs - "Find me spots with a lighthouse" or "Show me locations in Ocean County"'
+    },
+    {
+      icon: CpuChipIcon,
+      title: 'AI Intelligence',
+      description: 'Powered by MLX-optimized Llama-3.2-1B model running entirely on your device for complete privacy'
+    },
+    {
+      icon: MapPinIcon,
+      title: '400+ Birding Hotspots',
+      description: 'Carefully curated locations across New Jersey and New York with rich species data'
+    },
+    {
+      icon: CloudIcon,
+      title: 'Weather Integration',
+      description: 'Real-time weather conditions, wind data, and tide predictions for optimal birding'
+    },
+    {
+      icon: HeartIcon,
+      title: 'Personal Favorites',
+      description: 'Save your favorite spots and access them anytime without searching'
+    },
+    {
+      icon: DevicePhoneMobileIcon,
+      title: 'Modern Interface',
+      description: 'Beautiful SwiftUI design optimized for iOS 18+ with intuitive navigation'
+    }
+  ];
+
+  return (
+    <div className="bg-white">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-primary-50 to-blue-100 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
+                Your AI-Powered 
+                <span className="text-primary-600 block">Birding Companion</span>
+              </h1>
+              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+                Discover amazing birding locations in New York and New Jersey with voice-powered AI search. 
+                400+ curated hotspots, complete privacy, and intelligent recommendations.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  to="/download"
+                  className="bg-primary-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-primary-700 transition-colors duration-200 shadow-lg hover:shadow-xl text-center"
+                >
+                  Download for iOS
+                </Link>
+                <Link
+                  to="/features"
+                  className="border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-primary-50 transition-colors duration-200 text-center"
+                >
+                  Explore Features
+                </Link>
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-blue-500 rounded-3xl transform rotate-6 opacity-20"></div>
+                <img 
+                  src="/logo.png" 
+                  alt="GoBirding AI App" 
+                  className="relative h-64 w-64 lg:h-80 lg:w-80 rounded-3xl shadow-2xl"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              Why Birders Love GoBirding
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Experience the future of birding with AI-powered location discovery, 
+              voice commands, and complete privacy protection.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-200">
+                <div className="flex items-center mb-4">
+                  <div className="bg-primary-100 p-3 rounded-lg">
+                    <feature.icon className="h-6 w-6 text-primary-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 ml-4">{feature.title}</h3>
+                </div>
+                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24 bg-primary-600">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Birding Experience?
+          </h2>
+          <p className="text-xl text-primary-100 mb-8">
+            Join thousands of birders who've discovered their new favorite spots with GoBirding AI.
+          </p>
+          <Link
+            to="/download"
+            className="bg-white text-primary-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-lg hover:shadow-xl inline-block"
+          >
+            Download Now - Free
+          </Link>
+          <p className="text-primary-200 mt-4 text-sm">
+            Requires iOS 18.0+. iPhone 14 Plus recommended for optimal AI performance.
+          </p>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Home; 
