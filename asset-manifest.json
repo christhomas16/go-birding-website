@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/go-birding-website/static/css/main.67aacfca.css",
-    "main.js": "/go-birding-website/static/js/main.7e6ac75c.js",
-    "static/js/453.970d410b.chunk.js": "/go-birding-website/static/js/453.970d410b.chunk.js",
-    "index.html": "/go-birding-website/index.html",
-    "main.67aacfca.css.map": "/go-birding-website/static/css/main.67aacfca.css.map",
-    "main.7e6ac75c.js.map": "/go-birding-website/static/js/main.7e6ac75c.js.map",
-    "453.970d410b.chunk.js.map": "/go-birding-website/static/js/453.970d410b.chunk.js.map"
+    "main.css": "/static/css/main.67aacfca.css",
+    "main.js": "/static/js/main.56311ca4.js",
+    "static/js/453.970d410b.chunk.js": "/static/js/453.970d410b.chunk.js",
+    "index.html": "/index.html",
+    "main.67aacfca.css.map": "/static/css/main.67aacfca.css.map",
+    "main.56311ca4.js.map": "/static/js/main.56311ca4.js.map",
+    "453.970d410b.chunk.js.map": "/static/js/453.970d410b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.67aacfca.css",
-    "static/js/main.7e6ac75c.js"
+    "static/js/main.56311ca4.js"
   ]
 }
