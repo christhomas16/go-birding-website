@@ -38,9 +38,9 @@ const Features = () => {
     {
       icon: MapPinIcon,
       title: 'Comprehensive Location Database',
-      description: '400+ carefully curated birding hotspots',
+      description: 'Over 16,000 carefully curated birding hotspots',
       details: [
-        'Covers New Jersey and New York birding locations',
+        'Covers all 50 US states with comprehensive birding locations',
         'Rich details including species counts and habitat info',
         'Direct eBird integration for recent data',
         'Smart state detection based on your location'
@@ -110,10 +110,10 @@ const Features = () => {
     {
       icon: ShieldCheckIcon,
       title: 'Privacy-First Design',
-      description: 'Your data stays completely on your device',
+      description: 'Your data stays completely on your device with full offline capability',
       details: [
         'No data sharing or external server communication',
-        'All AI processing happens locally',
+        'All AI processing happens locally on your device',
         'No tracking or analytics collection',
         'Complete control over your birding data'
       ]
@@ -129,7 +129,7 @@ const Features = () => {
     {
       step: 2,
       title: 'AI Analysis',
-      description: 'The app intelligently searches 400+ locations using your criteria'
+      description: 'The app intelligently searches over 16,000 locations using your criteria'
     },
     {
       step: 3,
@@ -191,7 +191,11 @@ const Features = () => {
                   </ul>
                 </div>
                 <div className={`bg-gray-100 rounded-2xl p-8 ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                  <div className="aspect-square bg-gradient-to-br from-primary-400 to-blue-500 rounded-xl opacity-20"></div>
+                  <img 
+                    src={index === 0 ? "/voice-search.jpg" : index === 1 ? "/advanced-ai.jpg" : "/location-database.jpg"}
+                    alt={feature.title}
+                    className="w-full h-auto rounded-xl shadow-lg"
+                  />
                 </div>
               </div>
             ))}
@@ -283,7 +287,7 @@ const Features = () => {
               <h3 className="text-lg font-semibold text-gray-900 mb-4">System Requirements</h3>
               <ul className="space-y-2 text-gray-600">
                 <li>• iOS 18.0 or later</li>
-                <li>• iPhone 14 Plus recommended for optimal AI performance</li>
+                <li>• iPhone 14 Plus (recommended) or newer for optimal AI performance</li>
                 <li>• Location Services enabled</li>
                 <li>• Microphone access for voice commands</li>
               </ul>
@@ -291,9 +295,9 @@ const Features = () => {
             <div className="bg-white p-6 rounded-xl shadow-md">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Features</h3>
               <ul className="space-y-2 text-gray-600">
-                <li>• 400+ curated birding locations</li>
+                <li>• Over 16,000 curated birding locations</li>
                 <li>• Complete privacy protection</li>
-                <li>• NY & NJ coverage</li>
+                <li>• All 50 US states coverage</li>
                 <li>• Real-time weather integration</li>
               </ul>
             </div>

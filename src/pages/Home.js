@@ -23,8 +23,8 @@ const Home = () => {
     },
     {
       icon: MapPinIcon,
-      title: '400+ Birding Hotspots',
-      description: 'Carefully curated locations across New Jersey and New York with rich species data'
+      title: '16,000+ Birding Hotspots',
+      description: 'Carefully curated locations across all 50 US states with rich species data'
     },
     {
       icon: CloudIcon,
@@ -55,8 +55,8 @@ const Home = () => {
                 <span className="text-primary-600 block">Birding Companion</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Discover amazing birding locations in New York and New Jersey with voice-powered AI search. 
-                400+ curated hotspots, complete privacy, and intelligent recommendations.
+                                 Discover amazing birding locations across all 50 US states with voice-powered AI search. 
+                 Over 16,000 curated hotspots, complete privacy with offline-capable AI running locally on your device, and intelligent recommendations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -129,10 +129,10 @@ const Home = () => {
             to="/download"
             className="bg-white text-primary-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-lg hover:shadow-xl inline-block"
           >
-            Download Now - Free
+            Download Now
           </Link>
           <p className="text-primary-200 mt-4 text-sm">
-            Requires iOS 18.0+. iPhone 14 Plus recommended for optimal AI performance.
+            Starting at $0.99 in the App Store. Requires iOS 18.0+. iPhone 14 Plus (recommended) or newer.
           </p>
         </div>
       </section>

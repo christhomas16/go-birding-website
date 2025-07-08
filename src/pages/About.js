@@ -4,7 +4,6 @@ import {
   LightBulbIcon, 
   ShieldCheckIcon,
   HeartIcon,
-  GlobeAltIcon,
   SparklesIcon
 } from '@heroicons/react/24/outline';
 
@@ -12,8 +11,8 @@ const About = () => {
   const values = [
     {
       icon: ShieldCheckIcon,
-      title: 'Privacy First',
-      description: 'Your birding data stays completely on your device. No tracking, no data collection, complete privacy.'
+          title: 'Privacy First',
+    description: 'Your birding data stays completely on your device with full offline capability. No tracking, no data collection, complete privacy.'
     },
     {
       icon: LightBulbIcon,
@@ -33,8 +32,8 @@ const About = () => {
   ];
 
   const stats = [
-    { number: '400+', label: 'Birding Locations' },
-    { number: '2', label: 'States Covered' },
+    { number: '16,000+', label: 'Birding Locations' },
+    { number: '50', label: 'US States Covered' },
     { number: '100%', label: 'Privacy Protected' },
     { number: '1', label: 'Voice Command' }
   ];
@@ -69,9 +68,11 @@ const About = () => {
             <div className="flex justify-center">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-blue-500 rounded-3xl transform -rotate-6 opacity-20"></div>
-                <div className="relative bg-white p-8 rounded-3xl shadow-2xl">
-                  <GlobeAltIcon className="h-32 w-32 text-primary-600 mx-auto" />
-                </div>
+                <img 
+                  src="/about.jpg" 
+                  alt="About GoBirding AI" 
+                  className="relative h-64 w-64 lg:h-80 lg:w-80 rounded-3xl shadow-2xl object-cover"
+                />
               </div>
             </div>
           </div>
@@ -184,7 +185,7 @@ const About = () => {
             </p>
             
             <p className="mb-6">
-              We spent months curating over 400 birding locations across New York and New Jersey, 
+              We spent months curating over 16,000 birding locations across all 50 US states, 
               integrating real-time weather data, and training our AI to understand birding terminology 
               and preferences. Most importantly, we built everything to run entirely on your device - 
               because your birding adventures should remain private.

@@ -20,8 +20,8 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
-              Discover amazing birding locations in New York and New Jersey with the power of AI. 
-              Voice-powered search, complete privacy, and 400+ curated birding hotspots.
+              Discover amazing birding locations across all 50 US states with the power of AI. 
+              Voice-powered search, complete privacy with offline-capable AI, and over 16,000 curated birding hotspots.
             </p>
             <p className="text-sm text-gray-400">
               © 2025 GoBirding AI. All rights reserved.
@@ -60,13 +60,13 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">App</h4>
             <ul className="space-y-2">
               <li>
-                <span className="text-gray-300">iOS 18.0+</span>
+                <span className="text-gray-300">iPhone 14 Plus+ Recommended</span>
               </li>
               <li>
-                <span className="text-gray-300">400+ Locations</span>
+                <span className="text-gray-300">16,000+ Locations</span>
               </li>
               <li>
-                <span className="text-gray-300">NY & NJ Coverage</span>
+                <span className="text-gray-300">All 50 US States</span>
               </li>
               <li>
                 <span className="text-gray-300">Complete Privacy</span>

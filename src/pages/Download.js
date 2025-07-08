@@ -11,7 +11,7 @@ import {
 const Download = () => {
   const requirements = [
     { requirement: 'iOS 18.0 or later', status: 'required' },
-    { requirement: 'iPhone 14 Plus (recommended)', status: 'recommended' },
+    { requirement: 'iPhone 14 Plus (recommended) or newer', status: 'recommended' },
     { requirement: 'Location Services', status: 'required' },
     { requirement: 'Microphone Access', status: 'required' },
     { requirement: '2GB Available Storage', status: 'recommended' }
@@ -19,7 +19,7 @@ const Download = () => {
 
   const features = [
     'Voice-powered birding location search',
-    '400+ curated birding hotspots in NY & NJ',
+    'Over 16,000 curated birding hotspots across all 50 US states',
     'Complete privacy - all AI runs on device',
     'Real-time weather and tide conditions',
     'Personal favorites system',
@@ -30,7 +30,7 @@ const Download = () => {
     {
       icon: CpuChipIcon,
       title: 'AI Performance',
-      description: 'Best experience on iPhone 14 Plus or newer with A16 Bionic chip for optimal MLX AI performance'
+      description: 'Best experience on iPhone 14 Plus (recommended) or newer with A16 Bionic chip for optimal MLX AI performance'
     },
     {
       icon: ShieldCheckIcon,
@@ -72,7 +72,7 @@ const Download = () => {
               </div>
               
               <p className="text-sm text-gray-500">
-                Coming Soon to the iOS App Store. Currently in beta testing.
+                Available in the iOS App Store starting at $0.99.
               </p>
             </div>
             
@@ -181,7 +181,7 @@ const Download = () => {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Download from App Store</h3>
-                <p className="text-gray-600">Search for "GoBirding AI" in the iOS App Store and tap "Get" to download.</p>
+                <p className="text-gray-600">Search for "GoBirding AI" in the iOS App Store and purchase for $0.99 to download.</p>
               </div>
             </div>
             
@@ -217,13 +217,13 @@ const Download = () => {
           
           <div className="space-y-8">
             <div className="bg-white p-6 rounded-xl shadow-md">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Is GoBirding AI really free?</h3>
-              <p className="text-gray-600">Yes! GoBirding AI is completely free to download and use. No subscription fees, no in-app purchases, no ads.</p>
+                              <h3 className="text-lg font-semibold text-gray-900 mb-3">How much does GoBirding AI cost?</h3>
+                <p className="text-gray-600">GoBirding AI is available for a small one-time fee starting at $0.99 in the App Store. No subscription fees or in-app purchases required.</p>
             </div>
             
             <div className="bg-white p-6 rounded-xl shadow-md">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Why do you need iPhone 14 Plus or newer?</h3>
-              <p className="text-gray-600">While the app works on older devices, the MLX-optimized AI performs best on A16 Bionic chips for the smoothest voice recognition and fastest AI responses.</p>
+                              <h3 className="text-lg font-semibold text-gray-900 mb-3">Why is iPhone 14 Plus (recommended) or newer recommended?</h3>
+                <p className="text-gray-600">While the app works on iOS 18+ devices, the MLX-optimized AI performs best on iPhone 14 Plus or newer with A16 Bionic chips for the smoothest voice recognition and fastest AI responses.</p>
             </div>
             
             <div className="bg-white p-6 rounded-xl shadow-md">
@@ -233,7 +233,7 @@ const Download = () => {
             
             <div className="bg-white p-6 rounded-xl shadow-md">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">Which areas are covered?</h3>
-              <p className="text-gray-600">Currently we cover 400+ birding locations across New York and New Jersey, with plans to expand to additional states based on user feedback.</p>
+              <p className="text-gray-600">We cover over 16,000 birding locations across all 50 US states, with continuous updates and additions based on user feedback and eBird data.</p>
             </div>
           </div>
         </div>
@@ -252,13 +252,13 @@ const Download = () => {
             <div className="flex items-center justify-center space-x-3">
               <DevicePhoneMobileIcon className="h-8 w-8" />
               <div className="text-left">
-                <div className="text-sm">Coming Soon to the</div>
+                <div className="text-sm">Available in the</div>
                 <div className="text-xl font-semibold">App Store</div>
               </div>
             </div>
           </div>
           <p className="text-primary-200 mt-4 text-sm">
-            Currently in beta testing. Sign up for updates at gobirding.ai
+            Starting at $0.99. Download now at the App Store.
           </p>
         </div>
       </section>
