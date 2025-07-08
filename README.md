@@ -2,14 +2,18 @@
 
 A modern, responsive ReactJS website for GoBirding AI - Your AI-Powered Birding Companion. This website serves as both a marketing platform and informational resource for the iOS app that helps birding enthusiasts discover amazing locations using voice-powered AI search.
 
+## 🌐 Live Website
+
+Visit the live website at: **[https://gobirding.ai](https://gobirding.ai)**
+
 ## 🚀 Features
 
-- **Modern React Design**: Built with React 18+ and modern JavaScript
+- **Modern React Design**: Built with React 19+ and modern JavaScript
 - **Responsive Layout**: Optimized for desktop, tablet, and mobile devices
 - **Tailwind CSS**: Beautiful, consistent styling with a custom color palette
 - **Fast Performance**: Optimized for quick loading and smooth user experience
 - **SEO Friendly**: Clean structure and semantic HTML
-- **GitHub Pages Ready**: Configured for easy deployment to GitHub Pages
+- **Custom Domain**: Deployed with custom domain on GitHub Pages
 
 ## 🛠️ Technology Stack
 
@@ -17,18 +21,19 @@ A modern, responsive ReactJS website for GoBirding AI - Your AI-Powered Birding 
 - **React Router DOM**: Client-side routing for smooth navigation
 - **Tailwind CSS 3.4**: Utility-first CSS framework
 - **Heroicons**: Beautiful SVG icons
-- **GitHub Pages**: Free hosting and deployment
+- **GitHub Pages**: Free hosting with custom domain
 
 ## 📱 About GoBirding AI
 
 GoBirding AI is a sophisticated iOS app that transforms how birding enthusiasts discover and explore birding locations. Key features include:
 
 - **Voice-Powered Search**: Natural language queries to find perfect birding spots
-- **AI Intelligence**: MLX-optimized Llama-3.2-1B model running on-device
+- **AI Intelligence**: Offline-capable AI running locally on device for complete privacy
 - **16,000+ Locations**: Curated birding hotspots across all 50 US states
 - **Complete Privacy**: All processing happens locally on your device
 - **Weather Integration**: Real-time conditions and forecasts
 - **eBird Integration**: Direct access to species data and recent visits
+- **Affordable Pricing**: Starting at $0.99 in the App Store
 
 ## 🌐 Website Structure
 
@@ -76,11 +81,21 @@ This creates a `build` folder with optimized files ready for deployment.
 
 ## 📦 Deployment to GitHub Pages
 
-This project is configured for easy deployment to GitHub Pages:
+This project is deployed to GitHub Pages with a custom domain.
 
-### Automatic Deployment
+### Current Deployment
 
-1. Ensure your repository is connected to GitHub
+- **Live URL**: [https://gobirding.ai](https://gobirding.ai)
+- **GitHub Pages URL**: [https://christhomas16.github.io/go-birding-website](https://christhomas16.github.io/go-birding-website)
+- **Custom Domain**: gobirding.ai (configured with GoDaddy DNS)
+
+### Deployment Process
+
+1. Build the project:
+```bash
+npm run build
+```
+
 2. Deploy to GitHub Pages:
 ```bash
 npm run deploy
@@ -88,22 +103,16 @@ npm run deploy
 
 This will:
 - Build the project
-- Create a `gh-pages` branch
+- Create/update the `gh-pages` branch
 - Push the built files to GitHub Pages
-- Make the site available at `https://christhomas16.github.io/go-birding-website`
+- Site automatically updates at the custom domain
 
-### Manual Deployment
+### DNS Configuration
 
-1. Build the project: `npm run build`
-2. Push the `build` folder contents to your `gh-pages` branch
-3. Enable GitHub Pages in your repository settings
-
-### GitHub Pages Configuration
-
-The project is pre-configured with:
-- Homepage URL: `https://christhomas16.github.io/go-birding-website`
-- Base path routing for GitHub Pages subdirectory
-- Optimized build settings
+The custom domain is configured with:
+- 4 A records pointing to GitHub Pages IPs
+- CNAME file in the repository root for domain verification
+- GoDaddy DNS management for gobirding.ai
 
 ## 🎨 Customization
 
@@ -123,16 +132,26 @@ You can modify colors in `tailwind.config.js`.
 - Update company story in `src/pages/About.js`
 - Change download links in `src/pages/Download.js`
 
-### Logo
+### Images
 
-Replace `public/logo.png` with your app logo (recommended size: 512x512px).
+The website includes custom images:
+- `public/hero-banner.jpg` - Main homepage hero image
+- `public/about.jpg` - About page hero image
+- `public/voice-search.jpg` - Voice search feature illustration
+- `public/advanced-ai.jpg` - AI technology illustration
+- `public/location-database.jpg` - Location database illustration
 
 ## 📁 Project Structure
 
 ```
 go-birding-website/
 ├── public/
-│   ├── logo.png              # App logo
+│   ├── hero-banner.jpg       # Homepage hero image
+│   ├── about.jpg             # About page image
+│   ├── voice-search.jpg      # Feature images
+│   ├── advanced-ai.jpg
+│   ├── location-database.jpg
+│   ├── CNAME                 # Custom domain configuration
 │   └── index.html            # HTML template
 ├── src/
 │   ├── components/           # Reusable components
@@ -146,6 +165,7 @@ go-birding-website/
 │   ├── App.js                # Main app component
 │   ├── index.js              # Entry point
 │   └── index.css             # Global styles
+├── build/                    # Production build output
 ├── tailwind.config.js        # Tailwind configuration
 ├── postcss.config.js         # PostCSS configuration
 └── package.json              # Dependencies and scripts
@@ -170,11 +190,13 @@ go-birding-website/
 - On-device processing for complete privacy
 - Smart recommendations based on search criteria
 - Intelligent ranking by relevance and location
+- Offline-capable AI running locally on device
 
 ### Comprehensive Database
 - Over 16,000 curated birding locations
 - Rich species data and habitat information
 - Direct eBird integration for current data
+- Coverage across all 50 US states
 
 ## 📱 System Requirements (for the app)
 
@@ -182,6 +204,10 @@ go-birding-website/
 - iPhone 14 Plus (recommended) or newer for optimal AI performance
 - Location Services enabled
 - Microphone access for voice commands
+
+## 💰 Pricing
+
+GoBirding AI is available starting at $0.99 in the App Store, making advanced AI-powered birding accessible to everyone.
 
 ## 🤝 Contributing
 
@@ -197,14 +223,10 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 🔗 Links
 
-- **Website**: [https://christhomas16.github.io/go-birding-website](https://christhomas16.github.io/go-birding-website)
-- **App Domain**: [https://gobirding.ai](https://gobirding.ai)
-- **Repository**: [https://github.com/christhomas16/go-birding-website](https://github.com/christhomas16/go-birding-website)
-
-## 📞 Support
-
-For questions about the website or GoBirding AI app, visit [gobirding.ai](https://gobirding.ai).
+- **Website**: [https://gobirding.ai](https://gobirding.ai)
+- **GitHub Repository**: [https://github.com/christhomas16/go-birding-website](https://github.com/christhomas16/go-birding-website)
+- **App Store**: Coming soon to iOS App Store
 
 ---
 
-Built with ❤️ for the birding community
+*Built with ❤️ for the birding community*
