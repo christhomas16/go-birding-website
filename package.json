@@ -2,7 +2,7 @@
   "name": "go-birding-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://christhomas16.github.io/go-birding-website",
+  "homepage": "https://gobirding.ai",
   "dependencies": {
     "@headlessui/react": "^2.2.4",
     "@heroicons/react": "^2.2.0",
