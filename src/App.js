@@ -9,7 +9,7 @@ import Download from './pages/Download';
 
 function App() {
   return (
-    <Router basename="/go-birding-website">
+    <Router>
       <div className="min-h-screen bg-white">
         <Header />
         <main>
