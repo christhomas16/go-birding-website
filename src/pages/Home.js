@@ -77,9 +77,9 @@ const Home = () => {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-blue-500 rounded-3xl transform rotate-6 opacity-20"></div>
                 <img 
-                  src="/logo.png" 
-                  alt="GoBirding AI App" 
-                  className="relative h-64 w-64 lg:h-80 lg:w-80 rounded-3xl shadow-2xl"
+                  src="/hero-banner.jpg" 
+                  alt="GoBirding AI - Discover Amazing Birding Locations" 
+                  className="relative h-64 w-80 lg:h-80 lg:w-96 rounded-3xl shadow-2xl object-cover"
                 />
               </div>
             </div>
