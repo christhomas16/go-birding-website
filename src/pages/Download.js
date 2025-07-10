@@ -11,7 +11,7 @@ import {
 const Download = () => {
   const requirements = [
     { requirement: 'iOS 18.0 or later', status: 'required' },
-    { requirement: 'iPhone 14 Plus (recommended) or newer', status: 'recommended' },
+    { requirement: 'iPhone 14 Plus or newer', status: 'recommended' },
     { requirement: 'Location Services', status: 'required' },
     { requirement: 'Microphone Access', status: 'required' },
     { requirement: '2GB Available Storage', status: 'recommended' }
@@ -19,7 +19,7 @@ const Download = () => {
 
   const features = [
     'Voice-powered birding location search',
-    'Over 16,000 curated birding hotspots across all 50 US states',
+    'Over 19,200 curated birding hotspots across all 50 US states and 7 Canadian provinces',
     'Complete privacy - all AI runs on device',
     'Real-time weather and tide conditions',
     'Personal favorites system',
@@ -30,7 +30,7 @@ const Download = () => {
     {
       icon: CpuChipIcon,
       title: 'AI Performance',
-      description: 'Best experience on iPhone 14 Plus (recommended) or newer with A16 Bionic chip for optimal MLX AI performance'
+      description: 'Best experience on iPhone 14 Plus or newer with A16 Bionic chip for optimal MLX AI performance'
     },
     {
       icon: ShieldCheckIcon,
@@ -222,7 +222,7 @@ const Download = () => {
             </div>
             
             <div className="bg-white p-6 rounded-xl shadow-md">
-                              <h3 className="text-lg font-semibold text-gray-900 mb-3">Why is iPhone 14 Plus (recommended) or newer recommended?</h3>
+                              <h3 className="text-lg font-semibold text-gray-900 mb-3">Why is iPhone 14 Plus or newer recommended?</h3>
                 <p className="text-gray-600">While the app works on iOS 18+ devices, the MLX-optimized AI performs best on iPhone 14 Plus or newer with A16 Bionic chips for the smoothest voice recognition and fastest AI responses.</p>
             </div>
             
@@ -233,7 +233,7 @@ const Download = () => {
             
             <div className="bg-white p-6 rounded-xl shadow-md">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">Which areas are covered?</h3>
-              <p className="text-gray-600">We cover over 16,000 birding locations across all 50 US states, with continuous updates and additions based on user feedback and eBird data.</p>
+              <p className="text-gray-600">We cover over 19,200 birding locations across all 50 US states and 7 Canadian provinces, with continuous updates and additions based on user feedback and eBird data.</p>
             </div>
           </div>
         </div>

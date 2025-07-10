@@ -38,12 +38,12 @@ const Features = () => {
     {
       icon: MapPinIcon,
       title: 'Comprehensive Location Database',
-      description: 'Over 16,000 carefully curated birding hotspots',
+      description: 'Over 19,200 carefully curated birding hotspots',
       details: [
-        'Covers all 50 US states with comprehensive birding locations',
+        'Covers all 50 US states and 7 Canadian provinces with comprehensive birding locations',
         'Rich details including species counts and habitat info',
         'Direct eBird integration for recent data',
-        'Smart state detection based on your location'
+        'Smart state/province detection based on your location'
       ]
     }
   ];
@@ -129,7 +129,7 @@ const Features = () => {
     {
       step: 2,
       title: 'AI Analysis',
-      description: 'The app intelligently searches over 16,000 locations using your criteria'
+      description: 'The app intelligently searches over 19,200 locations using your criteria'
     },
     {
       step: 3,
@@ -287,7 +287,7 @@ const Features = () => {
               <h3 className="text-lg font-semibold text-gray-900 mb-4">System Requirements</h3>
               <ul className="space-y-2 text-gray-600">
                 <li>• iOS 18.0 or later</li>
-                <li>• iPhone 14 Plus (recommended) or newer for optimal AI performance</li>
+                <li>• iPhone 14 Plus or newer for optimal AI performance</li>
                 <li>• Location Services enabled</li>
                 <li>• Microphone access for voice commands</li>
               </ul>
@@ -295,9 +295,9 @@ const Features = () => {
             <div className="bg-white p-6 rounded-xl shadow-md">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Features</h3>
               <ul className="space-y-2 text-gray-600">
-                <li>• Over 16,000 curated birding locations</li>
+                <li>• Over 19,200 curated birding locations</li>
                 <li>• Complete privacy protection</li>
-                <li>• All 50 US states coverage</li>
+                <li>• All 50 US states and 7 Canadian provinces coverage</li>
                 <li>• Real-time weather integration</li>
               </ul>
             </div>

@@ -29,7 +29,7 @@ GoBirding AI is a sophisticated iOS app that transforms how birding enthusiasts 
 
 - **Voice-Powered Search**: Natural language queries to find perfect birding spots
 - **AI Intelligence**: Offline-capable AI running locally on device for complete privacy
-- **16,000+ Locations**: Curated birding hotspots across all 50 US states
+- **19,200+ Locations**: Curated birding hotspots across all 50 US states and 7 Canadian provinces
 - **Complete Privacy**: All processing happens locally on your device
 - **Weather Integration**: Real-time conditions and forecasts
 - **eBird Integration**: Direct access to species data and recent visits
@@ -193,15 +193,15 @@ go-birding-website/
 - Offline-capable AI running locally on device
 
 ### Comprehensive Database
-- Over 16,000 curated birding locations
+- Over 19,200 curated birding locations
 - Rich species data and habitat information
 - Direct eBird integration for current data
-- Coverage across all 50 US states
+- Coverage across all 50 US states and 7 Canadian provinces
 
 ## 📱 System Requirements (for the app)
 
 - iOS 18.0 or later
-- iPhone 14 Plus (recommended) or newer for optimal AI performance
+- iPhone 14 Plus or newer for optimal AI performance
 - Location Services enabled
 - Microphone access for voice commands
 

@@ -18,10 +18,10 @@ GoBirding is a sophisticated iOS app that transforms how birding enthusiasts dis
 - **Voice Explanations**: Listen to AI-generated explanations of why a location matches your search
 
 ### 🗺️ **Comprehensive Location Database**
-- **16,000+ Birding Hotspots**: Carefully curated locations across all 50 US states
+- **19,200+ Birding Hotspots**: Carefully curated locations across all 50 US states and 7 Canadian provinces
 - **Rich Location Details**: Species counts, habitat descriptions, accessibility features
 - **eBird Integration**: Direct links to recent visits, species lists, photos, and data submission
-- **Smart State Detection**: Automatically detects your location and switches between state databases
+- **Smart State/Province Detection**: Automatically detects your location and switches between state/province databases
 
 ### 📍 **Intelligent Search & Ranking**
 - **Proximity Detection**: Finds the closest spots when you ask for nearby locations
@@ -65,7 +65,7 @@ GoBirding is a sophisticated iOS app that transforms how birding enthusiasts dis
 ## 🔄 **How It Works**
 
 1. **Speak Your Need**: Tap the microphone and describe what you're looking for
-2. **AI Analysis**: The app intelligently searches over 16,000 locations using your criteria
+2. **AI Analysis**: The app intelligently searches over 19,200 locations using your criteria
 3. **Smart Ranking**: Results are ranked by relevance, distance, and species diversity
 4. **Voice Explanation**: Listen to why the top location is perfect for your query
 5. **Explore Details**: Tap any location for comprehensive information and directions
@@ -102,7 +102,7 @@ GoBirding is a sophisticated iOS app that transforms how birding enthusiasts dis
 ## 📱 **System Requirements**
 
 - **iOS 18.0+**: Optimized for the latest iOS features
-- **iPhone 14 Plus (recommended) or newer**: For optimal MLX AI performance
+- **iPhone 14 Plus or newer**: For optimal MLX AI performance
 - **Location Services**: Required for distance calculations and state detection
 - **Microphone Access**: For voice command functionality
 - **Speech Recognition**: For natural language processing

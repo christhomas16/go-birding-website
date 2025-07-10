@@ -32,10 +32,10 @@ const About = () => {
   ];
 
   const stats = [
-    { number: '16,000+', label: 'Birding Locations' },
+    { number: '19,200+', label: 'Birding Locations' },
     { number: '50', label: 'US States Covered' },
-    { number: '100%', label: 'Privacy Protected' },
-    { number: '1', label: 'Voice Command' }
+    { number: '7', label: 'Canadian Provinces' },
+    { number: '100%', label: 'Privacy Protected' }
   ];
 
   return (
@@ -185,7 +185,7 @@ const About = () => {
             </p>
             
             <p className="mb-6">
-              We spent months curating over 16,000 birding locations across all 50 US states, 
+              We spent months curating over 19,200 birding locations across all 50 US states and 7 Canadian provinces, 
               integrating real-time weather data, and training our AI to understand birding terminology 
               and preferences. Most importantly, we built everything to run entirely on your device - 
               because your birding adventures should remain private.
