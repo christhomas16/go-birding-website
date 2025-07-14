@@ -81,6 +81,17 @@ const Features = () => {
         'Complete location information preserved',
         'Easy management with swipe-to-delete'
       ]
+    },
+    {
+      icon: MapPinIcon,
+      title: 'Smart Location Detection',
+      description: 'Automatic state/province detection with GPS and GeoJSON boundaries',
+      details: [
+        'Auto-detects your state/province using GPS and precise polygon boundaries',
+        'Uses accurate GeoJSON data instead of simple bounding boxes',
+        'Manual override option for your preferred region',
+        'Continuously monitors location changes for automatic switching'
+      ]
     }
   ];
 
@@ -207,7 +218,7 @@ const Features = () => {
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-16">Smart Features</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {smartFeatures.map((feature, index) => (
               <div key={index} className="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-200">
                 <div className="bg-primary-100 p-4 rounded-xl w-fit mb-6">
