@@ -1,7 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  // Handle navigation with smooth scroll
+  const handleNavigation = (path) => {
+    navigate(path);
+    // Use setTimeout to ensure navigation completes before scrolling
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }, 100);
+  };
+
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -33,24 +47,36 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Navigation</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-gray-300 hover:text-white transition-colors duration-200">
+                <button 
+                  onClick={() => handleNavigation('/')}
+                  className="text-gray-300 hover:text-white transition-colors duration-200 text-left"
+                >
                   Home
-                </Link>
+                </button>
               </li>
               <li>
-                <Link to="/features" className="text-gray-300 hover:text-white transition-colors duration-200">
+                <button 
+                  onClick={() => handleNavigation('/features')}
+                  className="text-gray-300 hover:text-white transition-colors duration-200 text-left"
+                >
                   Features
-                </Link>
+                </button>
               </li>
               <li>
-                <Link to="/about" className="text-gray-300 hover:text-white transition-colors duration-200">
+                <button 
+                  onClick={() => handleNavigation('/about')}
+                  className="text-gray-300 hover:text-white transition-colors duration-200 text-left"
+                >
                   About
-                </Link>
+                </button>
               </li>
               <li>
-                <Link to="/download" className="text-gray-300 hover:text-white transition-colors duration-200">
+                <button 
+                  onClick={() => handleNavigation('/download')}
+                  className="text-gray-300 hover:text-white transition-colors duration-200 text-left"
+                >
                   Download
-                </Link>
+                </button>
               </li>
             </ul>
           </div>

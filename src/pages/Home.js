@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { 
   MicrophoneIcon, 
   CpuChipIcon, 
@@ -10,6 +10,20 @@ import {
 } from '@heroicons/react/24/outline';
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  // Handle navigation with smooth scroll
+  const handleNavigation = (path) => {
+    navigate(path);
+    // Use setTimeout to ensure navigation completes before scrolling
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }, 100);
+  };
+
   const features = [
     {
       icon: MicrophoneIcon,
@@ -59,18 +73,18 @@ const Home = () => {
                  Over 19,200 curated hotspots, complete privacy with offline-capable AI running locally on your device, and intelligent recommendations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  to="/download"
+                <button
+                  onClick={() => handleNavigation('/download')}
                   className="bg-primary-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-primary-700 transition-colors duration-200 shadow-lg hover:shadow-xl text-center"
                 >
                   Download for iOS
-                </Link>
-                <Link
-                  to="/features"
+                </button>
+                <button
+                  onClick={() => handleNavigation('/features')}
                   className="border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-primary-50 transition-colors duration-200 text-center"
                 >
                   Explore Features
-                </Link>
+                </button>
               </div>
             </div>
             <div className="flex justify-center">
@@ -125,12 +139,12 @@ const Home = () => {
           <p className="text-xl text-primary-100 mb-8">
             Join thousands of birders who've discovered their new favorite spots with GoBirding AI.
           </p>
-          <Link
-            to="/download"
+          <button
+            onClick={() => handleNavigation('/download')}
             className="bg-white text-primary-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-lg hover:shadow-xl inline-block"
           >
             Download Now
-          </Link>
+          </button>
           <p className="text-primary-200 mt-4 text-sm">
             Starting at $0.99 in the App Store. Requires iOS 18.0+. iPhone 14 Plus or newer.
           </p>
