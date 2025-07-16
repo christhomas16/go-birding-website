@@ -19,7 +19,8 @@ const Download = () => {
 
   const features = [
     'Voice-powered birding location search',
-    'Over 19,200 curated birding hotspots across all 50 US states and 7 Canadian provinces',
+    'Interactive hotspot map with 19,200+ locations',
+    'Real-time location tracking and filtering',
     'Complete privacy - all AI runs on device',
     'Real-time weather and tide conditions',
     'Personal favorites system',
@@ -72,7 +73,7 @@ const Download = () => {
               </div>
               
               <p className="text-sm text-gray-500">
-                Available in the iOS App Store starting at $0.99.
+                Available in the iOS App Store for $4.99.
               </p>
             </div>
             
@@ -181,7 +182,7 @@ const Download = () => {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Download from App Store</h3>
-                <p className="text-gray-600">Search for "GoBirding AI" in the iOS App Store and purchase for $0.99 to download.</p>
+                <p className="text-gray-600">Search for "GoBirding AI" in the iOS App Store and purchase for $4.99 to download.</p>
               </div>
             </div>
             
@@ -218,7 +219,7 @@ const Download = () => {
           <div className="space-y-8">
             <div className="bg-white p-6 rounded-xl shadow-md">
                               <h3 className="text-lg font-semibold text-gray-900 mb-3">How much does GoBirding AI cost?</h3>
-                <p className="text-gray-600">GoBirding AI is available for a small one-time fee starting at $0.99 in the App Store. No subscription fees or in-app purchases required.</p>
+                <p className="text-gray-600">GoBirding AI is available for a one-time fee of $4.99 in the App Store. No subscription fees or in-app purchases required.</p>
             </div>
             
             <div className="bg-white p-6 rounded-xl shadow-md">
@@ -234,6 +235,11 @@ const Download = () => {
             <div className="bg-white p-6 rounded-xl shadow-md">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">Which areas are covered?</h3>
               <p className="text-gray-600">We cover over 19,200 birding locations across all 50 US states and 7 Canadian provinces, with continuous updates and additions based on user feedback and eBird data.</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-xl shadow-md">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">How does the interactive map work?</h3>
+              <p className="text-gray-600">The interactive map shows all 19,200+ birding hotspots with your current location. You can tap any hotspot pin to view details, filter by county, show only favorites, and sort by distance. The map automatically centers on your location and updates as you move.</p>
             </div>
           </div>
         </div>
@@ -258,7 +264,7 @@ const Download = () => {
             </div>
           </div>
           <p className="text-primary-200 mt-4 text-sm">
-            Starting at $0.99. Download now at the App Store.
+            $4.99. Download now at the App Store.
           </p>
         </div>
       </section>

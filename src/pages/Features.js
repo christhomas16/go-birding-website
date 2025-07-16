@@ -8,7 +8,8 @@ import {
   DevicePhoneMobileIcon,
   SpeakerWaveIcon,
   ShieldCheckIcon,
-  MagnifyingGlassIcon
+  MagnifyingGlassIcon,
+  MapIcon
 } from '@heroicons/react/24/outline';
 
 const Features = () => {
@@ -44,6 +45,17 @@ const Features = () => {
         'Rich details including species counts and habitat info',
         'Direct eBird integration for recent data',
         'Smart state/province detection based on your location'
+      ]
+    },
+    {
+      icon: MapIcon,
+      title: 'Interactive Hotspot Map',
+      description: 'Visual exploration of birding locations with real-time tracking',
+      details: [
+        'Browse all 19,200+ hotspots on an interactive map with your current location',
+        'Tap any hotspot pin to view details and center the map automatically',
+        'Filter hotspots by county or show only your favorite locations',
+        'Sort locations by distance from your current position for easy discovery'
       ]
     }
   ];
@@ -214,8 +226,98 @@ const Features = () => {
         </div>
       </section>
 
-      {/* Smart Features Grid */}
+      {/* Interactive Hotspot Map Section */}
       <section className="py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Interactive Hotspot Map</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Explore birding locations visually with our comprehensive interactive map featuring real-time location tracking and intelligent filtering.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="flex items-center mb-6">
+                <div className="bg-primary-100 p-4 rounded-xl">
+                  <MapIcon className="h-8 w-8 text-primary-600" />
+                </div>
+                <div className="ml-6">
+                  <h3 className="text-2xl font-bold text-gray-900">Visual Location Discovery</h3>
+                  <p className="text-gray-600 mt-1">Browse all 19,200+ birding hotspots on an interactive map</p>
+                </div>
+              </div>
+              
+              <div className="space-y-6">
+                <div className="bg-white p-6 rounded-xl shadow-md">
+                  <h4 className="text-lg font-semibold text-gray-900 mb-3">Real-Time Location Tracking</h4>
+                  <ul className="space-y-2">
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700">Shows your current position with automatic map centering</span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700">Continuously updates as you move to new areas</span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700">Automatically zooms to fit nearby hotspots</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div className="bg-white p-6 rounded-xl shadow-md">
+                  <h4 className="text-lg font-semibold text-gray-900 mb-3">Interactive Hotspot Selection</h4>
+                  <ul className="space-y-2">
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700">Tap any hotspot pin to view detailed information</span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700">Map automatically centers on selected locations</span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700">Bidirectional sync between map pins and location list</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div className="bg-white p-6 rounded-xl shadow-md">
+                  <h4 className="text-lg font-semibold text-gray-900 mb-3">Smart Filtering & Sorting</h4>
+                  <ul className="space-y-2">
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700">Filter hotspots by specific counties</span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700">Show only your favorite locations on the map</span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700">Sort locations by distance from your current position</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-gray-100 rounded-2xl p-8">
+              <img 
+                src="/location-database.jpg"
+                alt="Interactive Hotspot Map - Browse birding locations visually"
+                className="w-full h-auto rounded-xl shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Smart Features Grid */}
+      <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-16">Smart Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

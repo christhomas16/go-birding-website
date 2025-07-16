@@ -37,8 +37,8 @@ const Home = () => {
     },
     {
       icon: MapPinIcon,
-      title: '19,200+ Birding Hotspots',
-      description: 'Carefully curated locations across all 50 US states and 7 Canadian provinces with rich species data'
+      title: 'Interactive Hotspot Map',
+      description: 'Browse 19,200+ birding locations on an interactive map with real-time location tracking and filtering'
     },
     {
       icon: CloudIcon,
@@ -69,8 +69,8 @@ const Home = () => {
                 <span className="text-primary-600 block">Birding Companion</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                                 Discover amazing birding locations across all 50 US states and 7 Canadian provinces with voice-powered AI search. 
-                 Over 19,200 curated hotspots, complete privacy with offline-capable AI running locally on your device, and intelligent recommendations.
+                Discover amazing birding locations across all 50 US states and 7 Canadian provinces with voice-powered AI search and interactive mapping. 
+                Browse over 19,200 curated hotspots on an interactive map, complete privacy with offline-capable AI running locally on your device, and intelligent recommendations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
@@ -146,7 +146,7 @@ const Home = () => {
             Download Now
           </button>
           <p className="text-primary-200 mt-4 text-sm">
-            Starting at $0.99 in the App Store. Requires iOS 18.0+. iPhone 14 Plus or newer.
+            Starting at $4.99 in the App Store. Requires iOS 18.0+. iPhone 14 Plus or newer.
           </p>
         </div>
       </section>
