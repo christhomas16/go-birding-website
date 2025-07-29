@@ -68,14 +68,34 @@ const TermsOfService = () => {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">6. Privacy and Data Collection</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">6. Apache 2.0 License Acknowledgement</h2>
+              <p className="text-gray-700 mb-4">
+                This application may include software components that are licensed under the Apache License, Version 2.0 ("Apache 2.0 License"). The Apache 2.0 License is a permissive open-source license that allows for the use, modification, and distribution of the licensed software under certain conditions.
+              </p>
+              <p className="text-gray-700 mb-4">
+                For any components licensed under the Apache 2.0 License, the following applies:
+              </p>
+              <ul className="list-disc pl-6 text-gray-700 mb-4">
+                <li>You may use, reproduce, and distribute the Apache 2.0 licensed components</li>
+                <li>You may modify and create derivative works of the Apache 2.0 licensed components</li>
+                <li>You must include a copy of the Apache 2.0 License when redistributing</li>
+                <li>You must state any changes made to the Apache 2.0 licensed components</li>
+                <li>You must include any existing copyright notices and disclaimers</li>
+              </ul>
+              <p className="text-gray-700 mb-4">
+                The full text of the Apache 2.0 License can be found at: <a href="https://www.apache.org/licenses/LICENSE-2.0" className="text-blue-600 hover:text-blue-800 underline" target="_blank" rel="noopener noreferrer">https://www.apache.org/licenses/LICENSE-2.0</a>
+              </p>
+            </section>
+
+            <section className="mb-8">
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">7. Privacy and Data Collection</h2>
               <p className="text-gray-700 mb-4">
                 Our App is designed with privacy in mind. Most data processing occurs locally on your device. For detailed information about how we handle your data, please refer to our Privacy Policy.
               </p>
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">7. Disclaimers</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">8. Disclaimers</h2>
               <p className="text-gray-700 mb-4">
                 The information provided by our App is for general informational purposes only. We make no representations or warranties of any kind, express or implied, about:
               </p>
@@ -88,21 +108,21 @@ const TermsOfService = () => {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">8. Limitation of Liability</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">9. Limitation of Liability</h2>
               <p className="text-gray-700 mb-4">
                 In no event shall GoBirding AI be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your use of the App.
               </p>
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">9. Changes to Terms</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">10. Changes to Terms</h2>
               <p className="text-gray-700 mb-4">
                 We reserve the right to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days notice prior to any new terms taking effect.
               </p>
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">10. Contact Information</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">11. Contact Information</h2>
               <p className="text-gray-700 mb-4">
                 If you have any questions about these Terms of Service, please contact us through the App or visit our website.
               </p>
