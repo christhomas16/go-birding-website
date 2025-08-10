@@ -68,7 +68,7 @@ const Download = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Download GoBirding AI on the App Store"
-                className="bg-black text-white px-8 py-4 rounded-2xl text-center mb-6 max-w-sm inline-block"
+                className="bg-black text-white px-10 py-5 rounded-2xl text-center mb-6 inline-block w-full max-w-md"
               >
                 <div className="flex items-center justify-center space-x-3">
                   <DevicePhoneMobileIcon className="h-8 w-8" />
@@ -276,7 +276,7 @@ const Download = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Open GoBirding AI on the App Store"
-            className="bg-black text-white px-8 py-4 rounded-2xl text-center max-w-sm mx-auto inline-block"
+            className="bg-black text-white px-10 py-5 rounded-2xl text-center mx-auto inline-block w-full max-w-md"
           >
             <div className="flex items-center justify-center space-x-3">
               <DevicePhoneMobileIcon className="h-8 w-8" />
