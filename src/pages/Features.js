@@ -300,7 +300,7 @@ const Features = () => {
             
             <div className="bg-gray-100 rounded-2xl p-8">
               <img 
-                src="/location-database.jpg"
+                src="/visual-location.jpg"
                 alt="Interactive Hotspot Map - Browse birding locations visually"
                 className="w-full h-auto rounded-xl shadow-lg"
               />
