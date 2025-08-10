@@ -109,7 +109,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">App</h4>
             <ul className="space-y-2">
               <li>
-                <span className="text-gray-300">iPhone 14 Plus+</span>
+                <span className="text-gray-300">iPhone 11 or newer</span>
               </li>
               <li>
                 <span className="text-gray-300">19,200+ Locations</span>
