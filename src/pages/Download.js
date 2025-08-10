@@ -62,8 +62,14 @@ const Download = () => {
                 AI recommendations, and complete privacy protection.
               </p>
               
-              {/* App Store Button Placeholder */}
-              <div className="bg-black text-white px-8 py-4 rounded-2xl text-center mb-6 max-w-sm">
+              {/* App Store Button */}
+              <a
+                href="https://apps.apple.com/us/app/go-birding-ai/id6747407940"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Download GoBirding AI on the App Store"
+                className="bg-black text-white px-8 py-4 rounded-2xl text-center mb-6 max-w-sm inline-block"
+              >
                 <div className="flex items-center justify-center space-x-3">
                   <DevicePhoneMobileIcon className="h-8 w-8" />
                   <div className="text-left">
@@ -71,7 +77,7 @@ const Download = () => {
                     <div className="text-xl font-semibold">App Store</div>
                   </div>
                 </div>
-              </div>
+              </a>
               
               <p className="text-sm text-gray-500">
                 Available in the iOS App Store for $4.99.
@@ -265,7 +271,13 @@ const Download = () => {
           <p className="text-xl text-primary-100 mb-8">
             Join the future of birding with AI-powered location discovery and voice search.
           </p>
-          <div className="bg-black text-white px-8 py-4 rounded-2xl text-center max-w-sm mx-auto">
+          <a
+            href="https://apps.apple.com/us/app/go-birding-ai/id6747407940"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open GoBirding AI on the App Store"
+            className="bg-black text-white px-8 py-4 rounded-2xl text-center max-w-sm mx-auto inline-block"
+          >
             <div className="flex items-center justify-center space-x-3">
               <DevicePhoneMobileIcon className="h-8 w-8" />
               <div className="text-left">
@@ -273,7 +285,7 @@ const Download = () => {
                 <div className="text-xl font-semibold">App Store</div>
               </div>
             </div>
-          </div>
+          </a>
           <p className="text-primary-200 mt-4 text-sm">
             $4.99. Download now at the App Store.
           </p>
