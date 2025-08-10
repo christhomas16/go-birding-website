@@ -47,7 +47,7 @@ const About = () => {
             <div>
               <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                 About
-                <span className="text-primary-600 block">GoBirding AI</span>
+                <span className="text-primary-600 block">Go Birding AI</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 We're revolutionizing how birding enthusiasts discover and explore new locations 
@@ -56,11 +56,11 @@ const About = () => {
               <div className="flex items-center space-x-4">
                 <img 
                   src="/logo.png" 
-                  alt="GoBirding AI" 
+                  alt="Go Birding AI" 
                   className="h-16 w-16 rounded-xl shadow-md"
                 />
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900">GoBirding AI</h3>
+                  <h3 className="text-lg font-semibold text-gray-900">Go Birding AI</h3>
                   <p className="text-gray-600">Your AI-Powered Birding Companion</p>
                 </div>
               </div>
@@ -70,7 +70,7 @@ const About = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-blue-500 rounded-3xl transform -rotate-6 opacity-20"></div>
                 <img 
                   src="/about.jpg" 
-                  alt="About GoBirding AI" 
+                  alt="About Go Birding AI" 
                   className="relative w-full max-w-xs sm:max-w-sm lg:max-w-md h-auto rounded-3xl shadow-2xl object-cover"
                 />
               </div>
@@ -140,7 +140,7 @@ const About = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Values</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Everything we build is guided by these core principles that ensure GoBirding AI 
+              Everything we build is guided by these core principles that ensure Go Birding AI 
               serves the birding community with integrity and excellence.
             </p>
           </div>
@@ -172,7 +172,7 @@ const About = () => {
           
           <div className="prose prose-xl mx-auto text-gray-600">
             <p className="mb-6">
-              GoBirding AI was born from a simple frustration: finding good birding locations required 
+              Go Birding AI was born from a simple frustration: finding good birding locations required 
               hours of research, scrolling through websites, and often ending up at crowded or 
               disappointing spots. As passionate birders ourselves, we knew there had to be a better way.
             </p>
@@ -192,7 +192,7 @@ const About = () => {
             </p>
             
             <p>
-              Today, GoBirding AI represents the future of birding technology: intelligent, private, 
+              Today, Go Birding AI represents the future of birding technology: intelligent, private, 
               and designed by birders who understand that the best technology enhances rather than 
               replaces the natural experience of watching birds in their habitat.
             </p>

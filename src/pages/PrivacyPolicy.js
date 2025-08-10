@@ -14,7 +14,7 @@ const PrivacyPolicy = () => {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Introduction</h2>
               <p className="text-gray-700 mb-4">
-                GoBirding AI ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our mobile application.
+                Go Birding AI ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our mobile application.
               </p>
               <p className="text-gray-700 mb-4">
                 <strong>Privacy-First Design:</strong> Our app is designed with privacy as a core principle. Most data processing occurs locally on your device, and we minimize data collection wherever possible.
@@ -151,7 +151,7 @@ const PrivacyPolicy = () => {
             <div className="bg-green-50 border border-green-200 rounded-lg p-6 mt-8">
               <h3 className="text-lg font-semibold text-green-900 mb-2">Privacy Summary</h3>
               <p className="text-green-800">
-                <strong>Your privacy is our priority.</strong> GoBirding AI processes most data locally on your device, 
+                <strong>Your privacy is our priority.</strong> Go Birding AI processes most data locally on your device, 
                 doesn't sell your information, and gives you full control over your privacy settings. 
                 Enjoy birding with confidence knowing your data stays private.
               </p>

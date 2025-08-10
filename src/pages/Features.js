@@ -174,7 +174,7 @@ const Features = () => {
             <span className="text-primary-600 block">Modern Birders</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover why GoBirding AI is the most advanced birding companion available, 
+            Discover why Go Birding AI is the most advanced birding companion available, 
             with cutting-edge AI technology and intuitive design.
           </p>
         </div>

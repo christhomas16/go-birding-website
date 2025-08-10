@@ -55,7 +55,7 @@ const Download = () => {
             <div>
               <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                 Download
-                <span className="text-primary-600 block">GoBirding AI</span>
+                <span className="text-primary-600 block">Go Birding AI</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Get the most advanced birding companion available for iOS. Voice-powered search, 
@@ -67,7 +67,7 @@ const Download = () => {
                 href="https://apps.apple.com/us/app/go-birding-ai/id6747407940"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Download GoBirding AI on the App Store"
+                aria-label="Download Go Birding AI on the App Store"
                 className="bg-black text-white px-10 py-5 rounded-2xl text-center mb-6 inline-block w-full max-w-md"
               >
                 <div className="flex items-center justify-center space-x-3">
@@ -89,7 +89,7 @@ const Download = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-blue-500 rounded-3xl transform rotate-6 opacity-20"></div>
                 <img 
                   src="/logo.png" 
-                  alt="GoBirding AI App" 
+                  alt="Go Birding AI App" 
                   className="relative w-full max-w-xs sm:max-w-sm lg:max-w-md h-auto rounded-3xl shadow-2xl"
                 />
               </div>
@@ -104,7 +104,7 @@ const Download = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">System Requirements</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Make sure your device meets these requirements for the best GoBirding AI experience.
+              Make sure your device meets these requirements for the best Go Birding AI experience.
             </p>
           </div>
           
@@ -154,7 +154,7 @@ const Download = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Technical Details</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Understanding the technology behind GoBirding AI and why certain requirements exist.
+              Understanding the technology behind Go Birding AI and why certain requirements exist.
             </p>
           </div>
           
@@ -178,7 +178,7 @@ const Download = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Installation Guide</h2>
             <p className="text-xl text-gray-600">
-              Follow these simple steps to get started with GoBirding AI
+              Follow these simple steps to get started with Go Birding AI
             </p>
           </div>
           
@@ -189,7 +189,7 @@ const Download = () => {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Download from App Store</h3>
-                <p className="text-gray-600">Search for "GoBirding AI" in the iOS App Store and purchase for $4.99 to download.</p>
+                <p className="text-gray-600">Search for "Go Birding AI" in the iOS App Store and purchase for $4.99 to download.</p>
               </div>
             </div>
             
@@ -225,8 +225,8 @@ const Download = () => {
           
           <div className="space-y-8">
             <div className="bg-white p-6 rounded-xl shadow-md">
-                              <h3 className="text-lg font-semibold text-gray-900 mb-3">How much does GoBirding AI cost?</h3>
-                <p className="text-gray-600">GoBirding AI is available for a one-time fee of $4.99 in the App Store. No subscription fees or in-app purchases required.</p>
+                              <h3 className="text-lg font-semibold text-gray-900 mb-3">How much does Go Birding AI cost?</h3>
+                <p className="text-gray-600">Go Birding AI is available for a one-time fee of $4.99 in the App Store. No subscription fees or in-app purchases required.</p>
             </div>
             
             <div className="bg-white p-6 rounded-xl shadow-md">
@@ -275,7 +275,7 @@ const Download = () => {
             href="https://apps.apple.com/us/app/go-birding-ai/id6747407940"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Open GoBirding AI on the App Store"
+            aria-label="Open Go Birding AI on the App Store"
             className="bg-black text-white px-10 py-5 rounded-2xl text-center mx-auto inline-block w-full max-w-md"
           >
             <div className="flex items-center justify-center space-x-3">

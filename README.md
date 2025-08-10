@@ -1,6 +1,6 @@
-# GoBirding AI Website
+# Go Birding AI Website
 
-A modern, responsive ReactJS website for GoBirding AI - Your AI-Powered Birding Companion. This website serves as both a marketing platform and informational resource for the iOS app that helps birding enthusiasts discover amazing locations using voice-powered AI search.
+A modern, responsive ReactJS website for Go Birding AI - Your AI-Powered Birding Companion. This website serves as both a marketing platform and informational resource for the iOS app that helps birding enthusiasts discover amazing locations using voice-powered AI search.
 
 ## 🌐 Live Website
 
@@ -23,9 +23,9 @@ Visit the live website at: **[https://gobirding.ai](https://gobirding.ai)**
 - **Heroicons**: Beautiful SVG icons
 - **GitHub Pages**: Free hosting with custom domain
 
-## 📱 About GoBirding AI
+## 📱 About Go Birding AI
 
-GoBirding AI is a sophisticated iOS app that transforms how birding enthusiasts discover and explore birding locations. Key features include:
+Go Birding AI is a sophisticated iOS app that transforms how birding enthusiasts discover and explore birding locations. Key features include:
 
 - **Voice-Powered Search**: Natural language queries to find perfect birding spots
 - **AI Intelligence**: Offline-capable AI running locally on device for complete privacy
@@ -118,7 +118,7 @@ The custom domain is configured with:
 
 ### Colors
 
-The website uses a custom blue color palette inspired by the GoBirding AI logo:
+The website uses a custom blue color palette inspired by the Go Birding AI logo:
 
 - **Primary**: Blue shades (`primary-50` to `primary-900`)
 - **Secondary**: Gray shades (`secondary-50` to `secondary-900`)
@@ -207,7 +207,7 @@ go-birding-website/
 
 ## 💰 Pricing
 
-GoBirding AI is available starting at $0.99 in the App Store, making advanced AI-powered birding accessible to everyone.
+Go Birding AI is available starting at $0.99 in the App Store, making advanced AI-powered birding accessible to everyone.
 
 ## 🤝 Contributing
 

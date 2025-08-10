@@ -92,7 +92,7 @@ const Home = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-blue-500 rounded-3xl transform rotate-6 opacity-20"></div>
                 <img 
                   src="/hero-banner.jpg" 
-                  alt="GoBirding AI - Discover Amazing Birding Locations" 
+                  alt="Go Birding AI - Discover Amazing Birding Locations" 
                   className="relative w-full max-w-xs sm:max-w-sm h-auto rounded-3xl shadow-2xl object-cover"
                 />
               </div>
@@ -137,7 +137,7 @@ const Home = () => {
             Ready to Transform Your Birding Experience?
           </h2>
           <p className="text-xl text-primary-100 mb-8">
-            Join thousands of birders who've discovered their new favorite spots with GoBirding AI.
+            Join thousands of birders who've discovered their new favorite spots with Go Birding AI.
           </p>
           <button
             onClick={() => handleNavigation('/download')}

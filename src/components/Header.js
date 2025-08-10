@@ -52,11 +52,11 @@ const Header = () => {
             >
               <img 
                 src="/logo.png" 
-                alt="GoBirding AI" 
+                alt="Go Birding AI" 
                 className="h-10 w-10 rounded-lg shadow-sm"
               />
               <div>
-                <h1 className="text-xl font-bold text-gray-900">GoBirding AI</h1>
+                <h1 className="text-xl font-bold text-gray-900">Go Birding AI</h1>
                 <p className="text-xs text-gray-600">Your AI-Powered Birding Companion</p>
               </div>
             </button>

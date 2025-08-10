@@ -1,6 +1,6 @@
 # GitHub Pages Deployment Guide
 
-This guide will help you deploy the GoBirding AI website to GitHub Pages.
+This guide will help you deploy the Go Birding AI website to GitHub Pages.
 
 ## Prerequisites
 
@@ -19,7 +19,7 @@ First, make sure all your code is pushed to the main branch of your GitHub repos
 git add .
 
 # Commit your changes
-git commit -m "Initial commit - GoBirding AI website"
+git commit -m "Initial commit - Go Birding AI website"
 
 # Push to GitHub (make sure you have the remote set up)
 git remote add origin https://github.com/christhomas16/go-birding-website.git
@@ -172,4 +172,4 @@ If you encounter issues with deployment:
 
 ---
 
-Your GoBirding AI website should now be live and accessible to users worldwide! 
+Your Go Birding AI website should now be live and accessible to users worldwide!

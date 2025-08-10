@@ -25,11 +25,11 @@ const Footer = () => {
             <div className="flex items-center space-x-3 mb-4">
               <img 
                 src="/logo.png" 
-                alt="GoBirding AI" 
+                alt="Go Birding AI" 
                 className="h-8 w-8 rounded-lg"
               />
               <div>
-                <h3 className="text-lg font-bold">GoBirding AI</h3>
+                <h3 className="text-lg font-bold">Go Birding AI</h3>
                 <p className="text-sm text-gray-400">Your AI-Powered Birding Companion</p>
               </div>
             </div>
@@ -38,7 +38,7 @@ const Footer = () => {
               Voice-powered search, complete privacy with offline-capable AI, and over 19,200 curated birding hotspots.
             </p>
             <p className="text-sm text-gray-400">
-              © 2025 GoBirding AI. All rights reserved.
+              © 2025 Go Birding AI. All rights reserved.
             </p>
           </div>
 

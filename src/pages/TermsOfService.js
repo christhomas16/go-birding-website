@@ -14,14 +14,14 @@ const TermsOfService = () => {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Acceptance of Terms</h2>
               <p className="text-gray-700 mb-4">
-                By downloading, installing, or using the GoBirding AI mobile application ("App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use our App.
+                By downloading, installing, or using the Go Birding AI mobile application ("App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use our App.
               </p>
             </section>
 
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">2. Description of Service</h2>
               <p className="text-gray-700 mb-4">
-                GoBirding AI is a mobile application that provides birding location recommendations, AI-powered features, and birding-related information. The App includes:
+                Go Birding AI is a mobile application that provides birding location recommendations, AI-powered features, and birding-related information. The App includes:
               </p>
               <ul className="list-disc pl-6 text-gray-700 mb-4">
                 <li>Access to over 19,200 curated birding locations across the US and Canada</li>
@@ -63,7 +63,7 @@ const TermsOfService = () => {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">5. Intellectual Property</h2>
               <p className="text-gray-700 mb-4">
-                The App and its original content, features, and functionality are owned by GoBirding AI and are protected by international copyright, trademark, patent, trade secret, and other intellectual property laws.
+                The App and its original content, features, and functionality are owned by Go Birding AI and are protected by international copyright, trademark, patent, trade secret, and other intellectual property laws.
               </p>
             </section>
 
@@ -110,7 +110,7 @@ const TermsOfService = () => {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">9. Limitation of Liability</h2>
               <p className="text-gray-700 mb-4">
-                In no event shall GoBirding AI be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your use of the App.
+                In no event shall Go Birding AI be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your use of the App.
               </p>
             </section>
 
