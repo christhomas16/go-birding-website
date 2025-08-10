@@ -48,20 +48,6 @@ const Features = () => {
         'Smart state/province detection based on your location',
         'GeoJSON-based region detection for precise state/province mapping'
       ]
-    },
-    {
-      icon: MapIcon,
-      title: 'Interactive Hotspot Map',
-      description: 'Visual exploration of birding locations with real-time tracking',
-      details: [
-        'Browse all 19,200+ hotspots on an interactive map with your current location',
-        'Tap any hotspot pin to view details and center the map automatically',
-        'Filter hotspots by county or show only your favorite locations',
-        'Sort locations by distance from your current position for easy discovery',
-        'Split-screen layout with synchronized map and list',
-        'Favorites overlay and quick access',
-        'Smart region fitting and auto-centering on selections'
-      ]
     }
   ];
 
