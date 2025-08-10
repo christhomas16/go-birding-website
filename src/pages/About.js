@@ -71,7 +71,7 @@ const About = () => {
                 <img 
                   src="/about.jpg" 
                   alt="About GoBirding AI" 
-                  className="relative h-64 w-64 lg:h-80 lg:w-80 rounded-3xl shadow-2xl object-cover"
+                  className="relative w-full max-w-xs sm:max-w-sm lg:max-w-md h-auto rounded-3xl shadow-2xl object-cover"
                 />
               </div>
             </div>

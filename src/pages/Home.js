@@ -93,7 +93,7 @@ const Home = () => {
                 <img 
                   src="/hero-banner.jpg" 
                   alt="GoBirding AI - Discover Amazing Birding Locations" 
-                  className="relative h-64 w-80 lg:h-80 lg:w-96 rounded-3xl shadow-2xl object-cover"
+                  className="relative w-full max-w-xs sm:max-w-sm h-auto rounded-3xl shadow-2xl object-cover"
                 />
               </div>
             </div>
