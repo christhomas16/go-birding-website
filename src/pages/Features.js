@@ -30,10 +30,11 @@ const Features = () => {
       title: 'Advanced AI Intelligence',
       description: 'MLX-optimized AI running entirely on your device',
       details: [
-        'Powered by Llama-3.2-1B model optimized for iOS',
+        'MLX-optimized on-device AI model',
         'Complete privacy - no data sent to external servers',
         'Smart recommendations based on your search criteria',
-        'AI explains why each location matches your needs'
+        'AI explains why each location matches your needs',
+        'Response Style presets: Accurate or Creative'
       ]
     },
     {
@@ -44,7 +45,8 @@ const Features = () => {
         'Covers all 50 US states and 7 Canadian provinces with comprehensive birding locations',
         'Rich details including species counts and habitat info',
         'Direct eBird integration for recent data',
-        'Smart state/province detection based on your location'
+        'Smart state/province detection based on your location',
+        'GeoJSON-based region detection for precise state/province mapping'
       ]
     },
     {
@@ -55,7 +57,10 @@ const Features = () => {
         'Browse all 19,200+ hotspots on an interactive map with your current location',
         'Tap any hotspot pin to view details and center the map automatically',
         'Filter hotspots by county or show only your favorite locations',
-        'Sort locations by distance from your current position for easy discovery'
+        'Sort locations by distance from your current position for easy discovery',
+        'Split-screen layout with synchronized map and list',
+        'Favorites overlay and quick access',
+        'Smart region fitting and auto-centering on selections'
       ]
     }
   ];
@@ -80,7 +85,9 @@ const Features = () => {
         'Current weather conditions and hourly forecasts',
         'Wind speed and direction crucial for birding',
         'Sunrise and sunset times for perfect timing',
-        'Tide predictions for coastal locations'
+        'Tide predictions for coastal locations',
+        'Coastal proximity awareness with low-tide prioritization',
+        'Weather-aware AI recommendations'
       ]
     },
     {
@@ -400,7 +407,7 @@ const Features = () => {
               <h3 className="text-lg font-semibold text-gray-900 mb-4">System Requirements</h3>
               <ul className="space-y-2 text-gray-600">
                 <li>• iOS 18.0 or later</li>
-                <li>• iPhone 14 Plus or newer for optimal AI performance</li>
+                <li>• iPhone 11 or newer for optimal on-device AI performance</li>
                 <li>• Location Services enabled</li>
                 <li>• Microphone access for voice commands</li>
               </ul>

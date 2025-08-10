@@ -33,7 +33,7 @@ const Home = () => {
     {
       icon: CpuChipIcon,
       title: 'AI Intelligence',
-      description: 'Powered by MLX-optimized Llama-3.2-1B model running entirely on your device for complete privacy'
+      description: 'MLX-optimized on-device AI model for complete privacy, with Response Style presets (Accurate or Creative)'
     },
     {
       icon: MapPinIcon,
@@ -146,7 +146,7 @@ const Home = () => {
             Download Now
           </button>
           <p className="text-primary-200 mt-4 text-sm">
-            Starting at $4.99 in the App Store. Requires iOS 18.0+. iPhone 14 Plus or newer.
+            Starting at $4.99 in the App Store. Requires iOS 18.0+. iPhone 11 or newer recommended.
           </p>
         </div>
       </section>

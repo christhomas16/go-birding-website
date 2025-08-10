@@ -11,7 +11,7 @@ import {
 const Download = () => {
   const requirements = [
     { requirement: 'iOS 18.0 or later', status: 'required' },
-    { requirement: 'iPhone 14 Plus or newer', status: 'recommended' },
+    { requirement: 'iPhone 11 or newer', status: 'recommended' },
     { requirement: 'Location Services', status: 'required' },
     { requirement: 'Microphone Access', status: 'required' },
     { requirement: '2GB Available Storage', status: 'recommended' }
@@ -22,6 +22,7 @@ const Download = () => {
     'Interactive hotspot map with 19,200+ locations',
     'Real-time location tracking and filtering',
     'Complete privacy - all AI runs on device',
+    'Offline operation for instant access in the field',
     'Real-time weather and tide conditions',
     'Personal favorites system',
     'eBird integration for species data'
@@ -31,7 +32,7 @@ const Download = () => {
     {
       icon: CpuChipIcon,
       title: 'AI Performance',
-      description: 'Best experience on iPhone 14 Plus or newer with A16 Bionic chip for optimal MLX AI performance'
+      description: 'Best experience on iPhone 11 or newer for optimal MLX on-device AI performance'
     },
     {
       icon: ShieldCheckIcon,
@@ -175,7 +176,7 @@ const Download = () => {
             </p>
           </div>
           
-          <div className="space-y-8">
+            <div className="space-y-8">
             <div className="flex items-start">
               <div className="bg-primary-600 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1">
                 1
@@ -223,10 +224,20 @@ const Download = () => {
             </div>
             
             <div className="bg-white p-6 rounded-xl shadow-md">
-                              <h3 className="text-lg font-semibold text-gray-900 mb-3">Why is iPhone 14 Plus or newer recommended?</h3>
-                <p className="text-gray-600">While the app works on iOS 18+ devices, the MLX-optimized AI performs best on iPhone 14 Plus or newer with A16 Bionic chips for the smoothest voice recognition and fastest AI responses.</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Why is iPhone 11 or newer recommended?</h3>
+              <p className="text-gray-600">While the app works on iOS 18+ devices, newer iPhones deliver the smoothest voice recognition and fastest on-device AI responses.</p>
             </div>
             
+            <div className="bg-white p-6 rounded-xl shadow-md">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">How big is the AI model download?</h3>
+              <p className="text-gray-600">Approximately 332 MB. The download begins only with your explicit consent.</p>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow-md">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Does it work on older devices?</h3>
+              <p className="text-gray-600">Yes. Older devices automatically use a lighter fallback for explanations to maintain stability.</p>
+            </div>
+
             <div className="bg-white p-6 rounded-xl shadow-md">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">Do you collect my birding data?</h3>
               <p className="text-gray-600">No. All AI processing happens entirely on your device. We don't collect, store, or transmit any of your searches, locations, or usage data.</p>
