@@ -51,10 +51,11 @@ const BirdChatter = () => {
   // Auto-advance carousel every 4 seconds
   useEffect(() => {
     const timer = setInterval(() => {
-      nextSlide();
+      setCurrentSlide((prev) => (prev + 1) % screenshots.length);
     }, 4000);
 
     return () => clearInterval(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentSlide]);
 
   const features = [
