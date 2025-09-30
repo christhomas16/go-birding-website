@@ -51,48 +51,123 @@ const Download = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary-50 to-blue-100 py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                Download
-                <span className="text-primary-600 block">Go Birding AI</span>
-              </h1>
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Get the most advanced birding companion available for iOS. Voice-powered search, 
-                AI recommendations, and complete privacy protection.
+          <div className="text-center mb-16">
+            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              Download Our Apps
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Explore our family of AI-powered birding apps for iOS. Each app brings unique features to enhance your birding experience.
+            </p>
+          </div>
+
+          {/* Two App Cards */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Go Birding AI Card */}
+            <div className="bg-white rounded-3xl shadow-2xl p-8 lg:p-10">
+              <div className="flex flex-col items-center text-center mb-6">
+                <img
+                  src="/logo.png"
+                  alt="Go Birding AI"
+                  className="w-24 h-24 rounded-2xl shadow-lg mb-4"
+                />
+                <h2 className="text-3xl font-bold text-gray-900 mb-2">Go Birding AI</h2>
+                <p className="text-lg text-primary-600 font-semibold mb-4">AI-Powered Location Discovery</p>
+              </div>
+
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                Voice-powered search for birding locations across 19,200+ hotspots. Interactive map,
+                real-time weather, and complete privacy with on-device AI.
               </p>
-              
-              {/* App Store Button */}
+
+              <div className="space-y-3 mb-8">
+                <div className="flex items-start">
+                  <CheckCircleIcon className="h-5 w-5 text-primary-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm">Voice-powered location search</span>
+                </div>
+                <div className="flex items-start">
+                  <CheckCircleIcon className="h-5 w-5 text-primary-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm">19,200+ curated hotspots</span>
+                </div>
+                <div className="flex items-start">
+                  <CheckCircleIcon className="h-5 w-5 text-primary-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm">Interactive map & weather</span>
+                </div>
+                <div className="flex items-start">
+                  <CheckCircleIcon className="h-5 w-5 text-primary-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm">Complete privacy protection</span>
+                </div>
+              </div>
+
               <a
                 href="https://apps.apple.com/us/app/go-birding-ai/id6747407940"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Download Go Birding AI on the App Store"
-                className="bg-black text-white px-10 py-5 rounded-2xl text-center mb-6 inline-block w-full max-w-md"
+                className="bg-black text-white px-8 py-4 rounded-2xl text-center w-full inline-block hover:bg-gray-800 transition-colors duration-200"
               >
                 <div className="flex items-center justify-center space-x-3">
-                  <DevicePhoneMobileIcon className="h-8 w-8" />
+                  <DevicePhoneMobileIcon className="h-7 w-7" />
                   <div className="text-left">
-                    <div className="text-sm">Download on the</div>
-                    <div className="text-xl font-semibold">App Store</div>
+                    <div className="text-xs">Download on the</div>
+                    <div className="text-lg font-semibold">App Store</div>
                   </div>
                 </div>
               </a>
-              
-              <p className="text-sm text-gray-500">
-                Available in the iOS App Store for $4.99.
+
+              <p className="text-sm text-gray-500 text-center mt-4">
+                $4.99 • iOS 18.0+
               </p>
             </div>
-            
-            <div className="flex justify-center">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-blue-500 rounded-3xl transform rotate-6 opacity-20"></div>
-                <img 
-                  src="/logo.png" 
-                  alt="Go Birding AI App" 
-                  className="relative w-full max-w-xs sm:max-w-sm lg:max-w-md h-auto rounded-3xl shadow-2xl"
+
+            {/* Bird Chatter Card */}
+            <div className="bg-white rounded-3xl shadow-2xl p-8 lg:p-10">
+              <div className="flex flex-col items-center text-center mb-6">
+                <img
+                  src="/birdchatter/AppIcon.png"
+                  alt="Bird Chatter"
+                  className="w-24 h-24 rounded-2xl shadow-lg mb-4"
                 />
+                <h2 className="text-3xl font-bold text-gray-900 mb-2">Bird Chatter</h2>
+                <p className="text-lg text-green-600 font-semibold mb-4">Real-Time Bird Sound ID</p>
               </div>
+
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                Identify bird species from sounds in real-time using Cornell Lab's BirdNET AI.
+                Record, detect, and track 6,521 species with gamification and achievements.
+              </p>
+
+              <div className="space-y-3 mb-8">
+                <div className="flex items-start">
+                  <CheckCircleIcon className="h-5 w-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm">Real-time species detection</span>
+                </div>
+                <div className="flex items-start">
+                  <CheckCircleIcon className="h-5 w-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm">6,521 species database</span>
+                </div>
+                <div className="flex items-start">
+                  <CheckCircleIcon className="h-5 w-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm">Points, levels & achievements</span>
+                </div>
+                <div className="flex items-start">
+                  <CheckCircleIcon className="h-5 w-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm">On-device AI processing</span>
+                </div>
+              </div>
+
+              <div className="bg-gray-100 text-gray-600 px-8 py-4 rounded-2xl text-center w-full">
+                <div className="flex items-center justify-center space-x-3">
+                  <DevicePhoneMobileIcon className="h-7 w-7" />
+                  <div className="text-left">
+                    <div className="text-xs">Coming Soon to the</div>
+                    <div className="text-lg font-semibold">App Store</div>
+                  </div>
+                </div>
+              </div>
+
+              <p className="text-sm text-gray-500 text-center mt-4">
+                Free • Coming Soon • iOS 18.0+
+              </p>
             </div>
           </div>
         </div>
