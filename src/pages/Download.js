@@ -128,30 +128,30 @@ const Download = () => {
                   className="w-24 h-24 rounded-2xl shadow-lg mb-4"
                 />
                 <h2 className="text-3xl font-bold text-gray-900 mb-2">Bird Chatter</h2>
-                <p className="text-lg text-green-600 font-semibold mb-4">Real-Time Bird Sound ID</p>
+                <p className="text-lg text-green-600 font-semibold mb-4">Identify 6,500+ Birds. Earn Points. Climb the Leaderboard.</p>
               </div>
 
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Identify bird species from sounds in real-time using Cornell Lab's BirdNET AI.
-                Record, detect, and track 6,521 species with gamification and achievements.
+                Tap. Listen. Compete. Bird Chatter turns your iPhone into a real-time bird identification
+                machine. Every bird you detect earns points — and the rarer the find, the bigger the reward.
               </p>
 
               <div className="space-y-3 mb-8">
                 <div className="flex items-start">
                   <CheckCircleIcon className="h-5 w-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700 text-sm">Real-time species detection</span>
+                  <span className="text-gray-700 text-sm">Live species detection with points scoring</span>
                 </div>
                 <div className="flex items-start">
                   <CheckCircleIcon className="h-5 w-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700 text-sm">6,521 species database</span>
+                  <span className="text-gray-700 text-sm">Compete on county, state, country & world leaderboards</span>
                 </div>
                 <div className="flex items-start">
                   <CheckCircleIcon className="h-5 w-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700 text-sm">Points, levels & achievements</span>
+                  <span className="text-gray-700 text-sm">Top 10 badges, life list tracking & profile stats</span>
                 </div>
                 <div className="flex items-start">
                   <CheckCircleIcon className="h-5 w-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700 text-sm">On-device AI processing</span>
+                  <span className="text-gray-700 text-sm">100% on-device — no internet, no uploads, total privacy</span>
                 </div>
               </div>
 
