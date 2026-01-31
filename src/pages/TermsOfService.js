@@ -8,7 +8,7 @@ const TermsOfService = () => {
           <h1 className="text-3xl font-bold text-gray-900 mb-8">Terms of Service</h1>
           <div className="prose prose-lg max-w-none">
             <p className="text-gray-600 mb-6">
-              <strong>Last updated:</strong> January 2025
+              <strong>Last updated:</strong> January 2026
             </p>
 
             <section className="mb-8">

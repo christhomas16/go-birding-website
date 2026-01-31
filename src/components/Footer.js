@@ -38,7 +38,7 @@ const Footer = () => {
               Voice-powered search, complete privacy with offline-capable AI, and over 19,200 curated birding hotspots.
             </p>
             <p className="text-sm text-gray-400">
-              © 2025 Go Birding AI. All rights reserved.
+              © 2026 Go Birding AI. All rights reserved.
             </p>
           </div>
 
