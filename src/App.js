@@ -7,6 +7,7 @@ import Features from './pages/Features';
 import About from './pages/About';
 import Download from './pages/Download';
 import BirdChatter from './pages/BirdChatter';
+import BirdChatterSupport from './pages/BirdChatterSupport';
 import TermsOfService from './pages/TermsOfService';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 
@@ -22,6 +23,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/download" element={<Download />} />
             <Route path="/bird-chatter" element={<BirdChatter />} />
+            <Route path="/bird-chatter/support" element={<BirdChatterSupport />} />
             <Route path="/terms" element={<TermsOfService />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
           </Routes>

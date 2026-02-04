@@ -499,6 +499,15 @@ const BirdChatter = () => {
           <p className="text-green-200 mt-4 text-sm">
             Free on the App Store. Requires iOS 18.0+ with microphone access.
           </p>
+          <p className="text-green-200 mt-6 text-base">
+            Need help? Visit our{' '}
+            <button
+              onClick={() => handleNavigation('/bird-chatter/support')}
+              className="text-white font-semibold hover:underline"
+            >
+              Support Page
+            </button>
+          </p>
         </div>
       </section>
     </div>
