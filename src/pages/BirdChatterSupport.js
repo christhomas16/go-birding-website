@@ -61,7 +61,7 @@ const BirdChatterSupport = () => {
       },
       {
         question: 'Do I need to create an account?',
-        answer: 'No account is required! Bird Chatter works completely on-device with no cloud services. Your leaderboard rankings are tied to your Apple ID through iCloud, but no personal data is collected or stored on our servers.'
+        answer: 'To participate in leaderboards, you need to sign in with Google or Apple. All bird detection works offline without an account, but signing in lets you compete on leaderboards and sync your stats across devices via Firebase.'
       },
       {
         question: 'How much does Bird Chatter cost?',
@@ -71,11 +71,11 @@ const BirdChatterSupport = () => {
     usingTheApp: [
       {
         question: 'What do the different point values mean?',
-        answer: 'Points are awarded based on how rare a detection is for you: World Lifer (first time ever) = 150 points, Country Lifer = 100 points, State Lifer = 75 points, County Lifer = 50 points, and Repeat detections = 10 points each.'
+        answer: 'Points are awarded based on how rare a detection is for you: World Lifer (first time ever) = 50-100 points plus rarity bonus, Country Lifer = 25-50 points, State Lifer = 10-25 points, County Lifer = 5-10 points, Year Lifer = 10 bonus points, and Repeat detections = 1 point minimum. Rare species earn additional points based on their regional occurrence probability.'
       },
       {
         question: 'How do leaderboards work?',
-        answer: 'Leaderboards rank you against other birders at four levels: County, State, Country, and World. Rankings are based on total points earned. Leaderboards reset every January 1st, giving everyone a fresh start each year.'
+        answer: 'Leaderboards rank you against other birders at four levels: County, State, Country, and World. Rankings are based on total points earned. Each level has both all-time and yearly leaderboards, with yearly boards resetting every January 1st. Your stats sync online via Firebase when you have an internet connection.'
       },
       {
         question: 'What are Top 10 badges?',
@@ -101,7 +101,7 @@ const BirdChatterSupport = () => {
     technical: [
       {
         question: 'Why does Bird Chatter need microphone access?',
-        answer: 'Microphone access is required to listen to bird sounds in real time. All audio processing happens entirely on your device using on-device AI. No audio is recorded, stored, or uploaded to any server.'
+        answer: 'Microphone access is required to record bird sounds for identification. All audio processing happens entirely on your device using on-device AI. Audio recordings are stored locally on your device and are never uploaded to any server.'
       },
       {
         question: 'Why does Bird Chatter need location access?',
@@ -109,7 +109,7 @@ const BirdChatterSupport = () => {
       },
       {
         question: 'Is my data private?',
-        answer: 'Yes, 100%. All AI processing happens on your device. No audio is recorded. No detections are uploaded. No personal data is collected. Your life list and stats are stored locally on your device and synced via iCloud if enabled.'
+        answer: 'Audio processing is completely private and happens entirely on your device. Audio recordings stay on your device and are never uploaded. Your leaderboard stats (points, species counts, location region) and life list are stored in Firebase to enable online leaderboards. You can delete all your online data anytime from the Profile page in the app.'
       },
       {
         question: 'Does Bird Chatter work offline?',
@@ -356,15 +356,15 @@ const BirdChatterSupport = () => {
               <ul className="space-y-2 text-gray-600 text-sm">
                 <li className="flex items-start">
                   <span className="text-green-600 mr-2">•</span>
-                  <span>All processing is on-device</span>
+                  <span>All AI processing is on-device</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-600 mr-2">•</span>
-                  <span>No audio recording or uploads</span>
+                  <span>Audio stays on your device</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-600 mr-2">•</span>
-                  <span>No personal data collection</span>
+                  <span>Delete data anytime from Profile</span>
                 </li>
               </ul>
             </div>
