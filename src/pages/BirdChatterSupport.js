@@ -71,7 +71,7 @@ const BirdChatterSupport = () => {
     usingTheApp: [
       {
         question: 'What do the different point values mean?',
-        answer: 'Points are awarded based on how rare a detection is for you: World Lifer (first time ever) = 50-100 points plus rarity bonus, Country Lifer = 25-50 points, State Lifer = 10-25 points, County Lifer = 5-10 points, Year Lifer = 10 bonus points, and Repeat detections = 1 point minimum. Rare species earn additional points based on their regional occurrence probability.'
+        answer: 'Points are awarded based on how rare a detection is for you: World Lifer (first time ever) = 150 points, Country Lifer = 100 points, State Lifer = 75 points, County Lifer = 50 points, Year Lifer bonus = 50 points (stacks with any tier), and Repeat detections = 10 points. A World Lifer that\'s also your first this year earns 200 points total!'
       },
       {
         question: 'How do leaderboards work?',

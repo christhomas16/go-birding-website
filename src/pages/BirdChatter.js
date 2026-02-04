@@ -78,7 +78,7 @@ const BirdChatter = () => {
     {
       icon: SparklesIcon,
       title: 'Lifer Bonuses',
-      description: 'First-time species earn big points: World Lifer = 50-100+ pts with rarity bonus. Country = 25-50. State = 10-25. County = 5-10. Repeats = 1 pt minimum.'
+      description: 'World Lifer = 150 pts. Country = 100. State = 75. County = 50. Year bonus = +50 (stacks). Repeats = 10 pts each.'
     },
     {
       icon: ChartBarIcon,
@@ -252,7 +252,7 @@ const BirdChatter = () => {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Collect Points</h3>
               <p className="text-gray-600">
-                Watch species names and points roll in live. First-time species earn big bonuses, with rare birds earning even more. Repeats still add to your total.
+                Watch species names and points roll in live. World Lifers earn 150 pts, Country 100, State 75, County 50. Year bonus adds +50. Repeats still earn 10 each.
               </p>
             </div>
 
@@ -342,30 +342,30 @@ const BirdChatter = () => {
               <div className="space-y-4">
                 <div className="flex justify-between items-center border-b border-gray-200 pb-3">
                   <span className="text-gray-700">World Lifer</span>
-                  <span className="text-green-600 font-semibold">50-100+ pts</span>
+                  <span className="text-green-600 font-semibold">+150 pts</span>
                 </div>
                 <div className="flex justify-between items-center border-b border-gray-200 pb-3">
                   <span className="text-gray-700">Country Lifer</span>
-                  <span className="text-green-600 font-semibold">25-50 pts</span>
+                  <span className="text-green-600 font-semibold">+100 pts</span>
                 </div>
                 <div className="flex justify-between items-center border-b border-gray-200 pb-3">
                   <span className="text-gray-700">State Lifer</span>
-                  <span className="text-blue-600 font-semibold">10-25 pts</span>
+                  <span className="text-blue-600 font-semibold">+75 pts</span>
                 </div>
                 <div className="flex justify-between items-center border-b border-gray-200 pb-3">
                   <span className="text-gray-700">County Lifer</span>
-                  <span className="text-blue-600 font-semibold">5-10 pts</span>
+                  <span className="text-blue-600 font-semibold">+50 pts</span>
                 </div>
                 <div className="flex justify-between items-center border-b border-gray-200 pb-3">
-                  <span className="text-gray-700">Year Lifer</span>
-                  <span className="text-blue-600 font-semibold">+10 bonus</span>
+                  <span className="text-gray-700">Year Lifer Bonus</span>
+                  <span className="text-blue-600 font-semibold">+50 pts</span>
                 </div>
                 <div className="flex justify-between items-center pb-3">
                   <span className="text-gray-700">Repeat Detection</span>
-                  <span className="text-gray-500 font-semibold">1+ pts</span>
+                  <span className="text-gray-500 font-semibold">+10 pts</span>
                 </div>
                 <div className="mt-4 pt-4 border-t border-gray-200">
-                  <p className="text-sm text-gray-600 text-center">Rare species earn bonus points based on regional occurrence</p>
+                  <p className="text-sm text-gray-600 text-center">Year bonus stacks with lifer tiers (e.g., World + Year = 200 pts)</p>
                 </div>
               </div>
             </div>
