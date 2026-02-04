@@ -443,7 +443,7 @@ const BirdChatterSupport = () => {
               </button>
               {' '}for app information or{' '}
               <button
-                onClick={() => handleNavigation('/download')}
+                onClick={() => handleNavigation('/bird-chatter/download')}
                 className="text-green-400 hover:text-green-300 font-semibold"
               >
                 Download

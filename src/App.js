@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import Header from './components/Header';
 import BirdChatterHeader from './components/BirdChatterHeader';
 import Footer from './components/Footer';
+import BirdChatterFooter from './components/BirdChatterFooter';
 import Home from './pages/Home';
 import Features from './pages/Features';
 import About from './pages/About';
@@ -33,7 +34,7 @@ function AppContent() {
           <Route path="/privacy" element={<PrivacyPolicy />} />
         </Routes>
       </main>
-      <Footer />
+      {isBirdChatterRoute ? <BirdChatterFooter /> : <Footer />}
     </div>
   );
 }
