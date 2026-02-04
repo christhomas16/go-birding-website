@@ -5,7 +5,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 // Custom hook for smooth scrolling to top
 const useScrollToTop = () => {
   const navigate = useNavigate();
-  
+
   const navigateWithScroll = (path) => {
     navigate(path);
     // Use setTimeout to ensure navigation completes before scrolling
@@ -16,20 +16,19 @@ const useScrollToTop = () => {
       });
     }, 100);
   };
-  
+
   return navigateWithScroll;
 };
 
-const Header = () => {
+const BirdChatterHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
   const navigateWithScroll = useScrollToTop();
 
   const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'Features', href: '/features' },
-    { name: 'About', href: '/about' },
-    { name: 'Download', href: '/download' },
+    { name: 'Home', href: '/bird-chatter' },
+    { name: 'Support', href: '/bird-chatter/support' },
+    { name: 'Download', href: '/bird-chatter/download' },
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -46,18 +45,18 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center">
-            <button 
-              onClick={() => handleNavigation('/')}
+            <button
+              onClick={() => handleNavigation('/bird-chatter')}
               className="flex items-center space-x-3 hover:opacity-80 transition-opacity duration-200"
             >
-              <img 
-                src="/logo.png" 
-                alt="Go Birding AI" 
+              <img
+                src="/birdchatter/AppIcon.png"
+                alt="Bird Chatter"
                 className="h-10 w-10 rounded-lg shadow-sm"
               />
               <div>
-                <h1 className="text-xl font-bold text-gray-900">Go Birding AI</h1>
-                <p className="text-xs text-gray-600">Your AI-Powered Birding Companion</p>
+                <h1 className="text-xl font-bold text-gray-900">Bird Chatter</h1>
+                <p className="text-xs text-green-600">Tap. Listen. Compete.</p>
               </div>
             </button>
           </div>
@@ -70,8 +69,8 @@ const Header = () => {
                 onClick={() => handleNavigation(item.href)}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
                   isActive(item.href)
-                    ? 'text-primary-600 bg-primary-50'
-                    : 'text-gray-700 hover:text-primary-600 hover:bg-gray-50'
+                    ? 'text-green-600 bg-green-50'
+                    : 'text-gray-700 hover:text-green-600 hover:bg-gray-50'
                 }`}
               >
                 {item.name}
@@ -82,8 +81,8 @@ const Header = () => {
           {/* Download Button */}
           <div className="hidden md:block">
             <button
-              onClick={() => handleNavigation('/download')}
-              className="bg-primary-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-primary-700 transition-colors duration-200 shadow-md hover:shadow-lg"
+              onClick={() => handleNavigation('/bird-chatter/download')}
+              className="bg-green-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-green-700 transition-colors duration-200 shadow-md hover:shadow-lg"
             >
               Download App
             </button>
@@ -93,7 +92,7 @@ const Header = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-primary-600 focus:outline-none focus:text-primary-600"
+              className="text-gray-700 hover:text-green-600 focus:outline-none focus:text-green-600"
             >
               {isMenuOpen ? (
                 <XMarkIcon className="h-6 w-6" />
@@ -114,16 +113,16 @@ const Header = () => {
                   onClick={() => handleNavigation(item.href)}
                   className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
                     isActive(item.href)
-                      ? 'text-primary-600 bg-primary-50'
-                      : 'text-gray-700 hover:text-primary-600 hover:bg-gray-50'
+                      ? 'text-green-600 bg-green-50'
+                      : 'text-gray-700 hover:text-green-600 hover:bg-gray-50'
                   }`}
                 >
                   {item.name}
                 </button>
               ))}
               <button
-                onClick={() => handleNavigation('/download')}
-                className="block w-full text-center bg-primary-600 text-white px-3 py-2 rounded-md text-base font-medium hover:bg-primary-700 transition-colors duration-200 mt-4"
+                onClick={() => handleNavigation('/bird-chatter/download')}
+                className="block w-full text-center bg-green-600 text-white px-3 py-2 rounded-md text-base font-medium hover:bg-green-700 transition-colors duration-200 mt-4"
               >
                 Download App
               </button>
@@ -135,4 +134,4 @@ const Header = () => {
   );
 };
 
-export default Header; 
+export default BirdChatterHeader;

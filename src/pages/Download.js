@@ -53,16 +53,15 @@ const Download = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Download Our Apps
+              Download Go Birding AI
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Explore our family of AI-powered birding apps for iOS. Each app brings unique features to enhance your birding experience.
+              AI-powered birding location discovery. Voice search for 19,200+ hotspots with complete privacy.
             </p>
           </div>
 
-          {/* Two App Cards */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Go Birding AI Card */}
+          {/* Single App Card */}
+          <div className="max-w-2xl mx-auto">
             <div className="bg-white rounded-3xl shadow-2xl p-8 lg:p-10">
               <div className="flex flex-col items-center text-center mb-6">
                 <img
@@ -116,57 +115,6 @@ const Download = () => {
 
               <p className="text-sm text-gray-500 text-center mt-4">
                 $4.99 • iOS 18.0+
-              </p>
-            </div>
-
-            {/* Bird Chatter Card */}
-            <div className="bg-white rounded-3xl shadow-2xl p-8 lg:p-10">
-              <div className="flex flex-col items-center text-center mb-6">
-                <img
-                  src="/birdchatter/AppIcon.png"
-                  alt="Bird Chatter"
-                  className="w-24 h-24 rounded-2xl shadow-lg mb-4"
-                />
-                <h2 className="text-3xl font-bold text-gray-900 mb-2">Bird Chatter</h2>
-                <p className="text-lg text-green-600 font-semibold mb-4">Identify 6,500+ Birds. Earn Points. Climb the Leaderboard.</p>
-              </div>
-
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                Tap. Listen. Compete. Bird Chatter turns your iPhone into a real-time bird identification
-                machine. Every bird you detect earns points — and the rarer the find, the bigger the reward.
-              </p>
-
-              <div className="space-y-3 mb-8">
-                <div className="flex items-start">
-                  <CheckCircleIcon className="h-5 w-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700 text-sm">Live species detection with points scoring</span>
-                </div>
-                <div className="flex items-start">
-                  <CheckCircleIcon className="h-5 w-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700 text-sm">Compete on county, state, country & world leaderboards</span>
-                </div>
-                <div className="flex items-start">
-                  <CheckCircleIcon className="h-5 w-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700 text-sm">Top 10 badges, life list tracking & profile stats</span>
-                </div>
-                <div className="flex items-start">
-                  <CheckCircleIcon className="h-5 w-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700 text-sm">100% on-device — no internet, no uploads, total privacy</span>
-                </div>
-              </div>
-
-              <div className="bg-gray-100 text-gray-600 px-8 py-4 rounded-2xl text-center w-full">
-                <div className="flex items-center justify-center space-x-3">
-                  <DevicePhoneMobileIcon className="h-7 w-7" />
-                  <div className="text-left">
-                    <div className="text-xs">Coming Soon to the</div>
-                    <div className="text-lg font-semibold">App Store</div>
-                  </div>
-                </div>
-              </div>
-
-              <p className="text-sm text-gray-500 text-center mt-4">
-                Free • Coming Soon • iOS 18.0+
               </p>
             </div>
           </div>
