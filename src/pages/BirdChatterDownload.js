@@ -253,7 +253,7 @@ const BirdChatterDownload = () => {
 
             <div className="bg-white p-6 rounded-xl shadow-md">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">Do you collect my birding data?</h3>
-              <p className="text-gray-600">No. All AI processing happens entirely on your device. We don't record audio, collect detections, store locations, or transmit any personal data.</p>
+              <p className="text-gray-600">Audio stays on your device and is never uploaded. To enable leaderboards, we store your stats (points, species counts, regional location like county/state) and life list in Firebase. You can delete all your data anytime from the Profile page.</p>
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow-md">
