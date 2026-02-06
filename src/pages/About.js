@@ -43,9 +43,9 @@ const About = () => {
 
   const stats = [
     { number: '19,200+', label: 'Birding Locations' },
-    { number: '50', label: 'US States Covered' },
+    { number: '6,500+', label: 'Bird Species Detected' },
     { number: '2', label: 'AI-Powered Apps' },
-    { number: '1,000+', label: 'Bird Species Detected' }
+    { number: '100%', label: 'On-Device AI' }
   ];
 
   return (
@@ -64,15 +64,22 @@ const About = () => {
                 From finding the perfect birding spot to identifying birds by sound, our apps harness the
                 latest in artificial intelligence.
               </p>
-              <div className="flex items-center space-x-4">
-                <img
-                  src="/logo.png"
-                  alt="gobirding.ai"
-                  className="h-16 w-16 rounded-xl shadow-md"
-                />
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900">gobirding.ai</h3>
-                  <p className="text-gray-600">AI-Powered Birding Apps</p>
+              <div className="flex items-center space-x-6">
+                <div className="flex items-center space-x-3">
+                  <img
+                    src="/logo.png"
+                    alt="Go Birding AI"
+                    className="h-12 w-12 rounded-xl shadow-sm"
+                  />
+                  <span className="text-sm font-semibold text-gray-700">Go Birding AI</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <img
+                    src="/birdchatter/AppIcon.png"
+                    alt="Bird Chatter"
+                    className="h-12 w-12 rounded-xl shadow-sm"
+                  />
+                  <span className="text-sm font-semibold text-gray-700">Bird Chatter</span>
                 </div>
               </div>
             </div>
@@ -241,31 +248,30 @@ const About = () => {
 
           <div className="prose prose-xl mx-auto text-gray-600">
             <p className="mb-6">
-              gobirding.ai started with a simple frustration: finding good birding locations required
-              hours of research, scrolling through websites, and often ending up at crowded or
-              disappointing spots. As passionate birders ourselves, we knew there had to be a better way.
+              gobirding.ai started with a simple idea: what if AI could make birding better? As passionate
+              birders ourselves, we saw two challenges that technology could solve — finding great birding
+              locations and identifying the birds you encounter.
             </p>
 
             <p className="mb-6">
-              Our first app, Go Birding AI, was born when we realized that modern AI could understand natural language
-              queries about birding needs. Instead of searching through lists and maps, what if you
-              could simply say "find me a quiet wetland spot in Ocean County" and get intelligent,
-              personalized recommendations? We spent months curating over 19,200 birding locations across
-              the US and Canada, integrating real-time weather data, and training our AI to understand
-              birding terminology and preferences.
+              Go Birding AI was built to solve the first challenge. Finding good birding spots used to require
+              hours of research, scrolling through websites, and often ending up at crowded or disappointing
+              locations. We curated over 19,200 birding locations across the US and Canada, integrated
+              real-time weather data, and built voice-powered AI search so you can simply say what you're
+              looking for.
             </p>
 
             <p className="mb-6">
-              Then came Bird Chatter - our answer to a different challenge. We wanted to bring the
-              excitement of competition to bird identification. Using on-device AI that recognizes bird
-              sounds in real time, Bird Chatter turns every birding outing into an adventure where you
-              can build your life list, earn points for new discoveries, and compete with birders around
-              the world.
+              Bird Chatter tackles the second challenge with a competitive twist. Using on-device AI
+              that recognizes over 6,500 bird species by sound in real time, Bird Chatter turns every
+              birding outing into an adventure. Build your life list, earn points for new discoveries
+              at the county, state, country, and world level, and compete with birders everywhere
+              through leaderboards and badges.
             </p>
 
             <p>
-              Today, gobirding.ai represents the future of birding technology: intelligent, private,
-              and designed by birders who understand that the best technology enhances rather than
+              Together, these apps represent our vision for the future of birding technology: intelligent,
+              private, and designed by birders who understand that the best technology enhances rather than
               replaces the natural experience of watching birds in their habitat.
             </p>
           </div>
