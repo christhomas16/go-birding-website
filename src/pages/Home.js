@@ -9,49 +9,6 @@ import {
   DevicePhoneMobileIcon
 } from '@heroicons/react/24/outline';
 
-const BirdSilhouette1 = ({ className, style }) => (
-  <svg viewBox="0 0 80 40" className={className} style={style}>
-    {/* Soaring bird with spread wings, visible body and tail */}
-    <path
-      d="M40 22 C38 22 35 21 32 20 C28 18 20 12 12 6 C10 4 8 3 6 3 C4 3 2 4 2 5 C2 6 4 8 8 10 C14 15 22 19 30 21 L28 22 C24 22 18 23 14 25 C12 26 10 27 10 28 C10 29 12 29 14 28 C18 26 24 24 30 23 L40 22 Z M40 22 C42 22 45 21 48 20 C52 18 60 12 68 6 C70 4 72 3 74 3 C76 3 78 4 78 5 C78 6 76 8 72 10 C66 15 58 19 50 21 L52 22 C56 22 62 23 66 25 C68 26 70 27 70 28 C70 29 68 29 66 28 C62 26 56 24 50 23 L40 22 Z M40 22 L40 24 C40 26 39 28 37 30 C36 31 35 32 34 32 C33 32 34 31 35 30 C37 28 38 26 38 24 L40 22 Z"
-      fill="currentColor"
-    />
-  </svg>
-);
-
-const BirdSilhouette2 = ({ className, style }) => (
-  <svg viewBox="0 0 80 40" className={className} style={style}>
-    {/* Bird with wings angled up - different flight pose */}
-    <path
-      d="M40 24 C37 24 33 22 28 18 C22 13 16 8 10 4 C8 2 6 2 5 3 C4 4 5 6 8 8 C14 13 24 19 34 23 L32 24 C28 25 22 27 18 29 C16 30 16 31 17 31 C18 31 20 30 24 28 C28 26 32 25 36 24 L40 24 Z M40 24 C43 24 47 22 52 18 C58 13 64 8 70 4 C72 2 74 2 75 3 C76 4 75 6 72 8 C66 13 56 19 46 23 L48 24 C52 25 58 27 62 29 C64 30 64 31 63 31 C62 31 60 30 56 28 C52 26 48 25 44 24 L40 24 Z M40 24 L41 27 C41 29 40 32 38 34 C37 35 36 36 36 35 C36 34 37 32 38 30 C39 28 40 26 40 24 Z"
-      fill="currentColor"
-    />
-  </svg>
-);
-
-const BirdSilhouette3 = ({ className, style }) => (
-  <svg viewBox="0 0 80 40" className={className} style={style}>
-    {/* Hawk/eagle style - broader wings */}
-    <path
-      d="M40 20 C36 20 30 18 24 14 C18 10 12 6 6 3 C4 2 2 2 1 3 C0 4 1 6 4 8 C10 13 20 18 32 20 C28 21 22 23 16 26 C14 27 13 28 14 29 C15 29 17 28 20 27 C26 24 32 22 38 21 L40 20 Z M40 20 C44 20 50 18 56 14 C62 10 68 6 74 3 C76 2 78 2 79 3 C80 4 79 6 76 8 C70 13 60 18 48 20 C52 21 58 23 64 26 C66 27 67 28 66 29 C65 29 63 28 60 27 C54 24 48 22 42 21 L40 20 Z M40 20 L40 23 C40 26 39 29 37 32 C36 33 35 33 35 32 C35 31 36 28 38 25 C39 23 40 21 40 20 Z"
-      fill="currentColor"
-    />
-  </svg>
-);
-
-const birdComponents = [BirdSilhouette1, BirdSilhouette2, BirdSilhouette3];
-
-const birds = [
-  { variant: 0, size: 'w-12', duration: '18s', delay: '0s', top: '12%', opacity: 0.15 },
-  { variant: 1, size: 'w-9', duration: '22s', delay: '3s', top: '25%', opacity: 0.1 },
-  { variant: 2, size: 'w-14', duration: '15s', delay: '7s', top: '45%', opacity: 0.12 },
-  { variant: 0, size: 'w-8', duration: '25s', delay: '2s', top: '60%', opacity: 0.08 },
-  { variant: 1, size: 'w-11', duration: '20s', delay: '10s', top: '32%', opacity: 0.11 },
-  { variant: 2, size: 'w-9', duration: '24s', delay: '5s', top: '72%', opacity: 0.07 },
-  { variant: 0, size: 'w-13', duration: '16s', delay: '12s', top: '18%', opacity: 0.13 },
-  { variant: 1, size: 'w-8', duration: '28s', delay: '8s', top: '52%', opacity: 0.09 },
-];
-
 const Home = () => {
   const navigate = useNavigate();
 
@@ -67,40 +24,10 @@ const Home = () => {
 
   return (
     <div className="bg-white">
-      {/* Flying birds animation */}
-      <style>{`
-        @keyframes flyAcross {
-          0% { transform: translateX(-100px) translateY(0); }
-          25% { transform: translateX(25vw) translateY(-8px); }
-          50% { transform: translateX(50vw) translateY(4px); }
-          75% { transform: translateX(75vw) translateY(-6px); }
-          100% { transform: translateX(calc(100vw + 100px)) translateY(0); }
-        }
-      `}</style>
-
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
-        {/* Animated flying birds */}
-        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-          {birds.map((bird, i) => {
-            const BirdComponent = birdComponents[bird.variant];
-            return (
-              <BirdComponent
-                key={i}
-                className={`${bird.size} absolute text-gray-900`}
-                style={{
-                  top: bird.top,
-                  opacity: bird.opacity,
-                  animation: `flyAcross ${bird.duration} ${bird.delay} linear infinite`,
-                  left: '-120px',
-                }}
-              />
-            );
-          })}
-        </div>
-
+      <section className="bg-gradient-to-br from-gray-50 to-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
-          <div className="relative z-10 text-center">
+          <div className="text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
               AI-Powered Apps for
               <span className="text-primary-600 block">Birding Enthusiasts</span>
