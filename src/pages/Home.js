@@ -24,81 +24,48 @@ const Home = () => {
 
   return (
     <div className="bg-white">
-      {/* Sound wave animation */}
+      {/* Audio waveform animation */}
       <style>{`
-        @keyframes waveExpand {
-          0% { transform: scale(0.4); opacity: 0.4; }
-          100% { transform: scale(1); opacity: 0; }
+        @keyframes waveBar {
+          0%, 100% { transform: scaleY(var(--wave-min)); }
+          50% { transform: scaleY(var(--wave-max)); }
         }
       `}</style>
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
-        {/* Sound wave arcs */}
-        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-          {/* Left wave source - facing right */}
-          <svg className="absolute" style={{ left: '5%', top: '15%', width: 200, height: 200 }}>
-            <g style={{ transformOrigin: '20px 100px', animation: 'waveExpand 4s 0s ease-out infinite' }}>
-              <path d="M20 40 Q80 100 20 160" fill="none" stroke="#93c5fd" strokeWidth="1.5" />
-              <path d="M20 55 Q65 100 20 145" fill="none" stroke="#93c5fd" strokeWidth="1.5" />
-              <path d="M20 70 Q50 100 20 130" fill="none" stroke="#93c5fd" strokeWidth="1.5" />
-            </g>
-          </svg>
-          <svg className="absolute" style={{ left: '5%', top: '15%', width: 200, height: 200 }}>
-            <g style={{ transformOrigin: '20px 100px', animation: 'waveExpand 4s 2s ease-out infinite' }}>
-              <path d="M20 40 Q80 100 20 160" fill="none" stroke="#93c5fd" strokeWidth="1.5" />
-              <path d="M20 55 Q65 100 20 145" fill="none" stroke="#93c5fd" strokeWidth="1.5" />
-              <path d="M20 70 Q50 100 20 130" fill="none" stroke="#93c5fd" strokeWidth="1.5" />
-            </g>
-          </svg>
-
-          {/* Right wave source - facing left */}
-          <svg className="absolute" style={{ right: '3%', top: '35%', width: 220, height: 220 }}>
-            <g style={{ transformOrigin: '200px 110px', animation: 'waveExpand 5s 0.5s ease-out infinite' }}>
-              <path d="M200 40 Q130 110 200 180" fill="none" stroke="#86efac" strokeWidth="1.5" />
-              <path d="M200 58 Q148 110 200 162" fill="none" stroke="#86efac" strokeWidth="1.5" />
-              <path d="M200 76 Q165 110 200 144" fill="none" stroke="#86efac" strokeWidth="1.5" />
-            </g>
-          </svg>
-          <svg className="absolute" style={{ right: '3%', top: '35%', width: 220, height: 220 }}>
-            <g style={{ transformOrigin: '200px 110px', animation: 'waveExpand 5s 3s ease-out infinite' }}>
-              <path d="M200 40 Q130 110 200 180" fill="none" stroke="#86efac" strokeWidth="1.5" />
-              <path d="M200 58 Q148 110 200 162" fill="none" stroke="#86efac" strokeWidth="1.5" />
-              <path d="M200 76 Q165 110 200 144" fill="none" stroke="#86efac" strokeWidth="1.5" />
-            </g>
-          </svg>
-
-          {/* Top-center wave source - facing down */}
-          <svg className="absolute" style={{ left: '60%', top: '-10px', width: 180, height: 160 }}>
-            <g style={{ transformOrigin: '90px 15px', animation: 'waveExpand 3.5s 1s ease-out infinite' }}>
-              <path d="M30 15 Q90 90 150 15" fill="none" stroke="#bfdbfe" strokeWidth="1.5" />
-              <path d="M45 15 Q90 72 135 15" fill="none" stroke="#bfdbfe" strokeWidth="1.5" />
-              <path d="M60 15 Q90 54 120 15" fill="none" stroke="#bfdbfe" strokeWidth="1.5" />
-            </g>
-          </svg>
-          <svg className="absolute" style={{ left: '60%', top: '-10px', width: 180, height: 160 }}>
-            <g style={{ transformOrigin: '90px 15px', animation: 'waveExpand 3.5s 2.8s ease-out infinite' }}>
-              <path d="M30 15 Q90 90 150 15" fill="none" stroke="#bfdbfe" strokeWidth="1.5" />
-              <path d="M45 15 Q90 72 135 15" fill="none" stroke="#bfdbfe" strokeWidth="1.5" />
-              <path d="M60 15 Q90 54 120 15" fill="none" stroke="#bfdbfe" strokeWidth="1.5" />
-            </g>
-          </svg>
-
-          {/* Bottom-left wave source - facing up-right */}
-          <svg className="absolute" style={{ left: '25%', bottom: '-20px', width: 180, height: 160 }}>
-            <g style={{ transformOrigin: '20px 145px', animation: 'waveExpand 4.5s 0.3s ease-out infinite' }}>
-              <path d="M20 145 Q30 70 100 30" fill="none" stroke="#bbf7d0" strokeWidth="1.5" />
-              <path d="M20 145 Q35 88 85 55" fill="none" stroke="#bbf7d0" strokeWidth="1.5" />
-              <path d="M20 145 Q38 106 70 80" fill="none" stroke="#bbf7d0" strokeWidth="1.5" />
-            </g>
-          </svg>
-          <svg className="absolute" style={{ left: '25%', bottom: '-20px', width: 180, height: 160 }}>
-            <g style={{ transformOrigin: '20px 145px', animation: 'waveExpand 4.5s 2.5s ease-out infinite' }}>
-              <path d="M20 145 Q30 70 100 30" fill="none" stroke="#bbf7d0" strokeWidth="1.5" />
-              <path d="M20 145 Q35 88 85 55" fill="none" stroke="#bbf7d0" strokeWidth="1.5" />
-              <path d="M20 145 Q38 106 70 80" fill="none" stroke="#bbf7d0" strokeWidth="1.5" />
-            </g>
-          </svg>
+        {/* Animated audio waveform bars */}
+        <div className="absolute inset-0 pointer-events-none flex items-center" aria-hidden="true">
+          <div className="w-full flex items-center justify-center gap-[3px] sm:gap-[4px] px-4">
+            {Array.from({ length: 80 }).map((_, i) => {
+              const center = 40;
+              const dist = Math.abs(i - center) / center;
+              const baseHeight = Math.max(0.15, 1 - dist * dist);
+              const variation = Math.sin(i * 0.7) * 0.3 + Math.sin(i * 1.3) * 0.2;
+              const minScale = Math.max(0.1, (baseHeight + variation) * 0.3);
+              const maxScale = Math.max(0.2, (baseHeight + variation) * 1.0);
+              const duration = 1.5 + Math.sin(i * 0.5) * 0.8;
+              const delay = (i * 0.06) % 2;
+              const progress = i / 79;
+              const r = Math.round(59 + progress * (34 - 59));
+              const g = Math.round(130 + progress * (197 - 130));
+              const b = Math.round(246 + progress * (94 - 246));
+              return (
+                <div
+                  key={i}
+                  className="flex-1 max-w-[4px] rounded-full"
+                  style={{
+                    height: '120px',
+                    backgroundColor: `rgba(${r}, ${g}, ${b}, 0.18)`,
+                    '--wave-min': minScale,
+                    '--wave-max': maxScale,
+                    animation: `waveBar ${duration}s ${delay}s ease-in-out infinite`,
+                    transformOrigin: 'center',
+                  }}
+                />
+              );
+            })}
+          </div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
