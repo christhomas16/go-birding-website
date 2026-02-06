@@ -4,10 +4,8 @@ import { useNavigate } from 'react-router-dom';
 const Footer = () => {
   const navigate = useNavigate();
 
-  // Handle navigation with smooth scroll
   const handleNavigation = (path) => {
     navigate(path);
-    // Use setTimeout to ensure navigation completes before scrolling
     setTimeout(() => {
       window.scrollTo({
         top: 0,
@@ -23,55 +21,46 @@ const Footer = () => {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center space-x-3 mb-4">
-              <img 
-                src="/logo.png" 
-                alt="Go Birding AI" 
+              <img
+                src="/logo.png"
+                alt="gobirding.ai"
                 className="h-8 w-8 rounded-lg"
               />
               <div>
-                <h3 className="text-lg font-bold">Go Birding AI</h3>
-                <p className="text-sm text-gray-400">Your AI-Powered Birding Companion</p>
+                <h3 className="text-lg font-bold">gobirding.ai</h3>
+                <p className="text-sm text-gray-400">AI-Powered Birding Apps</p>
               </div>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
-              Discover amazing birding locations across all 50 US states and 7 Canadian provinces with the power of AI. 
-              Voice-powered search, complete privacy with offline-capable AI, and over 19,200 curated birding hotspots.
+              Two powerful iOS apps for birding enthusiasts. Find locations with voice-powered AI or identify birds by sound and compete on leaderboards.
             </p>
             <p className="text-sm text-gray-400">
-              © 2026 Go Birding AI. All rights reserved.
+              © 2026 gobirding.ai. All rights reserved.
             </p>
           </div>
 
-          {/* Navigation Links */}
+          {/* Our Apps */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Navigation</h4>
+            <h4 className="text-lg font-semibold mb-4">Our Apps</h4>
             <ul className="space-y-2">
               <li>
-                <button 
-                  onClick={() => handleNavigation('/')}
+                <button
+                  onClick={() => handleNavigation('/go-birding-ai')}
                   className="text-gray-300 hover:text-white transition-colors duration-200 text-left"
                 >
-                  Home
+                  Go Birding AI
                 </button>
               </li>
               <li>
-                <button 
-                  onClick={() => handleNavigation('/features')}
+                <button
+                  onClick={() => handleNavigation('/bird-chatter')}
                   className="text-gray-300 hover:text-white transition-colors duration-200 text-left"
                 >
-                  Features
+                  Bird Chatter
                 </button>
               </li>
               <li>
-                <button 
-                  onClick={() => handleNavigation('/about')}
-                  className="text-gray-300 hover:text-white transition-colors duration-200 text-left"
-                >
-                  About
-                </button>
-              </li>
-              <li>
-                <button 
+                <button
                   onClick={() => handleNavigation('/download')}
                   className="text-gray-300 hover:text-white transition-colors duration-200 text-left"
                 >
@@ -81,12 +70,43 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Legal Links */}
+          {/* Support & About */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Support</h4>
+            <ul className="space-y-2">
+              <li>
+                <button
+                  onClick={() => handleNavigation('/go-birding-ai/support')}
+                  className="text-gray-300 hover:text-white transition-colors duration-200 text-left"
+                >
+                  Go Birding AI Support
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleNavigation('/bird-chatter/support')}
+                  className="text-gray-300 hover:text-white transition-colors duration-200 text-left"
+                >
+                  Bird Chatter Support
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleNavigation('/about')}
+                  className="text-gray-300 hover:text-white transition-colors duration-200 text-left"
+                >
+                  About
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          {/* Legal */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Legal</h4>
             <ul className="space-y-2">
               <li>
-                <button 
+                <button
                   onClick={() => handleNavigation('/terms')}
                   className="text-gray-300 hover:text-white transition-colors duration-200 text-left"
                 >
@@ -94,31 +114,12 @@ const Footer = () => {
                 </button>
               </li>
               <li>
-                <button 
+                <button
                   onClick={() => handleNavigation('/privacy')}
                   className="text-gray-300 hover:text-white transition-colors duration-200 text-left"
                 >
                   Privacy Policy
                 </button>
-              </li>
-            </ul>
-          </div>
-
-          {/* App Info */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">App</h4>
-            <ul className="space-y-2">
-              <li>
-                <span className="text-gray-300">iPhone 11 or newer</span>
-              </li>
-              <li>
-                <span className="text-gray-300">19,200+ Locations</span>
-              </li>
-              <li>
-                <span className="text-gray-300">50 US States + 7 Provinces</span>
-              </li>
-              <li>
-                <span className="text-gray-300">Complete Privacy</span>
               </li>
             </ul>
           </div>
@@ -134,4 +135,4 @@ const Footer = () => {
   );
 };
 
-export default Footer; 
+export default Footer;
