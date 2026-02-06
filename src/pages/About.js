@@ -168,8 +168,8 @@ const About = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
-            <div className="text-center lg:text-left">
-              <SparklesIcon className="h-16 w-16 text-primary-600 mx-auto lg:mx-0 mb-6" />
+            <div className="text-center">
+              <SparklesIcon className="h-16 w-16 text-primary-600 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Innovation</h3>
               <p className="text-gray-600">
                 We harness the latest AI technologies to create intuitive experiences
@@ -184,8 +184,8 @@ const About = () => {
                 lighting conditions at sunrise over a pristine wetland.
               </p>
             </div>
-            <div className="text-center lg:text-right">
-              <ShieldCheckIcon className="h-16 w-16 text-primary-600 mx-auto lg:mx-0 mb-6" />
+            <div className="text-center">
+              <ShieldCheckIcon className="h-16 w-16 text-primary-600 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Privacy</h3>
               <p className="text-gray-600">
                 Both our apps prioritize your privacy with on-device AI processing. Your birding
