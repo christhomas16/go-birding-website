@@ -74,7 +74,7 @@ const Download = () => {
               </a>
 
               <p className="text-sm text-gray-500 text-center mt-4">
-                $4.99 • iPhone 11+ • iOS 18.0+
+                $1.99 • iPhone 11+ • iOS 18.0+
               </p>
             </div>
 
@@ -160,7 +160,7 @@ const Download = () => {
               <tbody className="divide-y divide-gray-200">
                 <tr>
                   <td className="px-6 py-4 text-sm text-gray-700">Price</td>
-                  <td className="px-6 py-4 text-sm text-center text-gray-900 font-medium">$4.99</td>
+                  <td className="px-6 py-4 text-sm text-center text-gray-900 font-medium">$1.99</td>
                   <td className="px-6 py-4 text-sm text-center text-gray-900 font-medium">Free</td>
                 </tr>
                 <tr className="bg-gray-50">
@@ -221,7 +221,7 @@ const Download = () => {
               aria-label="Download Go Birding AI on the App Store"
               className="bg-primary-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-primary-700 transition-colors duration-200 shadow-lg"
             >
-              Go Birding AI — $4.99
+              Go Birding AI — $1.99
             </a>
             <a
               href="https://apps.apple.com/us/app/bird-chatter/id6749836729"

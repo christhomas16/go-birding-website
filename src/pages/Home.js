@@ -136,7 +136,7 @@ const Home = () => {
                 </div>
                 <div className="flex items-center text-sm text-gray-700">
                   <DevicePhoneMobileIcon className="h-5 w-5 text-primary-600 mr-3 flex-shrink-0" />
-                  <span>iPhone 11+ | iOS 18+ | $4.99</span>
+                  <span>iPhone 11+ | iOS 18+ | $1.99</span>
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-3">
@@ -150,7 +150,7 @@ const Home = () => {
                   onClick={() => handleNavigation('/download')}
                   className="border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full text-sm font-semibold hover:bg-primary-50 transition-colors duration-200 text-center"
                 >
-                  Download — $4.99
+                  Download — $1.99
                 </button>
               </div>
             </div>

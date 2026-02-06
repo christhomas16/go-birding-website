@@ -49,7 +49,7 @@ const GoBirdingAISupport = () => {
     gettingStarted: [
       {
         question: 'How much does Go Birding AI cost?',
-        answer: 'Go Birding AI is available for a one-time fee of $4.99 in the App Store. No subscription fees or in-app purchases required.'
+        answer: 'Go Birding AI is available for a one-time fee of $1.99 in the App Store. No subscription fees or in-app purchases required.'
       },
       {
         question: 'What are the system requirements?',

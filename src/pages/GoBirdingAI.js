@@ -144,7 +144,7 @@ const GoBirdingAI = () => {
             Download Now
           </button>
           <p className="text-primary-200 mt-4 text-sm">
-            Starting at $4.99 in the App Store. Requires iOS 18.0+. iPhone 11 or newer recommended.
+            Starting at $1.99 in the App Store. Requires iOS 18.0+. iPhone 11 or newer recommended.
           </p>
           <p className="text-primary-200 mt-6 text-base">
             Need help? Visit our{' '}
