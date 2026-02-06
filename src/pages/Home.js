@@ -9,6 +9,26 @@ import {
   DevicePhoneMobileIcon
 } from '@heroicons/react/24/outline';
 
+const FlyingBird = ({ className, style }) => (
+  <svg viewBox="0 0 40 20" className={className} style={style}>
+    <path
+      d="M20 10 Q15 2 5 5 Q10 8 15 10 Q10 12 5 15 Q15 18 20 10Z M20 10 Q25 2 35 5 Q30 8 25 10 Q30 12 35 15 Q25 18 20 10Z"
+      fill="currentColor"
+    />
+  </svg>
+);
+
+const birds = [
+  { size: 'w-8', duration: '18s', delay: '0s', top: '15%', opacity: 0.12 },
+  { size: 'w-6', duration: '22s', delay: '3s', top: '25%', opacity: 0.08 },
+  { size: 'w-10', duration: '15s', delay: '7s', top: '40%', opacity: 0.1 },
+  { size: 'w-5', duration: '25s', delay: '2s', top: '60%', opacity: 0.07 },
+  { size: 'w-7', duration: '20s', delay: '10s', top: '35%', opacity: 0.09 },
+  { size: 'w-6', duration: '24s', delay: '5s', top: '70%', opacity: 0.06 },
+  { size: 'w-9', duration: '16s', delay: '12s', top: '20%', opacity: 0.11 },
+  { size: 'w-5', duration: '28s', delay: '8s', top: '50%', opacity: 0.07 },
+];
+
 const Home = () => {
   const navigate = useNavigate();
 
@@ -24,10 +44,37 @@ const Home = () => {
 
   return (
     <div className="bg-white">
+      {/* Flying birds animation */}
+      <style>{`
+        @keyframes flyAcross {
+          0% { transform: translateX(-100px) translateY(0); }
+          25% { transform: translateX(25vw) translateY(-8px); }
+          50% { transform: translateX(50vw) translateY(4px); }
+          75% { transform: translateX(75vw) translateY(-6px); }
+          100% { transform: translateX(calc(100vw + 100px)) translateY(0); }
+        }
+      `}</style>
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
+        {/* Animated flying birds */}
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+          {birds.map((bird, i) => (
+            <FlyingBird
+              key={i}
+              className={`${bird.size} absolute text-gray-900`}
+              style={{
+                top: bird.top,
+                opacity: bird.opacity,
+                animation: `flyAcross ${bird.duration} ${bird.delay} linear infinite`,
+                left: '-100px',
+              }}
+            />
+          ))}
+        </div>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
-          <div className="text-center">
+          <div className="relative z-10 text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
               AI-Powered Apps for
               <span className="text-primary-600 block">Birding Enthusiasts</span>
