@@ -126,7 +126,7 @@ const About = () => {
             {/* Bird Chatter */}
             <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl border border-green-100">
               <div className="flex items-center space-x-4 mb-6">
-                <img src="/bird-chatter-icon.png" alt="Bird Chatter" className="h-14 w-14 rounded-xl shadow-sm" />
+                <img src="/birdchatter/AppIcon.png" alt="Bird Chatter" className="h-14 w-14 rounded-xl shadow-sm" />
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900">Bird Chatter</h3>
                   <p className="text-green-600 font-medium">Competitive Bird Identification</p>
