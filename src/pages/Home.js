@@ -24,40 +24,81 @@ const Home = () => {
 
   return (
     <div className="bg-white">
-      {/* Sound wave ripple animation */}
+      {/* Sound wave animation */}
       <style>{`
-        @keyframes ripple {
-          0% { transform: scale(0.3); opacity: 0.35; }
+        @keyframes waveExpand {
+          0% { transform: scale(0.4); opacity: 0.4; }
           100% { transform: scale(1); opacity: 0; }
         }
       `}</style>
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
-        {/* Sound wave ripples */}
+        {/* Sound wave arcs */}
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-          {/* Left ripple source */}
-          <div className="absolute" style={{ left: '10%', top: '30%' }}>
-            <div className="absolute rounded-full border border-primary-400" style={{ width: 200, height: 200, marginLeft: -100, marginTop: -100, animation: 'ripple 4s 0s ease-out infinite' }} />
-            <div className="absolute rounded-full border border-primary-400" style={{ width: 200, height: 200, marginLeft: -100, marginTop: -100, animation: 'ripple 4s 1s ease-out infinite' }} />
-            <div className="absolute rounded-full border border-primary-400" style={{ width: 200, height: 200, marginLeft: -100, marginTop: -100, animation: 'ripple 4s 2s ease-out infinite' }} />
-          </div>
-          {/* Right ripple source */}
-          <div className="absolute" style={{ right: '8%', top: '50%' }}>
-            <div className="absolute rounded-full border border-green-400" style={{ width: 260, height: 260, marginLeft: -130, marginTop: -130, animation: 'ripple 5s 0.5s ease-out infinite' }} />
-            <div className="absolute rounded-full border border-green-400" style={{ width: 260, height: 260, marginLeft: -130, marginTop: -130, animation: 'ripple 5s 2s ease-out infinite' }} />
-            <div className="absolute rounded-full border border-green-400" style={{ width: 260, height: 260, marginLeft: -130, marginTop: -130, animation: 'ripple 5s 3.5s ease-out infinite' }} />
-          </div>
-          {/* Center-top ripple source */}
-          <div className="absolute" style={{ left: '55%', top: '15%' }}>
-            <div className="absolute rounded-full border border-primary-300" style={{ width: 160, height: 160, marginLeft: -80, marginTop: -80, animation: 'ripple 3.5s 1.5s ease-out infinite' }} />
-            <div className="absolute rounded-full border border-primary-300" style={{ width: 160, height: 160, marginLeft: -80, marginTop: -80, animation: 'ripple 3.5s 3s ease-out infinite' }} />
-          </div>
-          {/* Bottom-left ripple source */}
-          <div className="absolute" style={{ left: '30%', bottom: '10%' }}>
-            <div className="absolute rounded-full border border-green-300" style={{ width: 180, height: 180, marginLeft: -90, marginTop: -90, animation: 'ripple 4.5s 0.8s ease-out infinite' }} />
-            <div className="absolute rounded-full border border-green-300" style={{ width: 180, height: 180, marginLeft: -90, marginTop: -90, animation: 'ripple 4.5s 2.8s ease-out infinite' }} />
-          </div>
+          {/* Left wave source - facing right */}
+          <svg className="absolute" style={{ left: '5%', top: '15%', width: 200, height: 200 }}>
+            <g style={{ transformOrigin: '20px 100px', animation: 'waveExpand 4s 0s ease-out infinite' }}>
+              <path d="M20 40 Q80 100 20 160" fill="none" stroke="#93c5fd" strokeWidth="1.5" />
+              <path d="M20 55 Q65 100 20 145" fill="none" stroke="#93c5fd" strokeWidth="1.5" />
+              <path d="M20 70 Q50 100 20 130" fill="none" stroke="#93c5fd" strokeWidth="1.5" />
+            </g>
+          </svg>
+          <svg className="absolute" style={{ left: '5%', top: '15%', width: 200, height: 200 }}>
+            <g style={{ transformOrigin: '20px 100px', animation: 'waveExpand 4s 2s ease-out infinite' }}>
+              <path d="M20 40 Q80 100 20 160" fill="none" stroke="#93c5fd" strokeWidth="1.5" />
+              <path d="M20 55 Q65 100 20 145" fill="none" stroke="#93c5fd" strokeWidth="1.5" />
+              <path d="M20 70 Q50 100 20 130" fill="none" stroke="#93c5fd" strokeWidth="1.5" />
+            </g>
+          </svg>
+
+          {/* Right wave source - facing left */}
+          <svg className="absolute" style={{ right: '3%', top: '35%', width: 220, height: 220 }}>
+            <g style={{ transformOrigin: '200px 110px', animation: 'waveExpand 5s 0.5s ease-out infinite' }}>
+              <path d="M200 40 Q130 110 200 180" fill="none" stroke="#86efac" strokeWidth="1.5" />
+              <path d="M200 58 Q148 110 200 162" fill="none" stroke="#86efac" strokeWidth="1.5" />
+              <path d="M200 76 Q165 110 200 144" fill="none" stroke="#86efac" strokeWidth="1.5" />
+            </g>
+          </svg>
+          <svg className="absolute" style={{ right: '3%', top: '35%', width: 220, height: 220 }}>
+            <g style={{ transformOrigin: '200px 110px', animation: 'waveExpand 5s 3s ease-out infinite' }}>
+              <path d="M200 40 Q130 110 200 180" fill="none" stroke="#86efac" strokeWidth="1.5" />
+              <path d="M200 58 Q148 110 200 162" fill="none" stroke="#86efac" strokeWidth="1.5" />
+              <path d="M200 76 Q165 110 200 144" fill="none" stroke="#86efac" strokeWidth="1.5" />
+            </g>
+          </svg>
+
+          {/* Top-center wave source - facing down */}
+          <svg className="absolute" style={{ left: '60%', top: '-10px', width: 180, height: 160 }}>
+            <g style={{ transformOrigin: '90px 15px', animation: 'waveExpand 3.5s 1s ease-out infinite' }}>
+              <path d="M30 15 Q90 90 150 15" fill="none" stroke="#bfdbfe" strokeWidth="1.5" />
+              <path d="M45 15 Q90 72 135 15" fill="none" stroke="#bfdbfe" strokeWidth="1.5" />
+              <path d="M60 15 Q90 54 120 15" fill="none" stroke="#bfdbfe" strokeWidth="1.5" />
+            </g>
+          </svg>
+          <svg className="absolute" style={{ left: '60%', top: '-10px', width: 180, height: 160 }}>
+            <g style={{ transformOrigin: '90px 15px', animation: 'waveExpand 3.5s 2.8s ease-out infinite' }}>
+              <path d="M30 15 Q90 90 150 15" fill="none" stroke="#bfdbfe" strokeWidth="1.5" />
+              <path d="M45 15 Q90 72 135 15" fill="none" stroke="#bfdbfe" strokeWidth="1.5" />
+              <path d="M60 15 Q90 54 120 15" fill="none" stroke="#bfdbfe" strokeWidth="1.5" />
+            </g>
+          </svg>
+
+          {/* Bottom-left wave source - facing up-right */}
+          <svg className="absolute" style={{ left: '25%', bottom: '-20px', width: 180, height: 160 }}>
+            <g style={{ transformOrigin: '20px 145px', animation: 'waveExpand 4.5s 0.3s ease-out infinite' }}>
+              <path d="M20 145 Q30 70 100 30" fill="none" stroke="#bbf7d0" strokeWidth="1.5" />
+              <path d="M20 145 Q35 88 85 55" fill="none" stroke="#bbf7d0" strokeWidth="1.5" />
+              <path d="M20 145 Q38 106 70 80" fill="none" stroke="#bbf7d0" strokeWidth="1.5" />
+            </g>
+          </svg>
+          <svg className="absolute" style={{ left: '25%', bottom: '-20px', width: 180, height: 160 }}>
+            <g style={{ transformOrigin: '20px 145px', animation: 'waveExpand 4.5s 2.5s ease-out infinite' }}>
+              <path d="M20 145 Q30 70 100 30" fill="none" stroke="#bbf7d0" strokeWidth="1.5" />
+              <path d="M20 145 Q35 88 85 55" fill="none" stroke="#bbf7d0" strokeWidth="1.5" />
+              <path d="M20 145 Q38 106 70 80" fill="none" stroke="#bbf7d0" strokeWidth="1.5" />
+            </g>
+          </svg>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
