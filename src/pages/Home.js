@@ -27,11 +27,8 @@ const Home = () => {
       {/* Audio waveform animation */}
       <style>{`
         @keyframes waveBar {
-          0% { transform: scaleY(0.05); }
-          15% { transform: scaleY(var(--wave-max)); }
-          50% { transform: scaleY(var(--wave-min)); }
-          85% { transform: scaleY(var(--wave-max)); }
-          100% { transform: scaleY(var(--wave-min)); }
+          0%, 100% { transform: scaleY(var(--wave-min)); }
+          50% { transform: scaleY(var(--wave-max)); }
         }
       `}</style>
 
@@ -39,14 +36,14 @@ const Home = () => {
       <section className="relative bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
         {/* Animated audio waveform bars */}
         <div className="absolute inset-0 pointer-events-none flex items-center" aria-hidden="true">
-          <div className="w-full flex items-center justify-center gap-[3px] sm:gap-[4px] px-4">
+          <div className="w-full flex items-center justify-center gap-[4px] sm:gap-[6px] px-4">
             {Array.from({ length: 80 }).map((_, i) => {
               const center = 40;
               const dist = Math.abs(i - center) / center;
               const baseHeight = Math.max(0.15, 1 - dist * dist);
               const variation = Math.sin(i * 0.7) * 0.3 + Math.sin(i * 1.3) * 0.2;
-              const minScale = Math.max(0.1, (baseHeight + variation) * 0.3);
-              const maxScale = Math.max(0.2, (baseHeight + variation) * 1.0);
+              const minScale = Math.max(0.08, (baseHeight + variation) * 0.25);
+              const maxScale = Math.max(0.15, (baseHeight + variation) * 1.0);
               const duration = 1.5 + Math.sin(i * 0.5) * 0.8;
               const delay = (i * 0.06) % 2;
               const progress = i / 79;
@@ -56,13 +53,16 @@ const Home = () => {
               return (
                 <div
                   key={i}
-                  className="flex-1 max-w-[4px] rounded-full"
+                  className="rounded-full"
                   style={{
+                    width: '8px',
                     height: '200px',
                     backgroundColor: `rgba(${r}, ${g}, ${b}, 0.18)`,
+                    transform: 'scaleY(0.03)',
                     '--wave-min': minScale,
                     '--wave-max': maxScale,
                     animation: `waveBar ${duration}s ${delay}s ease-in-out infinite`,
+                    animationFillMode: 'backwards',
                     transformOrigin: 'center',
                   }}
                 />
