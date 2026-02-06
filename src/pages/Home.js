@@ -24,10 +24,44 @@ const Home = () => {
 
   return (
     <div className="bg-white">
+      {/* Sound wave ripple animation */}
+      <style>{`
+        @keyframes ripple {
+          0% { transform: scale(0.3); opacity: 0.35; }
+          100% { transform: scale(1); opacity: 0; }
+        }
+      `}</style>
+
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-gray-50 to-gray-100">
+      <section className="relative bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
+        {/* Sound wave ripples */}
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+          {/* Left ripple source */}
+          <div className="absolute" style={{ left: '10%', top: '30%' }}>
+            <div className="absolute rounded-full border border-primary-400" style={{ width: 200, height: 200, marginLeft: -100, marginTop: -100, animation: 'ripple 4s 0s ease-out infinite' }} />
+            <div className="absolute rounded-full border border-primary-400" style={{ width: 200, height: 200, marginLeft: -100, marginTop: -100, animation: 'ripple 4s 1s ease-out infinite' }} />
+            <div className="absolute rounded-full border border-primary-400" style={{ width: 200, height: 200, marginLeft: -100, marginTop: -100, animation: 'ripple 4s 2s ease-out infinite' }} />
+          </div>
+          {/* Right ripple source */}
+          <div className="absolute" style={{ right: '8%', top: '50%' }}>
+            <div className="absolute rounded-full border border-green-400" style={{ width: 260, height: 260, marginLeft: -130, marginTop: -130, animation: 'ripple 5s 0.5s ease-out infinite' }} />
+            <div className="absolute rounded-full border border-green-400" style={{ width: 260, height: 260, marginLeft: -130, marginTop: -130, animation: 'ripple 5s 2s ease-out infinite' }} />
+            <div className="absolute rounded-full border border-green-400" style={{ width: 260, height: 260, marginLeft: -130, marginTop: -130, animation: 'ripple 5s 3.5s ease-out infinite' }} />
+          </div>
+          {/* Center-top ripple source */}
+          <div className="absolute" style={{ left: '55%', top: '15%' }}>
+            <div className="absolute rounded-full border border-primary-300" style={{ width: 160, height: 160, marginLeft: -80, marginTop: -80, animation: 'ripple 3.5s 1.5s ease-out infinite' }} />
+            <div className="absolute rounded-full border border-primary-300" style={{ width: 160, height: 160, marginLeft: -80, marginTop: -80, animation: 'ripple 3.5s 3s ease-out infinite' }} />
+          </div>
+          {/* Bottom-left ripple source */}
+          <div className="absolute" style={{ left: '30%', bottom: '10%' }}>
+            <div className="absolute rounded-full border border-green-300" style={{ width: 180, height: 180, marginLeft: -90, marginTop: -90, animation: 'ripple 4.5s 0.8s ease-out infinite' }} />
+            <div className="absolute rounded-full border border-green-300" style={{ width: 180, height: 180, marginLeft: -90, marginTop: -90, animation: 'ripple 4.5s 2.8s ease-out infinite' }} />
+          </div>
+        </div>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
-          <div className="text-center">
+          <div className="relative z-10 text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
               AI-Powered Apps for
               <span className="text-primary-600 block">Birding Enthusiasts</span>
