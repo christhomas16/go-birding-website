@@ -27,8 +27,11 @@ const Home = () => {
       {/* Audio waveform animation */}
       <style>{`
         @keyframes waveBar {
-          0%, 100% { transform: scaleY(var(--wave-min)); }
-          50% { transform: scaleY(var(--wave-max)); }
+          0% { transform: scaleY(0.05); }
+          15% { transform: scaleY(var(--wave-max)); }
+          50% { transform: scaleY(var(--wave-min)); }
+          85% { transform: scaleY(var(--wave-max)); }
+          100% { transform: scaleY(var(--wave-min)); }
         }
       `}</style>
 
@@ -55,7 +58,7 @@ const Home = () => {
                   key={i}
                   className="flex-1 max-w-[4px] rounded-full"
                   style={{
-                    height: '120px',
+                    height: '200px',
                     backgroundColor: `rgba(${r}, ${g}, ${b}, 0.18)`,
                     '--wave-min': minScale,
                     '--wave-max': maxScale,
