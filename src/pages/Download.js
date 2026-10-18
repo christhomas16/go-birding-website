@@ -3,7 +3,7 @@ import {
   DevicePhoneMobileIcon,
   CheckCircleIcon
 } from '@heroicons/react/24/outline';
-import { EBIRD_IT_APP_STORE_URL } from '../ebirdIt';
+import { NEXT_LIFER_APP_STORE_URL } from '../nextLifer';
 
 const Download = () => {
   return (
@@ -136,16 +136,16 @@ const Download = () => {
               </p>
             </div>
 
-            {/* eBird-it Card */}
+            {/* Next Lifer Card */}
             <div className="bg-white rounded-3xl shadow-2xl p-8 lg:p-10 border-t-4 border-teal-600">
               <div className="flex flex-col items-center text-center mb-6">
                 <img
-                  src="/ebird-it/AppIcon.png"
-                  alt="eBird-it"
+                  src="/next-lifer/AppIcon.png"
+                  alt="Next Lifer"
                   className="w-20 h-20 rounded-2xl shadow-lg mb-4"
                 />
-                <h2 className="text-2xl font-bold text-gray-900 mb-1">eBird-it</h2>
-                <p className="text-teal-600 font-semibold mb-4">Lifers & Hotspots Near You</p>
+                <h2 className="text-2xl font-bold text-gray-900 mb-1">Next Lifer</h2>
+                <p className="text-teal-600 font-semibold mb-4">Lifers & Rarities Near You</p>
               </div>
 
               <p className="text-gray-600 mb-6 leading-relaxed text-center">
@@ -172,12 +172,12 @@ const Download = () => {
                 </div>
               </div>
 
-              {EBIRD_IT_APP_STORE_URL ? (
+              {NEXT_LIFER_APP_STORE_URL ? (
                 <a
-                  href={EBIRD_IT_APP_STORE_URL}
+                  href={NEXT_LIFER_APP_STORE_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Download eBird-it on the App Store"
+                  aria-label="Download Next Lifer on the App Store"
                   className="bg-black text-white px-8 py-4 rounded-2xl text-center w-full inline-block hover:bg-gray-800 transition-colors duration-200"
                 >
                   <div className="flex items-center justify-center space-x-3">
@@ -225,7 +225,7 @@ const Download = () => {
                   <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Feature</th>
                   <th className="px-6 py-4 text-center text-sm font-semibold text-primary-600">Go Birding AI</th>
                   <th className="px-6 py-4 text-center text-sm font-semibold text-green-600">Bird Chatter</th>
-                  <th className="px-6 py-4 text-center text-sm font-semibold text-teal-600">eBird-it</th>
+                  <th className="px-6 py-4 text-center text-sm font-semibold text-teal-600">Next Lifer</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200">
@@ -311,24 +311,24 @@ const Download = () => {
             >
               Bird Chatter — Free
             </a>
-            {EBIRD_IT_APP_STORE_URL ? (
+            {NEXT_LIFER_APP_STORE_URL ? (
               <a
-                href={EBIRD_IT_APP_STORE_URL}
+                href={NEXT_LIFER_APP_STORE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Download eBird-it on the App Store"
+                aria-label="Download Next Lifer on the App Store"
                 className="bg-teal-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-teal-700 transition-colors duration-200 shadow-lg"
               >
-                eBird-it — Free
+                Next Lifer — Free
               </a>
             ) : (
               <span className="bg-teal-600 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg opacity-80">
-                eBird-it — Coming Soon
+                Next Lifer — Coming Soon
               </span>
             )}
           </div>
           <p className="text-gray-400 mt-6 text-sm">
-            Go Birding AI and Bird Chatter require iOS 18.0+; eBird-it requires iOS 17.0+.
+            Go Birding AI and Bird Chatter require iOS 18.0+; Next Lifer requires iOS 17.0+.
           </p>
         </div>
       </section>

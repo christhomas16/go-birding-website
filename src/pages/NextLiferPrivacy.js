@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const EBirdItPrivacy = () => {
+const NextLiferPrivacy = () => {
   const navigate = useNavigate();
 
   const handleNavigation = (path) => {
@@ -55,11 +55,11 @@ const EBirdItPrivacy = () => {
         <div className="bg-white rounded-lg shadow-lg p-8">
           <div className="flex items-center mb-8">
             <img
-              src="/ebird-it/AppIcon.png"
-              alt="eBird-it"
+              src="/next-lifer/AppIcon.png"
+              alt="Next Lifer"
               className="w-12 h-12 rounded-xl shadow-sm mr-4"
             />
-            <h1 className="text-3xl font-bold text-gray-900">eBird-it Privacy Policy</h1>
+            <h1 className="text-3xl font-bold text-gray-900">Next Lifer Privacy Policy</h1>
           </div>
           <div className="prose prose-lg max-w-none">
             <p className="text-gray-600 mb-2">
@@ -74,7 +74,7 @@ const EBirdItPrivacy = () => {
               <ul className="list-disc pl-6 text-teal-900 space-y-1">
                 <li>We collect only what's needed to run your account, find birds near you, and sync your setup between devices.</li>
                 <li><strong>No ads, no tracking, no analytics SDKs</strong>, and we never sell your data.</li>
-                <li>eBird-it never sees your eBird password.</li>
+                <li>Next Lifer never sees your eBird password.</li>
                 <li>You can delete your account and all of its data in the app at any time: <strong>Settings → Account → Delete account</strong>.</li>
               </ul>
             </div>
@@ -82,7 +82,7 @@ const EBirdItPrivacy = () => {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Who We Are</h2>
               <p className="text-gray-700 mb-4">
-                eBird-it ("the app") is an iPhone app made by the Go Birding team at gobirding.ai ("we," "our," or "us").
+                Next Lifer ("the app") is an iPhone app made by the Go Birding team at gobirding.ai ("we," "our," or "us").
                 It helps birders find potential lifers, year birds, rarities, owls and hotspots near any place using data from eBird.
                 We are responsible for the personal information described in this policy.
               </p>
@@ -90,9 +90,9 @@ const EBirdItPrivacy = () => {
                 Contact: <a href="mailto:support@gobirding.ai" className={linkClass}>support@gobirding.ai</a>
               </p>
               <p className="text-gray-700 mb-4">
-                This policy covers eBird-it only. Our other apps have their own policies — for example, the{' '}
+                This policy covers Next Lifer only. Our other apps have their own policies — for example, the{' '}
                 <button onClick={() => handleNavigation('/privacy')} className={linkClass}>Go Birding AI Privacy Policy</button>.
-                eBird-it is an independent app and is not affiliated with or endorsed by the Cornell Lab of Ornithology.
+                Next Lifer is an independent app and is not affiliated with or endorsed by the Cornell Lab of Ornithology or eBird.
               </p>
             </section>
 
@@ -101,7 +101,7 @@ const EBirdItPrivacy = () => {
 
               <h3 className="text-xl font-semibold text-gray-900 mb-3">2.1 Information stored with your account</h3>
               <p className="text-gray-700 mb-4">
-                You can use eBird-it as a <strong>guest</strong> without giving us an email address. A guest account is an
+                You can use Next Lifer as a <strong>guest</strong> without giving us an email address. A guest account is an
                 anonymous account identified only by a random user ID. If you choose to create an account (email and password)
                 or use Sign in with Apple, you can keep your data across devices. In either case, we store:
               </p>
@@ -131,7 +131,7 @@ const EBirdItPrivacy = () => {
 
               <h3 className="text-xl font-semibold text-gray-900 mb-3">2.2 Location</h3>
               <p className="text-gray-700 mb-4">
-                If you allow it, eBird-it uses your iPhone's location on your device to search near you. When you run a search,
+                If you allow it, Next Lifer uses your iPhone's location on your device to search near you. When you run a search,
                 the coordinates of the search center (your location, or a place you typed) are sent to our server, and from there
                 to eBird, to find nearby sightings and hotspots. We use those coordinates only to answer that search and do
                 <strong> not</strong> store your location with your account — except for the favorite hotspots and saved areas
@@ -142,7 +142,7 @@ const EBirdItPrivacy = () => {
               <h3 className="text-xl font-semibold text-gray-900 mb-3">2.3 Connect eBird and your eBird password</h3>
               <p className="text-gray-700 mb-4">
                 When you use <strong>Connect eBird</strong>, you sign in on eBird's (the Cornell Lab's) own sign-in page shown
-                inside the app. <strong>eBird-it never sees or stores your eBird password.</strong> The resulting eBird sign-in
+                inside the app. <strong>Next Lifer never sees or stores your eBird password.</strong> The resulting eBird sign-in
                 cookies stay only on your iPhone, in the app's web data store, and are used to download your life list and year
                 list from ebird.org. They are never sent to us. They are removed when you choose Disconnect eBird, sign out, or
                 delete your account.
@@ -193,7 +193,7 @@ const EBirdItPrivacy = () => {
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">4. Where Your Data Is Stored</h2>
               <p className="text-gray-700 mb-4">
                 Your account and profile data are stored with our hosting provider, Supabase, in the United States (US East).
-                If you use eBird-it from outside the United States, your information will be transferred to and processed in the
+                If you use Next Lifer from outside the United States, your information will be transferred to and processed in the
                 United States. Data is encrypted in transit (HTTPS) and at rest by our hosting provider.
               </p>
             </section>
@@ -284,13 +284,13 @@ const EBirdItPrivacy = () => {
                 You can delete your account and all associated data at any time, directly in the app — including guest accounts:
               </p>
               <ol className="list-decimal pl-6 text-gray-700 mb-4">
-                <li>Open eBird-it and tap the gear icon to open <strong>Settings</strong>.</li>
+                <li>Open Next Lifer and tap the gear icon to open <strong>Settings</strong>.</li>
                 <li>Go to <strong>Account</strong> and tap <strong>Delete account</strong>.</li>
                 <li>Review what will be deleted and tap <strong>Delete my account</strong>.</li>
               </ol>
               <p className="text-gray-700 mb-4">
                 This permanently deletes your sign-in, your profile, your life list and year list, your favorites and saved areas,
-                any saved eBird API key, and any device tokens from our servers, and clears eBird-it's data (including your eBird
+                any saved eBird API key, and any device tokens from our servers, and clears Next Lifer's data (including your eBird
                 sign-in session) from your iPhone. It can't be undone. Your eBird account and checklists at ebird.org are separate
                 and are not affected.
               </p>
@@ -299,14 +299,14 @@ const EBirdItPrivacy = () => {
                 the app from your iPhone does not by itself delete your account data from our servers. You can also email{' '}
                 <a href="mailto:support@gobirding.ai" className={linkClass}>support@gobirding.ai</a> to request deletion.
                 More help is on the{' '}
-                <button onClick={() => handleNavigation('/ebird-it/support')} className={linkClass}>eBird-it Support page</button>.
+                <button onClick={() => handleNavigation('/next-lifer/support')} className={linkClass}>Next Lifer Support page</button>.
               </p>
             </section>
 
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">9. Children's Privacy</h2>
               <p className="text-gray-700 mb-4">
-                eBird-it is not directed to children under 13, and we do not knowingly collect personal information from children
+                Next Lifer is not directed to children under 13, and we do not knowingly collect personal information from children
                 under 13. If you believe a child has given us personal information, please contact us and we will delete it.
               </p>
             </section>
@@ -324,10 +324,10 @@ const EBirdItPrivacy = () => {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">11. Terms and Attribution</h2>
               <p className="text-gray-700 mb-4">
-                Bird data in eBird-it comes from eBird, a project of the Cornell Lab of Ornithology, and is subject to the{' '}
+                Bird data in Next Lifer comes from eBird, a project of the Cornell Lab of Ornithology, and is subject to the{' '}
                 <a href="https://www.birds.cornell.edu/home/ebird-api-terms-of-use/" className={linkClass} target="_blank" rel="noopener noreferrer">eBird API Terms of Use</a>.
                 Place search and geocoding are provided by Apple; directions open in Apple Maps or Google Maps. Bird photos are
-                from Wikimedia Commons, with credits shown in the app. Your use of the App Store version of eBird-it is also
+                from Wikimedia Commons, with credits shown in the app. Your use of the App Store version of Next Lifer is also
                 subject to Apple's standard Licensed Application End User License Agreement.
               </p>
             </section>
@@ -353,7 +353,7 @@ const EBirdItPrivacy = () => {
             <div className="bg-green-50 border border-green-200 rounded-lg p-6 mt-8">
               <h3 className="text-lg font-semibold text-green-900 mb-2">Privacy Summary</h3>
               <p className="text-green-800">
-                <strong>Your birding data is yours.</strong> eBird-it stores only what it needs to find birds for you and sync your
+                <strong>Your birding data is yours.</strong> Next Lifer stores only what it needs to find birds for you and sync your
                 lists, never sees your eBird password, has no ads or trackers, and lets you delete everything from inside the app.
               </p>
             </div>
@@ -364,4 +364,4 @@ const EBirdItPrivacy = () => {
   );
 };
 
-export default EBirdItPrivacy;
+export default NextLiferPrivacy;

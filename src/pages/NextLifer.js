@@ -18,18 +18,18 @@ import {
   UserCircleIcon,
   ArrowPathIcon
 } from '@heroicons/react/24/outline';
-import { EBIRD_IT_APP_STORE_URL } from '../ebirdIt';
+import { NEXT_LIFER_APP_STORE_URL } from '../nextLifer';
 
-const EBirdIt = () => {
+const NextLifer = () => {
   const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const screenshots = [
-    { src: '/ebird-it/S1.png', alt: 'eBird-it home screen: find birds near a place, with distance and time filters' },
-    { src: '/ebird-it/S2.png', alt: 'eBird-it results: Lifers, Year birds, Rarities, Owls, Hotspots, Notable and All as pills' },
-    { src: '/ebird-it/S3.png', alt: 'eBird-it map view with lifers, rarities and hotspots inside the search radius' },
-    { src: '/ebird-it/S4.png', alt: 'eBird-it hotspot page with Directions, eBird and Share buttons' },
-    { src: '/ebird-it/S5.png', alt: 'eBird-it owl results with recent owl sightings and comments' }
+    { src: '/next-lifer/S1.png', alt: 'Next Lifer year birds: species near you that you have not seen yet this year' },
+    { src: '/next-lifer/S2.png', alt: 'Next Lifer results: Lifers, Year birds, Rarities, Owls, Hotspots, Notable and All as pills' },
+    { src: '/next-lifer/S3.png', alt: 'Next Lifer map view with lifers, rarities and hotspots inside the search radius' },
+    { src: '/next-lifer/S4.png', alt: 'Next Lifer hotspot page with Directions, eBird and Share buttons' },
+    { src: '/next-lifer/S5.png', alt: 'Next Lifer owl results with recent owl sightings and comments' }
   ];
 
   const handleNavigation = (path) => {
@@ -115,12 +115,12 @@ const EBirdIt = () => {
   ];
 
   const AppStoreButton = ({ light }) => (
-    EBIRD_IT_APP_STORE_URL ? (
+    NEXT_LIFER_APP_STORE_URL ? (
       <a
-        href={EBIRD_IT_APP_STORE_URL}
+        href={NEXT_LIFER_APP_STORE_URL}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Download eBird-it on the App Store"
+        aria-label="Download Next Lifer on the App Store"
         className={`${light ? 'bg-white text-teal-700 hover:bg-gray-100' : 'bg-teal-600 text-white hover:bg-teal-700'} px-8 py-4 rounded-full text-lg font-semibold transition-colors duration-200 shadow-lg hover:shadow-xl text-center inline-block`}
       >
         Download on the App Store
@@ -143,18 +143,18 @@ const EBirdIt = () => {
             <div>
               <div className="flex items-center mb-6">
                 <img
-                  src="/ebird-it/AppIcon.png"
-                  alt="eBird-it"
+                  src="/next-lifer/AppIcon.png"
+                  alt="Next Lifer"
                   className="w-16 h-16 rounded-2xl shadow-md mr-4"
                 />
-                <span className="text-2xl font-bold text-gray-900">eBird-it</span>
+                <span className="text-2xl font-bold text-gray-900">Next Lifer</span>
               </div>
               <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
                 Your Next Lifer
                 <span className="text-teal-600 block">Is Nearby.</span>
               </h1>
               <p className="text-xl text-gray-600 mb-4 leading-relaxed">
-                eBird-it finds potential lifers, year birds, rarities, owls and the best hotspots near any place — from live eBird data.
+                Next Lifer finds potential lifers, year birds, rarities, owls and the best hotspots near any place — from live eBird data.
               </p>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 Connect your eBird account once and every search highlights the birds you still need. Free for iPhone, with a clean dark design built for the field.
@@ -244,7 +244,7 @@ const EBirdIt = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              How eBird-it Works
+              How Next Lifer Works
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Three steps from "where should I go?" to your next lifer
@@ -258,7 +258,7 @@ const EBirdIt = () => {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Connect eBird</h3>
               <p className="text-gray-600">
-                Sign in on eBird's own page inside the app. eBird-it imports your life and year lists — it never sees your password.
+                Sign in on eBird's own page inside the app. Next Lifer imports your life and year lists — it never sees your password.
               </p>
             </div>
 
@@ -320,7 +320,7 @@ const EBirdIt = () => {
                 Built Around Your Life List
               </h2>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                eBird-it knows which birds are new for you, so every search answers the question birders actually ask:
+                Next Lifer knows which birds are new for you, so every search answers the question birders actually ask:
                 what can I add today?
               </p>
               <div className="space-y-4">
@@ -330,7 +330,7 @@ const EBirdIt = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Connect eBird</h4>
-                    <p className="text-gray-600">Sign in on eBird's own page — your life and year lists come across automatically. eBird-it never sees your password.</p>
+                    <p className="text-gray-600">Sign in on eBird's own page — your life and year lists come across automatically. Next Lifer never sees your password.</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -405,7 +405,7 @@ const EBirdIt = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Voice Search</h3>
               <p className="text-gray-600 leading-relaxed">
-                On iPhones with Apple Intelligence (iOS 26), just say "owls near Cape May this week" and eBird-it does the rest.
+                On iPhones with Apple Intelligence (iOS 26), just say "owls near Cape May this week" and Next Lifer does the rest.
               </p>
             </div>
 
@@ -431,8 +431,8 @@ const EBirdIt = () => {
           </div>
 
           <p className="text-sm text-gray-500 text-center mt-12 max-w-3xl mx-auto">
-            Data from eBird, a project of the Cornell Lab of Ornithology. eBird-it is an independent app and is not
-            affiliated with or endorsed by the Cornell Lab of Ornithology.
+            Data from eBird, a project of the Cornell Lab of Ornithology. Next Lifer is an independent app and is not
+            affiliated with or endorsed by the Cornell Lab of Ornithology or eBird.
           </p>
         </div>
       </section>
@@ -444,7 +444,7 @@ const EBirdIt = () => {
             Stop Scrolling. Start Chasing.
           </h2>
           <p className="text-xl text-teal-100 mb-8">
-            eBird-it turns live eBird reports into a short list of birds you actually need — and where to find them.
+            Next Lifer turns live eBird reports into a short list of birds you actually need — and where to find them.
           </p>
           <AppStoreButton light />
           <p className="text-teal-200 mt-4 text-sm">
@@ -453,14 +453,14 @@ const EBirdIt = () => {
           <p className="text-teal-200 mt-6 text-base">
             Need help? Visit our{' '}
             <button
-              onClick={() => handleNavigation('/ebird-it/support')}
+              onClick={() => handleNavigation('/next-lifer/support')}
               className="text-white font-semibold hover:underline"
             >
               Support Page
             </button>
             {' '}or read the{' '}
             <button
-              onClick={() => handleNavigation('/ebird-it/privacy')}
+              onClick={() => handleNavigation('/next-lifer/privacy')}
               className="text-white font-semibold hover:underline"
             >
               Privacy Policy
@@ -472,4 +472,4 @@ const EBirdIt = () => {
   );
 };
 
-export default EBirdIt;
+export default NextLifer;

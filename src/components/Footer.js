@@ -61,10 +61,10 @@ const Footer = () => {
               </li>
               <li>
                 <button
-                  onClick={() => handleNavigation('/ebird-it')}
+                  onClick={() => handleNavigation('/next-lifer')}
                   className="text-gray-300 hover:text-white transition-colors duration-200 text-left"
                 >
-                  eBird-it
+                  Next Lifer
                 </button>
               </li>
               <li>
@@ -100,10 +100,10 @@ const Footer = () => {
               </li>
               <li>
                 <button
-                  onClick={() => handleNavigation('/ebird-it/support')}
+                  onClick={() => handleNavigation('/next-lifer/support')}
                   className="text-gray-300 hover:text-white transition-colors duration-200 text-left"
                 >
-                  eBird-it Support
+                  Next Lifer Support
                 </button>
               </li>
               <li>
@@ -139,10 +139,10 @@ const Footer = () => {
               </li>
               <li>
                 <button
-                  onClick={() => handleNavigation('/ebird-it/privacy')}
+                  onClick={() => handleNavigation('/next-lifer/privacy')}
                   className="text-gray-300 hover:text-white transition-colors duration-200 text-left"
                 >
-                  eBird-it Privacy Policy
+                  Next Lifer Privacy Policy
                 </button>
               </li>
             </ul>

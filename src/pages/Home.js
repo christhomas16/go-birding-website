@@ -9,7 +9,7 @@ import {
   DevicePhoneMobileIcon,
   StarIcon
 } from '@heroicons/react/24/outline';
-import { EBIRD_IT_APP_STORE_URL } from '../ebirdIt';
+import { NEXT_LIFER_APP_STORE_URL } from '../nextLifer';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -205,17 +205,17 @@ const Home = () => {
               </div>
             </div>
 
-            {/* eBird-it Card */}
+            {/* Next Lifer Card */}
             <div className="bg-gradient-to-br from-teal-50 to-cyan-50 p-8 lg:p-10 rounded-3xl border border-teal-100 hover:shadow-xl transition-shadow duration-200">
               <div className="flex items-center mb-6">
                 <img
-                  src="/ebird-it/AppIcon.png"
-                  alt="eBird-it"
+                  src="/next-lifer/AppIcon.png"
+                  alt="Next Lifer"
                   className="w-16 h-16 rounded-2xl shadow-md mr-4"
                 />
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900">eBird-it</h3>
-                  <p className="text-teal-600 font-medium">Lifers Near You</p>
+                  <h3 className="text-2xl font-bold text-gray-900">Next Lifer</h3>
+                  <p className="text-teal-600 font-medium">Find Your Next Lifer</p>
                 </div>
               </div>
               <p className="text-gray-600 mb-6 leading-relaxed">
@@ -241,14 +241,14 @@ const Home = () => {
               </div>
               <div className="flex flex-col sm:flex-row gap-3">
                 <button
-                  onClick={() => handleNavigation('/ebird-it')}
+                  onClick={() => handleNavigation('/next-lifer')}
                   className="bg-teal-600 text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-teal-700 transition-colors duration-200 text-center"
                 >
                   Learn More
                 </button>
-                {EBIRD_IT_APP_STORE_URL ? (
+                {NEXT_LIFER_APP_STORE_URL ? (
                   <a
-                    href={EBIRD_IT_APP_STORE_URL}
+                    href={NEXT_LIFER_APP_STORE_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="border-2 border-teal-600 text-teal-600 px-6 py-3 rounded-full text-sm font-semibold hover:bg-teal-50 transition-colors duration-200 text-center"
@@ -285,7 +285,7 @@ const Home = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Privacy First</h3>
               <p className="text-gray-600 leading-relaxed">
-                No ads, no tracking, and we never sell your data. Go Birding AI and Bird Chatter keep AI on your iPhone, and eBird-it stores only what it needs to sync your lists.
+                No ads, no tracking, and we never sell your data. Go Birding AI and Bird Chatter keep AI on your iPhone, and Next Lifer stores only what it needs to sync your lists.
               </p>
             </div>
 

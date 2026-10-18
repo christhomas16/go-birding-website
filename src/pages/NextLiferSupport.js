@@ -11,7 +11,7 @@ import {
   WrenchScrewdriverIcon
 } from '@heroicons/react/24/outline';
 
-const EBirdItSupport = () => {
+const NextLiferSupport = () => {
   const navigate = useNavigate();
 
   const handleNavigation = (path) => {
@@ -53,12 +53,12 @@ const EBirdItSupport = () => {
   const faqs = {
     gettingStarted: [
       {
-        question: 'What does eBird-it do?',
-        answer: 'eBird-it finds potential lifers, year birds, rarities, owls and the best hotspots near any place, using live data from eBird. Pick your current location or type a city, park or address, choose a distance and how many days back to look, and tap "Find birds in this area". Every result category appears as a pill at the top of the results, and you can switch to a map at any time.'
+        question: 'What does Next Lifer do?',
+        answer: 'Next Lifer finds potential lifers, year birds, rarities, owls and the best hotspots near any place, using live data from eBird. Pick your current location or type a city, park or address, choose a distance and how many days back to look, and tap "Find birds in this area". Every result category appears as a pill at the top of the results, and you can switch to a map at any time.'
       },
       {
-        question: 'What do I need to use eBird-it?',
-        answer: 'An iPhone running iOS 17.0 or later and an internet connection. eBird-it is free. You don\'t need an eBird API key, and you don\'t need to create an account to get started. Voice search is available on iPhones that support Apple Intelligence running iOS 26.'
+        question: 'What do I need to use Next Lifer?',
+        answer: 'An iPhone running iOS 17.0 or later and an internet connection. Next Lifer is free. You don\'t need an eBird API key, and you don\'t need to create an account to get started. Voice search is available on iPhones that support Apple Intelligence running iOS 26.'
       },
       {
         question: 'Do I need an account?',
@@ -76,23 +76,23 @@ const EBirdItSupport = () => {
     connectEBird: [
       {
         question: 'How does Connect eBird work?',
-        answer: 'Tap Connect eBird (on the home screen, during setup, or in Settings → eBird life list). eBird\'s own sign-in page opens inside the app. Once you sign in, eBird-it downloads your life list and this year\'s list from eBird. eBird-it never sees or stores your eBird password — you type it directly into eBird\'s page. You can refresh your lists any time from Settings → eBird life list.'
+        answer: 'Tap Connect eBird (on the home screen, during setup, or in Settings → eBird life list). eBird\'s own sign-in page opens inside the app. Once you sign in, Next Lifer downloads your life list and this year\'s list from eBird. Next Lifer never sees or stores your eBird password — you type it directly into eBird\'s page. You can refresh your lists any time from Settings → eBird life list.'
       },
       {
         question: 'Can I add my life list without connecting?',
-        answer: 'Yes. You can import the life list CSV from ebird.org/lifelist (use the download/share option and open it with eBird-it), or import the full "My eBird Data" export (.zip) that eBird emails you. You can also tap "Seen it" on a lifer or year bird card to mark a single species as seen.'
+        answer: 'Yes. You can import the life list CSV from ebird.org/lifelist (use the download/share option and open it with Next Lifer), or import the full "My eBird Data" export (.zip) that eBird emails you. You can also tap "Seen it" on a lifer or year bird card to mark a single species as seen.'
       },
       {
         question: 'The eBird sign-in page won\'t load. What should I do?',
-        answer: 'Check that you have a working internet connection and try again in a minute — eBird\'s sign-in service is occasionally slow or down for maintenance. If the page stays blank, close the sign-in sheet, force-quit eBird-it and reopen it, then try Connect eBird again. If you use a content blocker or VPN, try turning it off briefly. As a fallback, you can import your life list CSV instead (see above).'
+        answer: 'Check that you have a working internet connection and try again in a minute — eBird\'s sign-in service is occasionally slow or down for maintenance. If the page stays blank, close the sign-in sheet, force-quit Next Lifer and reopen it, then try Connect eBird again. If you use a content blocker or VPN, try turning it off briefly. As a fallback, you can import your life list CSV instead (see above).'
       },
       {
         question: 'My species count is different from eBird\'s. Why?',
-        answer: 'eBird-it counts only full species, the same way eBird\'s own life list does. Subspecies groups and forms are counted as their parent species, and "spuhs" (e.g. "duck sp."), slashes (e.g. "Greater/Lesser Scaup"), hybrids and domestic types are excluded. If your total still differs, refresh your lists from Settings → eBird life list — recent checklists may not have been included yet — and remember that the year list only counts the current calendar year.'
+        answer: 'Next Lifer counts only full species, the same way eBird\'s own life list does. Subspecies groups and forms are counted as their parent species, and "spuhs" (e.g. "duck sp."), slashes (e.g. "Greater/Lesser Scaup"), hybrids and domestic types are excluded. If your total still differs, refresh your lists from Settings → eBird life list — recent checklists may not have been included yet — and remember that the year list only counts the current calendar year.'
       },
       {
         question: 'How do I disconnect eBird?',
-        answer: 'Go to Settings → eBird life list → Disconnect eBird. This removes the eBird sign-in session from your iPhone. Your imported life list stays in the app until you replace it or delete your account. Your eBird account and checklists at ebird.org are never changed by eBird-it.'
+        answer: 'Go to Settings → eBird life list → Disconnect eBird. This removes the eBird sign-in session from your iPhone. Your imported life list stays in the app until you replace it or delete your account. Your eBird account and checklists at ebird.org are never changed by Next Lifer.'
       }
     ],
     accounts: [
@@ -109,14 +109,14 @@ const EBirdItSupport = () => {
         answer: 'On the sign-in screen, tap the forgot-password option and enter your account email. The app emails you a 6-digit code. Enter the code in the app, then choose a new password. If the email doesn\'t arrive within a few minutes, check your spam or junk folder. If you signed up with Sign in with Apple, you don\'t have a separate password — just use Sign in with Apple again.'
       },
       {
-        question: 'Can I use eBird-it on more than one device?',
+        question: 'Can I use Next Lifer on more than one device?',
         answer: 'Yes, with a full account. Sign in with the same email or Apple ID on each device and your life list, year list, favorites, saved areas and settings sync automatically.'
       }
     ]
   };
 
   const deleteSteps = [
-    'Open eBird-it and tap the gear icon to open Settings.',
+    'Open Next Lifer and tap the gear icon to open Settings.',
     'Scroll to the Account section.',
     'Tap Delete account.',
     'Review what gets deleted, then tap Delete my account. Your account and all associated data — profile, life list, year list, favorites, saved areas and any device tokens — are permanently deleted from our servers, and the app\'s data is cleared from your iPhone.'
@@ -146,12 +146,12 @@ const EBirdItSupport = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <img
-              src="/ebird-it/AppIcon.png"
-              alt="eBird-it"
+              src="/next-lifer/AppIcon.png"
+              alt="Next Lifer"
               className="w-24 h-24 rounded-2xl shadow-lg mx-auto mb-6"
             />
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              eBird-it
+              Next Lifer
               <span className="text-teal-600 block">Support</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -182,11 +182,11 @@ const EBirdItSupport = () => {
           </div>
           <div className="mt-8 text-center">
             <button
-              onClick={() => handleNavigation('/ebird-it')}
+              onClick={() => handleNavigation('/next-lifer')}
               className="inline-flex items-center text-teal-600 font-semibold hover:underline"
             >
               <ArrowLeftIcon className="h-4 w-4 mr-2" />
-              Back to eBird-it overview
+              Back to Next Lifer overview
             </button>
           </div>
         </div>
@@ -201,7 +201,7 @@ const EBirdItSupport = () => {
             </div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
             <p className="text-xl text-gray-600">
-              Find answers to common questions about using eBird-it
+              Find answers to common questions about using Next Lifer
             </p>
           </div>
 
@@ -235,13 +235,13 @@ const EBirdItSupport = () => {
               </p>
               <p className="text-gray-600 leading-relaxed">
                 Can't open the app, or already deleted it? Email{' '}
-                <a href="mailto:support@gobirding.ai?subject=eBird-it%20data%20deletion%20request" className="text-teal-600 font-semibold hover:underline">
+                <a href="mailto:support@gobirding.ai?subject=Next%20Lifer%20data%20deletion%20request" className="text-teal-600 font-semibold hover:underline">
                   support@gobirding.ai
                 </a>{' '}
                 from the email address on your account and we'll delete your data —
                 or send you a copy of it — within 30 days. See our{' '}
                 <button
-                  onClick={() => handleNavigation('/ebird-it/privacy')}
+                  onClick={() => handleNavigation('/next-lifer/privacy')}
                   className="text-teal-600 font-semibold hover:underline"
                 >
                   Privacy Policy
@@ -283,7 +283,7 @@ const EBirdItSupport = () => {
                 </li>
                 <li className="flex items-start">
                   <span className="text-teal-600 mr-2">•</span>
-                  <span>Force-quit and reopen eBird-it</span>
+                  <span>Force-quit and reopen Next Lifer</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-teal-600 mr-2">•</span>
@@ -408,13 +408,13 @@ const EBirdItSupport = () => {
           </p>
           <div className="flex flex-col items-center space-y-4">
             <a
-              href="mailto:support@gobirding.ai?subject=eBird-it%20support"
+              href="mailto:support@gobirding.ai?subject=Next%20Lifer%20support"
               className="text-teal-400 text-xl font-semibold hover:text-teal-300 transition-colors duration-200"
             >
               support@gobirding.ai
             </a>
             <p className="text-sm text-gray-400 max-w-2xl">
-              Please mention eBird-it and include details about your issue: device model, iOS version, and steps to reproduce the problem.
+              Please mention Next Lifer and include details about your issue: device model, iOS version, and steps to reproduce the problem.
               For account issues, include your account email. Never send us your eBird password.
             </p>
           </div>
@@ -422,17 +422,17 @@ const EBirdItSupport = () => {
             <p className="text-gray-400 text-sm">
               Visit{' '}
               <button
-                onClick={() => handleNavigation('/ebird-it')}
+                onClick={() => handleNavigation('/next-lifer')}
                 className="text-teal-400 hover:text-teal-300 font-semibold"
               >
-                eBird-it
+                Next Lifer
               </button>
               {' '}for app information or read the{' '}
               <button
-                onClick={() => handleNavigation('/ebird-it/privacy')}
+                onClick={() => handleNavigation('/next-lifer/privacy')}
                 className="text-teal-400 hover:text-teal-300 font-semibold"
               >
-                eBird-it Privacy Policy
+                Next Lifer Privacy Policy
               </button>
             </p>
           </div>
@@ -442,4 +442,4 @@ const EBirdItSupport = () => {
   );
 };
 
-export default EBirdItSupport;
+export default NextLiferSupport;

@@ -22,7 +22,7 @@ const About = () => {
     {
       icon: ShieldCheckIcon,
       title: 'Privacy First',
-      description: 'We prioritize your privacy across all our apps. Go Birding AI runs entirely on-device, Bird Chatter keeps all audio processing local with only minimal leaderboard data stored online, and eBird-it stores only what it needs to sync your lists — with no ads or tracking.'
+      description: 'We prioritize your privacy across all our apps. Go Birding AI runs entirely on-device, Bird Chatter keeps all audio processing local with only minimal leaderboard data stored online, and Next Lifer stores only what it needs to sync your lists — with no ads or tracking.'
     },
     {
       icon: LightBulbIcon,
@@ -83,11 +83,11 @@ const About = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <img
-                    src="/ebird-it/AppIcon.png"
-                    alt="eBird-it"
+                    src="/next-lifer/AppIcon.png"
+                    alt="Next Lifer"
                     className="h-12 w-12 rounded-xl shadow-sm"
                   />
-                  <span className="text-sm font-semibold text-gray-700">eBird-it</span>
+                  <span className="text-sm font-semibold text-gray-700">Next Lifer</span>
                 </div>
               </div>
             </div>
@@ -160,13 +160,13 @@ const About = () => {
               </button>
             </div>
 
-            {/* eBird-it */}
+            {/* Next Lifer */}
             <div className="bg-gradient-to-br from-teal-50 to-cyan-50 p-8 rounded-2xl border border-teal-100">
               <div className="flex items-center space-x-4 mb-6">
-                <img src="/ebird-it/AppIcon.png" alt="eBird-it" className="h-14 w-14 rounded-xl shadow-sm" />
+                <img src="/next-lifer/AppIcon.png" alt="Next Lifer" className="h-14 w-14 rounded-xl shadow-sm" />
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900">eBird-it</h3>
-                  <p className="text-teal-600 font-medium">Lifers & Hotspots Near You</p>
+                  <h3 className="text-2xl font-bold text-gray-900">Next Lifer</h3>
+                  <p className="text-teal-600 font-medium">Lifers & Rarities Near You</p>
                 </div>
               </div>
               <p className="text-gray-600 mb-6 leading-relaxed">
@@ -175,7 +175,7 @@ const About = () => {
                 birds you still need.
               </p>
               <button
-                onClick={() => handleNavigation('/ebird-it')}
+                onClick={() => handleNavigation('/next-lifer')}
                 className="text-teal-600 font-semibold hover:text-teal-700 transition-colors"
               >
                 Learn more &rarr;
@@ -300,7 +300,7 @@ const About = () => {
             </p>
 
             <p className="mb-6">
-              Our newest app, eBird-it, answers the question every birder asks before heading out: what's around that I
+              Our newest app, Next Lifer, answers the question every birder asks before heading out: what's around that I
               still need? It reads live eBird reports, compares them with your own life and year lists,
               and shows potential lifers, year birds, rarities, owls and the best hotspots near any place.
             </p>

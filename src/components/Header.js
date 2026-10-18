@@ -116,10 +116,10 @@ const Header = () => {
     { name: 'Support', href: '/bird-chatter/support', isActive: location.pathname === '/bird-chatter/support' },
   ];
 
-  const eBirdItItems = [
-    { name: 'Overview', href: '/ebird-it', isActive: location.pathname === '/ebird-it' },
-    { name: 'Support', href: '/ebird-it/support', isActive: location.pathname === '/ebird-it/support' },
-    { name: 'Privacy Policy', href: '/ebird-it/privacy', isActive: location.pathname === '/ebird-it/privacy' },
+  const nextLiferItems = [
+    { name: 'Overview', href: '/next-lifer', isActive: location.pathname === '/next-lifer' },
+    { name: 'Support', href: '/next-lifer/support', isActive: location.pathname === '/next-lifer/support' },
+    { name: 'Privacy Policy', href: '/next-lifer/privacy', isActive: location.pathname === '/next-lifer/privacy' },
   ];
 
   return (
@@ -161,9 +161,9 @@ const Header = () => {
               onNavigate={handleNavigation}
             />
             <Dropdown
-              label="eBird-it"
-              items={eBirdItItems}
-              isActive={isActive('/ebird-it')}
+              label="Next Lifer"
+              items={nextLiferItems}
+              isActive={isActive('/next-lifer')}
               accentColor="teal"
               onNavigate={handleNavigation}
             />
@@ -268,11 +268,11 @@ const Header = () => {
                 Support
               </button>
 
-              {/* eBird-it section */}
+              {/* Next Lifer section */}
               <div className="px-3 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider mt-2">
-                eBird-it
+                Next Lifer
               </div>
-              {eBirdItItems.map((item) => (
+              {nextLiferItems.map((item) => (
                 <button
                   key={item.href}
                   onClick={() => handleNavigation(item.href)}
