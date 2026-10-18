@@ -62,7 +62,7 @@ const Dropdown = ({ label, items, isActive, accentColor, onNavigate }) => {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
+        className={`flex items-center whitespace-nowrap px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
           isActive ? activeClass : `text-gray-700 ${hoverClass}`
         }`}
       >
@@ -139,7 +139,7 @@ const Header = () => {
               />
               <div>
                 <h1 className="text-xl font-bold text-gray-900">gobirding.ai</h1>
-                <p className="text-xs text-gray-600">AI-Powered Birding Apps</p>
+                <p className="text-xs text-gray-600 whitespace-nowrap">AI-Powered Birding Apps</p>
               </div>
             </button>
           </div>
@@ -169,7 +169,7 @@ const Header = () => {
             />
             <button
               onClick={() => handleNavigation('/download')}
-              className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
+              className={`whitespace-nowrap px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
                 isActive('/download')
                   ? 'text-primary-600 bg-primary-50'
                   : 'text-gray-700 hover:text-primary-600 hover:bg-gray-50'
@@ -179,7 +179,7 @@ const Header = () => {
             </button>
             <button
               onClick={() => handleNavigation('/about')}
-              className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
+              className={`whitespace-nowrap px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
                 isActive('/about')
                   ? 'text-primary-600 bg-primary-50'
                   : 'text-gray-700 hover:text-primary-600 hover:bg-gray-50'
@@ -190,7 +190,7 @@ const Header = () => {
           </nav>
 
           {/* Download CTA Button */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <button
               onClick={() => handleNavigation('/download')}
               className="bg-gray-900 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors duration-200 shadow-md hover:shadow-lg"
