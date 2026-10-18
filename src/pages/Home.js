@@ -6,8 +6,10 @@ import {
   TrophyIcon,
   CpuChipIcon,
   ShieldCheckIcon,
-  DevicePhoneMobileIcon
+  DevicePhoneMobileIcon,
+  StarIcon
 } from '@heroicons/react/24/outline';
+import { NEXT_LIFER_APP_STORE_URL } from '../nextLifer';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -78,7 +80,7 @@ const Home = () => {
               <span className="text-primary-600 block">Birding Enthusiasts</span>
             </h1>
             <p className="text-xl text-gray-600 mb-12 leading-relaxed max-w-3xl mx-auto">
-              Two powerful iOS apps built by birders, for birders. Discover locations with voice-powered AI or identify birds by sound and compete on leaderboards.
+              Three iOS apps built by birders, for birders. Discover locations with voice-powered AI, identify birds by sound and compete on leaderboards, or find lifers near you from live eBird data.
             </p>
             <button
               onClick={() => handleNavigation('/download')}
@@ -90,7 +92,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Two App Cards */}
+      {/* App Cards */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -98,11 +100,11 @@ const Home = () => {
               Our Apps
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Two ways to enhance your birding experience
+              Three ways to enhance your birding experience
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Go Birding AI Card */}
             <div className="bg-gradient-to-br from-primary-50 to-blue-50 p-8 lg:p-10 rounded-3xl border border-primary-100 hover:shadow-xl transition-shadow duration-200">
               <div className="flex items-center mb-6">
@@ -202,6 +204,64 @@ const Home = () => {
                 </button>
               </div>
             </div>
+
+            {/* Next Lifer Card */}
+            <div className="bg-gradient-to-br from-teal-50 to-cyan-50 p-8 lg:p-10 rounded-3xl border border-teal-100 hover:shadow-xl transition-shadow duration-200">
+              <div className="flex items-center mb-6">
+                <img
+                  src="/next-lifer-assets/AppIcon.png"
+                  alt="Next Lifer"
+                  className="w-16 h-16 rounded-2xl shadow-md mr-4"
+                />
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900">Next Lifer</h3>
+                  <p className="text-teal-600 font-medium">Find Your Next Lifer</p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                Find potential lifers, year birds, rarities, owls and the best hotspots near any place from live eBird data. Connect eBird once and every search shows the birds you still need.
+              </p>
+              <div className="space-y-3 mb-8">
+                <div className="flex items-center text-sm text-gray-700">
+                  <StarIcon className="h-5 w-5 text-teal-600 mr-3 flex-shrink-0" />
+                  <span>Lifers, year birds, rarities & owls</span>
+                </div>
+                <div className="flex items-center text-sm text-gray-700">
+                  <MapPinIcon className="h-5 w-5 text-teal-600 mr-3 flex-shrink-0" />
+                  <span>Best hotspots, list or map view</span>
+                </div>
+                <div className="flex items-center text-sm text-gray-700">
+                  <ShieldCheckIcon className="h-5 w-5 text-teal-600 mr-3 flex-shrink-0" />
+                  <span>No ads, no tracking, delete anytime</span>
+                </div>
+                <div className="flex items-center text-sm text-gray-700">
+                  <DevicePhoneMobileIcon className="h-5 w-5 text-teal-600 mr-3 flex-shrink-0" />
+                  <span>iPhone | iOS 17+ | Free</span>
+                </div>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <button
+                  onClick={() => handleNavigation('/next-lifer')}
+                  className="bg-teal-600 text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-teal-700 transition-colors duration-200 text-center"
+                >
+                  Learn More
+                </button>
+                {NEXT_LIFER_APP_STORE_URL ? (
+                  <a
+                    href={NEXT_LIFER_APP_STORE_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="border-2 border-teal-600 text-teal-600 px-6 py-3 rounded-full text-sm font-semibold hover:bg-teal-50 transition-colors duration-200 text-center"
+                  >
+                    Download — Free
+                  </a>
+                ) : (
+                  <span className="border-2 border-teal-600 text-teal-600 px-6 py-3 rounded-full text-sm font-semibold text-center">
+                    Coming Soon
+                  </span>
+                )}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -214,7 +274,7 @@ const Home = () => {
               Built by Birders, for Birders
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Privacy-first design, on-device AI, and apps that enhance the birding experience
+              Privacy-first design, smart technology, and apps that enhance the birding experience
             </p>
           </div>
 
@@ -225,7 +285,7 @@ const Home = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Privacy First</h3>
               <p className="text-gray-600 leading-relaxed">
-                Both apps use on-device AI. Your audio and searches never leave your iPhone. We believe your birding data is your business.
+                No ads, no tracking, and we never sell your data. Go Birding AI and Bird Chatter keep AI on your iPhone, and Next Lifer stores only what it needs to sync your lists.
               </p>
             </div>
 
@@ -235,7 +295,7 @@ const Home = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">On-Device AI</h3>
               <p className="text-gray-600 leading-relaxed">
-                No internet required for core features. AI models run locally on your iPhone for instant results anywhere in the field.
+                Go Birding AI and Bird Chatter run their AI models locally on your iPhone — no internet required for core features, instant results anywhere in the field.
               </p>
             </div>
 
@@ -245,7 +305,7 @@ const Home = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Native iOS</h3>
               <p className="text-gray-600 leading-relaxed">
-                Built with SwiftUI for iOS 18+. Optimized for iPhone performance with beautiful, intuitive interfaces.
+                Built with SwiftUI for modern iOS. Optimized for iPhone performance with beautiful, intuitive interfaces.
               </p>
             </div>
           </div>
@@ -259,7 +319,7 @@ const Home = () => {
             Start Your Birding Adventure
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Whether you're searching for the perfect birding spot or competing to identify the most species, we've got an app for you.
+            Whether you're searching for the perfect birding spot, competing to identify the most species, or chasing your next lifer, we've got an app for you.
           </p>
           <button
             onClick={() => handleNavigation('/download')}

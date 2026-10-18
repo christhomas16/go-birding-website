@@ -32,7 +32,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
-              Two powerful iOS apps for birding enthusiasts. Find locations with voice-powered AI or identify birds by sound and compete on leaderboards.
+              Three iOS apps for birding enthusiasts. Find locations with voice-powered AI, identify birds by sound and compete on leaderboards, or find lifers near you with live eBird data.
             </p>
             <p className="text-sm text-gray-400">
               © 2026 gobirding.ai. All rights reserved.
@@ -57,6 +57,14 @@ const Footer = () => {
                   className="text-gray-300 hover:text-white transition-colors duration-200 text-left"
                 >
                   Bird Chatter
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleNavigation('/next-lifer')}
+                  className="text-gray-300 hover:text-white transition-colors duration-200 text-left"
+                >
+                  Next Lifer
                 </button>
               </li>
               <li>
@@ -92,6 +100,14 @@ const Footer = () => {
               </li>
               <li>
                 <button
+                  onClick={() => handleNavigation('/next-lifer/support')}
+                  className="text-gray-300 hover:text-white transition-colors duration-200 text-left"
+                >
+                  Next Lifer Support
+                </button>
+              </li>
+              <li>
+                <button
                   onClick={() => handleNavigation('/about')}
                   className="text-gray-300 hover:text-white transition-colors duration-200 text-left"
                 >
@@ -119,6 +135,14 @@ const Footer = () => {
                   className="text-gray-300 hover:text-white transition-colors duration-200 text-left"
                 >
                   Privacy Policy
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleNavigation('/next-lifer/privacy')}
+                  className="text-gray-300 hover:text-white transition-colors duration-200 text-left"
+                >
+                  Next Lifer Privacy Policy
                 </button>
               </li>
             </ul>
