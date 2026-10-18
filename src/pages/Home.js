@@ -209,7 +209,7 @@ const Home = () => {
             <div className="bg-gradient-to-br from-teal-50 to-cyan-50 p-8 lg:p-10 rounded-3xl border border-teal-100 hover:shadow-xl transition-shadow duration-200">
               <div className="flex items-center mb-6">
                 <img
-                  src="/next-lifer/AppIcon.png"
+                  src="/next-lifer-assets/AppIcon.png"
                   alt="Next Lifer"
                   className="w-16 h-16 rounded-2xl shadow-md mr-4"
                 />

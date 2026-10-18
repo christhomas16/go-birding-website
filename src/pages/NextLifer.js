@@ -25,11 +25,11 @@ const NextLifer = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const screenshots = [
-    { src: '/next-lifer/S1.png', alt: 'Next Lifer year birds: species near you that you have not seen yet this year' },
-    { src: '/next-lifer/S2.png', alt: 'Next Lifer results: Lifers, Year birds, Rarities, Owls, Hotspots, Notable and All as pills' },
-    { src: '/next-lifer/S3.png', alt: 'Next Lifer map view with lifers, rarities and hotspots inside the search radius' },
-    { src: '/next-lifer/S4.png', alt: 'Next Lifer hotspot page with Directions, eBird and Share buttons' },
-    { src: '/next-lifer/S5.png', alt: 'Next Lifer owl results with recent owl sightings and comments' }
+    { src: '/next-lifer-assets/S1.png', alt: 'Next Lifer year birds: species near you that you have not seen yet this year' },
+    { src: '/next-lifer-assets/S2.png', alt: 'Next Lifer results: Lifers, Year birds, Rarities, Owls, Hotspots, Notable and All as pills' },
+    { src: '/next-lifer-assets/S3.png', alt: 'Next Lifer map view with lifers, rarities and hotspots inside the search radius' },
+    { src: '/next-lifer-assets/S4.png', alt: 'Next Lifer hotspot page with Directions, eBird and Share buttons' },
+    { src: '/next-lifer-assets/S5.png', alt: 'Next Lifer owl results with recent owl sightings and comments' }
   ];
 
   const handleNavigation = (path) => {
@@ -143,7 +143,7 @@ const NextLifer = () => {
             <div>
               <div className="flex items-center mb-6">
                 <img
-                  src="/next-lifer/AppIcon.png"
+                  src="/next-lifer-assets/AppIcon.png"
                   alt="Next Lifer"
                   className="w-16 h-16 rounded-2xl shadow-md mr-4"
                 />

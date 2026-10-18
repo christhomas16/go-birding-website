@@ -146,7 +146,7 @@ const NextLiferSupport = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <img
-              src="/next-lifer/AppIcon.png"
+              src="/next-lifer-assets/AppIcon.png"
               alt="Next Lifer"
               className="w-24 h-24 rounded-2xl shadow-lg mx-auto mb-6"
             />

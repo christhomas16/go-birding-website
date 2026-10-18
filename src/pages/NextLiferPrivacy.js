@@ -55,7 +55,7 @@ const NextLiferPrivacy = () => {
         <div className="bg-white rounded-lg shadow-lg p-8">
           <div className="flex items-center mb-8">
             <img
-              src="/next-lifer/AppIcon.png"
+              src="/next-lifer-assets/AppIcon.png"
               alt="Next Lifer"
               className="w-12 h-12 rounded-xl shadow-sm mr-4"
             />
