@@ -12,6 +12,7 @@ import BirdChatter from './pages/BirdChatter';
 import BirdChatterSupport from './pages/BirdChatterSupport';
 import EBirdIt from './pages/EBirdIt';
 import EBirdItSupport from './pages/EBirdItSupport';
+import EBirdItPrivacy from './pages/EBirdItPrivacy';
 import TermsOfService from './pages/TermsOfService';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 
@@ -31,6 +32,7 @@ function AppContent() {
           <Route path="/bird-chatter/support" element={<BirdChatterSupport />} />
           <Route path="/ebird-it" element={<EBirdIt />} />
           <Route path="/ebird-it/support" element={<EBirdItSupport />} />
+          <Route path="/ebird-it/privacy" element={<EBirdItPrivacy />} />
           <Route path="/terms" element={<TermsOfService />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
         </Routes>
