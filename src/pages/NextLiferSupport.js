@@ -58,7 +58,7 @@ const NextLiferSupport = () => {
       },
       {
         question: 'What do I need to use Next Lifer?',
-        answer: 'An iPhone running iOS 17.0 or later and an internet connection. Next Lifer is free. You don\'t need an eBird API key, and you don\'t need to create an account to get started. Voice search is available on iPhones that support Apple Intelligence running iOS 26.'
+        answer: 'An iPhone running iOS 17.0 or later and an internet connection. Next Lifer is free. You don\'t need an eBird API key, and you don\'t need to create an account to get started. Voice search works on any iPhone; on iPhones with Apple Intelligence (iOS 26) it understands more flexible requests.'
       },
       {
         question: 'Do I need an account?',

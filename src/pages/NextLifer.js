@@ -405,7 +405,7 @@ const NextLifer = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Voice Search</h3>
               <p className="text-gray-600 leading-relaxed">
-                On iPhones with Apple Intelligence (iOS 26), just say "owls near Cape May this week" and Next Lifer does the rest.
+                Just say "owls near Cape May this week" and Next Lifer does the rest — on any iPhone, with Apple Intelligence making it even smarter on iPhones that have it.
               </p>
             </div>
 

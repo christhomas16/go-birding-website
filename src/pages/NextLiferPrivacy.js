@@ -152,7 +152,7 @@ const NextLiferPrivacy = () => {
               <ul className="list-disc pl-6 text-gray-700 mb-4">
                 <li>Your recent searches</li>
                 <li>Your eBird sign-in session (see 2.3)</li>
-                <li>Voice search audio and transcripts — on iPhones that support it, voice search is processed on your device by Apple's speech recognition and on-device Apple Intelligence; we don't receive the audio</li>
+                <li>Voice search audio and transcripts — your voice is turned into text by Apple's speech recognition (on your device when supported), and the request is interpreted on your device (by Apple Intelligence where available, otherwise by the app itself); we don't receive or store the audio or the transcript</li>
                 <li>Cached data such as the eBird species list and bird photos</li>
               </ul>
 
