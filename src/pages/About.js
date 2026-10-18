@@ -22,12 +22,12 @@ const About = () => {
     {
       icon: ShieldCheckIcon,
       title: 'Privacy First',
-      description: 'We prioritize your privacy across both apps. Go Birding AI runs entirely on-device, and Bird Chatter keeps all audio processing local with only minimal leaderboard data stored online.'
+      description: 'We prioritize your privacy across all our apps. Go Birding AI runs entirely on-device, Bird Chatter keeps all audio processing local with only minimal leaderboard data stored online, and eBird-it stores only what it needs to sync your lists — with no ads or tracking.'
     },
     {
       icon: LightBulbIcon,
       title: 'Innovation',
-      description: 'From voice-powered location search to real-time bird sound identification, we push the boundaries of what AI can do for birders.'
+      description: 'From voice-powered location search to real-time bird sound identification and lifer-finding from live eBird data, we push the boundaries of what technology can do for birders.'
     },
     {
       icon: HeartIcon,
@@ -44,7 +44,7 @@ const About = () => {
   const stats = [
     { number: '19,200+', label: 'Birding Locations' },
     { number: '6,500+', label: 'Bird Species Detected' },
-    { number: '2', label: 'AI-Powered Apps' },
+    { number: '3', label: 'iOS Birding Apps' },
     { number: '100%', label: 'On-Device AI' }
   ];
 
@@ -64,7 +64,7 @@ const About = () => {
                 From finding the perfect birding spot to identifying birds by sound, our apps harness the
                 latest in artificial intelligence.
               </p>
-              <div className="flex items-center space-x-6">
+              <div className="flex flex-wrap items-center gap-6">
                 <div className="flex items-center space-x-3">
                   <img
                     src="/logo.png"
@@ -80,6 +80,14 @@ const About = () => {
                     className="h-12 w-12 rounded-xl shadow-sm"
                   />
                   <span className="text-sm font-semibold text-gray-700">Bird Chatter</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <img
+                    src="/ebird-it/AppIcon.png"
+                    alt="eBird-it"
+                    className="h-12 w-12 rounded-xl shadow-sm"
+                  />
+                  <span className="text-sm font-semibold text-gray-700">eBird-it</span>
                 </div>
               </div>
             </div>
@@ -103,11 +111,11 @@ const About = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Apps</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Two powerful iOS apps, each designed to enhance a different aspect of the birding experience.
+              Three iOS apps, each designed to enhance a different aspect of the birding experience.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Go Birding AI */}
             <div className="bg-gradient-to-br from-primary-50 to-blue-50 p-8 rounded-2xl border border-primary-100">
               <div className="flex items-center space-x-4 mb-6">
@@ -151,6 +159,28 @@ const About = () => {
                 Learn more &rarr;
               </button>
             </div>
+
+            {/* eBird-it */}
+            <div className="bg-gradient-to-br from-teal-50 to-cyan-50 p-8 rounded-2xl border border-teal-100">
+              <div className="flex items-center space-x-4 mb-6">
+                <img src="/ebird-it/AppIcon.png" alt="eBird-it" className="h-14 w-14 rounded-xl shadow-sm" />
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900">eBird-it</h3>
+                  <p className="text-teal-600 font-medium">Lifers & Hotspots Near You</p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                Find potential lifers, year birds, rarities, owls and the best hotspots near any place
+                from live eBird data. Connect your eBird account once and every search highlights the
+                birds you still need.
+              </p>
+              <button
+                onClick={() => handleNavigation('/ebird-it')}
+                className="text-teal-600 font-semibold hover:text-teal-700 transition-colors"
+              >
+                Learn more &rarr;
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -188,8 +218,8 @@ const About = () => {
               <ShieldCheckIcon className="h-16 w-16 text-primary-600 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Privacy</h3>
               <p className="text-gray-600">
-                Both our apps prioritize your privacy with on-device AI processing. Your birding
-                data stays under your control.
+                Our apps collect as little as possible, never show ads or track you, and keep your
+                birding data under your control.
               </p>
             </div>
           </div>
@@ -267,6 +297,12 @@ const About = () => {
               birding outing into an adventure. Build your life list, earn points for new discoveries
               at the county, state, country, and world level, and compete with birders everywhere
               through leaderboards and badges.
+            </p>
+
+            <p className="mb-6">
+              Our newest app, eBird-it, answers the question every birder asks before heading out: what's around that I
+              still need? It reads live eBird reports, compares them with your own life and year lists,
+              and shows potential lifers, year birds, rarities, owls and the best hotspots near any place.
             </p>
 
             <p>

@@ -32,21 +32,31 @@ const Dropdown = ({ label, items, isActive, accentColor, onNavigate }) => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const activeClass = accentColor === 'green'
-    ? 'text-green-600'
-    : 'text-primary-600';
-
-  const hoverClass = accentColor === 'green'
-    ? 'hover:text-green-600'
-    : 'hover:text-primary-600';
-
-  const dropdownActiveClass = accentColor === 'green'
-    ? 'text-green-600 bg-green-50'
-    : 'text-primary-600 bg-primary-50';
-
-  const dropdownHoverClass = accentColor === 'green'
-    ? 'hover:bg-green-50 hover:text-green-600'
-    : 'hover:bg-primary-50 hover:text-primary-600';
+  const accentClasses = {
+    green: {
+      active: 'text-green-600',
+      hover: 'hover:text-green-600',
+      dropdownActive: 'text-green-600 bg-green-50',
+      dropdownHover: 'hover:bg-green-50 hover:text-green-600'
+    },
+    teal: {
+      active: 'text-teal-600',
+      hover: 'hover:text-teal-600',
+      dropdownActive: 'text-teal-600 bg-teal-50',
+      dropdownHover: 'hover:bg-teal-50 hover:text-teal-600'
+    },
+    blue: {
+      active: 'text-primary-600',
+      hover: 'hover:text-primary-600',
+      dropdownActive: 'text-primary-600 bg-primary-50',
+      dropdownHover: 'hover:bg-primary-50 hover:text-primary-600'
+    }
+  };
+  const accent = accentClasses[accentColor] || accentClasses.blue;
+  const activeClass = accent.active;
+  const hoverClass = accent.hover;
+  const dropdownActiveClass = accent.dropdownActive;
+  const dropdownHoverClass = accent.dropdownHover;
 
   return (
     <div className="relative" ref={dropdownRef}>
@@ -106,6 +116,12 @@ const Header = () => {
     { name: 'Support', href: '/bird-chatter/support', isActive: location.pathname === '/bird-chatter/support' },
   ];
 
+  const eBirdItItems = [
+    { name: 'Overview', href: '/ebird-it', isActive: location.pathname === '/ebird-it' },
+    { name: 'Support', href: '/ebird-it/support', isActive: location.pathname === '/ebird-it/support' },
+    { name: 'Privacy Policy', href: '/ebird-it/privacy', isActive: location.pathname === '/ebird-it/privacy' },
+  ];
+
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -129,7 +145,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-4">
+          <nav className="hidden md:flex items-center space-x-1 lg:space-x-4">
             <Dropdown
               label="Go Birding AI"
               items={goBirdingItems}
@@ -142,6 +158,13 @@ const Header = () => {
               items={birdChatterItems}
               isActive={isActive('/bird-chatter')}
               accentColor="green"
+              onNavigate={handleNavigation}
+            />
+            <Dropdown
+              label="eBird-it"
+              items={eBirdItItems}
+              isActive={isActive('/ebird-it')}
+              accentColor="teal"
               onNavigate={handleNavigation}
             />
             <button
@@ -244,6 +267,24 @@ const Header = () => {
               >
                 Support
               </button>
+
+              {/* eBird-it section */}
+              <div className="px-3 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider mt-2">
+                eBird-it
+              </div>
+              {eBirdItItems.map((item) => (
+                <button
+                  key={item.href}
+                  onClick={() => handleNavigation(item.href)}
+                  className={`block w-full text-left px-6 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
+                    item.isActive
+                      ? 'text-teal-600 bg-teal-50'
+                      : 'text-gray-700 hover:text-teal-600 hover:bg-gray-50'
+                  }`}
+                >
+                  {item.name}
+                </button>
+              ))}
 
               {/* Other links */}
               <div className="border-t border-gray-200 mt-2 pt-2">

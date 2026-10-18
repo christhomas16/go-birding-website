@@ -3,6 +3,7 @@ import {
   DevicePhoneMobileIcon,
   CheckCircleIcon
 } from '@heroicons/react/24/outline';
+import { EBIRD_IT_APP_STORE_URL } from '../ebirdIt';
 
 const Download = () => {
   return (
@@ -15,12 +16,12 @@ const Download = () => {
               Download Our Apps
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Two powerful birding apps for your iPhone. Find locations or identify birds by sound.
+              Three birding apps for your iPhone. Find locations, identify birds by sound, or find lifers near you.
             </p>
           </div>
 
-          {/* Two App Cards Side by Side */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {/* App Cards Side by Side */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {/* Go Birding AI Card */}
             <div className="bg-white rounded-3xl shadow-2xl p-8 lg:p-10 border-t-4 border-primary-600">
               <div className="flex flex-col items-center text-center mb-6">
@@ -134,13 +135,82 @@ const Download = () => {
                 Free • iPhone 14 Plus+ • iOS 18.0+
               </p>
             </div>
+
+            {/* eBird-it Card */}
+            <div className="bg-white rounded-3xl shadow-2xl p-8 lg:p-10 border-t-4 border-teal-600">
+              <div className="flex flex-col items-center text-center mb-6">
+                <img
+                  src="/ebird-it/AppIcon.png"
+                  alt="eBird-it"
+                  className="w-20 h-20 rounded-2xl shadow-lg mb-4"
+                />
+                <h2 className="text-2xl font-bold text-gray-900 mb-1">eBird-it</h2>
+                <p className="text-teal-600 font-semibold mb-4">Lifers & Hotspots Near You</p>
+              </div>
+
+              <p className="text-gray-600 mb-6 leading-relaxed text-center">
+                Find potential lifers, year birds, rarities, owls and the best hotspots near any place,
+                from live eBird data and your own life list.
+              </p>
+
+              <div className="space-y-3 mb-8">
+                <div className="flex items-start">
+                  <CheckCircleIcon className="h-5 w-5 text-teal-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm">Connect eBird to import your life & year lists</span>
+                </div>
+                <div className="flex items-start">
+                  <CheckCircleIcon className="h-5 w-5 text-teal-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm">Lifers, year birds, rarities, owls & hotspots</span>
+                </div>
+                <div className="flex items-start">
+                  <CheckCircleIcon className="h-5 w-5 text-teal-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm">Map view, favorites & saved search areas</span>
+                </div>
+                <div className="flex items-start">
+                  <CheckCircleIcon className="h-5 w-5 text-teal-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm">No ads, no tracking — use it as a guest</span>
+                </div>
+              </div>
+
+              {EBIRD_IT_APP_STORE_URL ? (
+                <a
+                  href={EBIRD_IT_APP_STORE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Download eBird-it on the App Store"
+                  className="bg-black text-white px-8 py-4 rounded-2xl text-center w-full inline-block hover:bg-gray-800 transition-colors duration-200"
+                >
+                  <div className="flex items-center justify-center space-x-3">
+                    <DevicePhoneMobileIcon className="h-7 w-7" />
+                    <div className="text-left">
+                      <div className="text-xs">Download on the</div>
+                      <div className="text-lg font-semibold">App Store</div>
+                    </div>
+                  </div>
+                </a>
+              ) : (
+                <div className="bg-gray-200 text-gray-700 px-8 py-4 rounded-2xl text-center w-full">
+                  <div className="flex items-center justify-center space-x-3">
+                    <DevicePhoneMobileIcon className="h-7 w-7" />
+                    <div className="text-left">
+                      <div className="text-xs">Coming soon to the</div>
+                      <div className="text-lg font-semibold">App Store</div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              <p className="text-sm text-gray-500 text-center mt-4">
+                Free • iPhone • iOS 17.0+
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Comparison Section */}
       <section className="py-24">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Compare Our Apps</h2>
             <p className="text-xl text-gray-600">
@@ -148,13 +218,14 @@ const Download = () => {
             </p>
           </div>
 
-          <div className="overflow-hidden rounded-2xl border border-gray-200">
+          <div className="overflow-x-auto rounded-2xl border border-gray-200">
             <table className="w-full">
               <thead>
                 <tr className="bg-gray-50">
                   <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Feature</th>
                   <th className="px-6 py-4 text-center text-sm font-semibold text-primary-600">Go Birding AI</th>
                   <th className="px-6 py-4 text-center text-sm font-semibold text-green-600">Bird Chatter</th>
+                  <th className="px-6 py-4 text-center text-sm font-semibold text-teal-600">eBird-it</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200">
@@ -162,41 +233,49 @@ const Download = () => {
                   <td className="px-6 py-4 text-sm text-gray-700">Price</td>
                   <td className="px-6 py-4 text-sm text-center text-gray-900 font-medium">$1.99</td>
                   <td className="px-6 py-4 text-sm text-center text-gray-900 font-medium">Free</td>
+                  <td className="px-6 py-4 text-sm text-center text-gray-900 font-medium">Free</td>
                 </tr>
                 <tr className="bg-gray-50">
                   <td className="px-6 py-4 text-sm text-gray-700">Focus</td>
                   <td className="px-6 py-4 text-sm text-center text-gray-900">Find birding locations</td>
                   <td className="px-6 py-4 text-sm text-center text-gray-900">Identify birds by sound</td>
+                  <td className="px-6 py-4 text-sm text-center text-gray-900">Find lifers & rarities nearby</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 text-sm text-gray-700">Device</td>
                   <td className="px-6 py-4 text-sm text-center text-gray-900">iPhone 11+</td>
                   <td className="px-6 py-4 text-sm text-center text-gray-900">iPhone 14 Plus+</td>
+                  <td className="px-6 py-4 text-sm text-center text-gray-900">iPhone (iOS 17+)</td>
                 </tr>
                 <tr className="bg-gray-50">
                   <td className="px-6 py-4 text-sm text-gray-700">On-Device AI</td>
                   <td className="px-6 py-4 text-sm text-center text-green-600">Yes</td>
                   <td className="px-6 py-4 text-sm text-center text-green-600">Yes</td>
+                  <td className="px-6 py-4 text-sm text-center text-gray-400">No</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 text-sm text-gray-700">Works Offline</td>
                   <td className="px-6 py-4 text-sm text-center text-green-600">Yes</td>
                   <td className="px-6 py-4 text-sm text-center text-green-600">Yes (detection)</td>
+                  <td className="px-6 py-4 text-sm text-center text-gray-400">No (live eBird data)</td>
                 </tr>
                 <tr className="bg-gray-50">
                   <td className="px-6 py-4 text-sm text-gray-700">Leaderboards</td>
                   <td className="px-6 py-4 text-sm text-center text-gray-400">No</td>
                   <td className="px-6 py-4 text-sm text-center text-green-600">Yes</td>
+                  <td className="px-6 py-4 text-sm text-center text-gray-400">No</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 text-sm text-gray-700">Voice Search</td>
                   <td className="px-6 py-4 text-sm text-center text-green-600">Yes</td>
                   <td className="px-6 py-4 text-sm text-center text-gray-400">No</td>
+                  <td className="px-6 py-4 text-sm text-center text-green-600">Yes (iOS 26)</td>
                 </tr>
                 <tr className="bg-gray-50">
                   <td className="px-6 py-4 text-sm text-gray-700">Key Stat</td>
                   <td className="px-6 py-4 text-sm text-center text-gray-900">19,200+ locations</td>
                   <td className="px-6 py-4 text-sm text-center text-gray-900">6,500+ species</td>
+                  <td className="px-6 py-4 text-sm text-center text-gray-900">Live eBird data</td>
                 </tr>
               </tbody>
             </table>
@@ -211,7 +290,7 @@ const Download = () => {
             Start Your Birding Adventure
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Download both apps and get the complete birding experience.
+            Get all three apps for the complete birding experience.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -232,9 +311,24 @@ const Download = () => {
             >
               Bird Chatter — Free
             </a>
+            {EBIRD_IT_APP_STORE_URL ? (
+              <a
+                href={EBIRD_IT_APP_STORE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Download eBird-it on the App Store"
+                className="bg-teal-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-teal-700 transition-colors duration-200 shadow-lg"
+              >
+                eBird-it — Free
+              </a>
+            ) : (
+              <span className="bg-teal-600 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg opacity-80">
+                eBird-it — Coming Soon
+              </span>
+            )}
           </div>
           <p className="text-gray-400 mt-6 text-sm">
-            Both apps require iOS 18.0+ and are available on the App Store.
+            Go Birding AI and Bird Chatter require iOS 18.0+; eBird-it requires iOS 17.0+.
           </p>
         </div>
       </section>
