@@ -25,11 +25,11 @@ const NextLifer = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const screenshots = [
-    { src: '/next-lifer-assets/S1.png', alt: 'Next Lifer year birds: species near you that you have not seen yet this year' },
-    { src: '/next-lifer-assets/S2.png', alt: 'Next Lifer results: every category as pills above a list of recent sightings with distance, count and time' },
-    { src: '/next-lifer-assets/S3.png', alt: 'Next Lifer map view with lifers, rarities and hotspots inside the search radius' },
-    { src: '/next-lifer-assets/S4.png', alt: 'Next Lifer hotspot page: map, all-time and recent counts, lifers and rarities, recent checklists and species' },
-    { src: '/next-lifer-assets/S5.png', alt: 'Next Lifer owl results with recent owl sightings and comments' }
+    { src: '/next-lifer-assets/S1.png?v=2', alt: 'Next Lifer year birds: species near you that you have not seen yet this year' },
+    { src: '/next-lifer-assets/S2.png?v=2', alt: 'Next Lifer results: every category as pills above a list of recent sightings with distance, count and time' },
+    { src: '/next-lifer-assets/S3.png?v=2', alt: 'Next Lifer map view with lifers, rarities and hotspots inside the search radius' },
+    { src: '/next-lifer-assets/S4.png?v=2', alt: 'Next Lifer hotspot page: map, all-time and recent counts, lifers and rarities, recent checklists and species' },
+    { src: '/next-lifer-assets/S5.png?v=2', alt: 'Next Lifer owl results with recent owl sightings and comments' }
   ];
 
   const handleNavigation = (path) => {
@@ -143,7 +143,7 @@ const NextLifer = () => {
             <div>
               <div className="flex items-center mb-6">
                 <img
-                  src="/next-lifer-assets/AppIcon.png"
+                  src="/next-lifer-assets/AppIcon.png?v=2"
                   alt="Next Lifer"
                   className="w-16 h-16 rounded-2xl shadow-md mr-4"
                 />

@@ -140,7 +140,7 @@ const Download = () => {
             <div className="bg-white rounded-3xl shadow-2xl p-8 lg:p-10 border-t-4 border-amber-500">
               <div className="flex flex-col items-center text-center mb-6">
                 <img
-                  src="/next-lifer-assets/AppIcon.png"
+                  src="/next-lifer-assets/AppIcon.png?v=2"
                   alt="Next Lifer"
                   className="w-20 h-20 rounded-2xl shadow-lg mb-4"
                 />
