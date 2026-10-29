@@ -26,9 +26,9 @@ const NextLifer = () => {
 
   const screenshots = [
     { src: '/next-lifer-assets/S1.png', alt: 'Next Lifer year birds: species near you that you have not seen yet this year' },
-    { src: '/next-lifer-assets/S2.png', alt: 'Next Lifer results: Lifers, Year birds, Rarities, Owls, Hotspots, Notable and All as pills' },
+    { src: '/next-lifer-assets/S2.png', alt: 'Next Lifer results: every category as pills above a list of recent sightings with distance, count and time' },
     { src: '/next-lifer-assets/S3.png', alt: 'Next Lifer map view with lifers, rarities and hotspots inside the search radius' },
-    { src: '/next-lifer-assets/S4.png', alt: 'Next Lifer hotspot page with Directions, eBird and Share buttons' },
+    { src: '/next-lifer-assets/S4.png', alt: 'Next Lifer hotspot page: map, all-time and recent counts, lifers and rarities, recent checklists and species' },
     { src: '/next-lifer-assets/S5.png', alt: 'Next Lifer owl results with recent owl sightings and comments' }
   ];
 
@@ -68,7 +68,7 @@ const NextLifer = () => {
     {
       icon: StarIcon,
       title: 'Lifers',
-      description: 'Recent sightings of species that aren\'t on your life list yet — the birds worth the drive.'
+      description: 'Recent sightings of species that aren\'t on your life list yet — the birds worth the drive. Only birds that count on eBird, never hybrids or "sp."'
     },
     {
       icon: CalendarDaysIcon,
@@ -121,13 +121,13 @@ const NextLifer = () => {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Download Next Lifer on the App Store"
-        className={`${light ? 'bg-white text-teal-700 hover:bg-gray-100' : 'bg-teal-600 text-white hover:bg-teal-700'} px-8 py-4 rounded-full text-lg font-semibold transition-colors duration-200 shadow-lg hover:shadow-xl text-center inline-block`}
+        className={`${light ? 'bg-white text-slate-900 hover:bg-gray-100' : 'bg-slate-900 text-white hover:bg-slate-800'} px-8 py-4 rounded-full text-lg font-semibold transition-colors duration-200 shadow-lg hover:shadow-xl text-center inline-block`}
       >
         Download on the App Store
       </a>
     ) : (
       <span
-        className={`${light ? 'bg-white/90 text-teal-700' : 'bg-teal-600 text-white'} px-8 py-4 rounded-full text-lg font-semibold shadow-lg text-center inline-block cursor-default`}
+        className={`${light ? 'bg-white/90 text-slate-900' : 'bg-slate-900 text-white'} px-8 py-4 rounded-full text-lg font-semibold shadow-lg text-center inline-block cursor-default`}
       >
         Coming soon to the App Store
       </span>
@@ -137,7 +137,7 @@ const NextLifer = () => {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-teal-50 to-cyan-100 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-slate-50 to-amber-50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -151,7 +151,7 @@ const NextLifer = () => {
               </div>
               <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
                 Your Next Lifer
-                <span className="text-teal-600 block">Is Nearby.</span>
+                <span className="text-amber-600 block">Is Nearby.</span>
               </h1>
               <p className="text-xl text-gray-600 mb-4 leading-relaxed">
                 Next Lifer finds potential lifers, year birds, rarities, owls and the best hotspots near any place — from live eBird data.
@@ -163,7 +163,7 @@ const NextLifer = () => {
                 <AppStoreButton />
                 <button
                   onClick={() => window.scrollTo({ top: 800, behavior: 'smooth' })}
-                  className="border-2 border-teal-600 text-teal-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-teal-50 transition-colors duration-200 text-center"
+                  className="border-2 border-slate-900 text-slate-900 px-8 py-4 rounded-full text-lg font-semibold hover:bg-amber-50 transition-colors duration-200 text-center"
                 >
                   Learn More
                 </button>
@@ -211,7 +211,7 @@ const NextLifer = () => {
                         onClick={() => goToSlide(index)}
                         className={`w-2 h-2 rounded-full transition-all duration-200 ${
                           index === currentSlide
-                            ? 'bg-teal-400 w-8'
+                            ? 'bg-amber-400 w-8'
                             : 'bg-white/60 hover:bg-white/80'
                         }`}
                         aria-label={`Go to screenshot ${index + 1}`}
@@ -231,7 +231,7 @@ const NextLifer = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {highlights.map((item, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl lg:text-5xl font-bold text-teal-600 mb-2">{item.stat}</div>
+                <div className="text-4xl lg:text-5xl font-bold text-amber-600 mb-2">{item.stat}</div>
                 <div className="text-gray-600 text-sm lg:text-base">{item.label}</div>
               </div>
             ))}
@@ -253,8 +253,8 @@ const NextLifer = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-2xl shadow-md text-center">
-              <div className="bg-teal-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold text-teal-600">1</span>
+              <div className="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-2xl font-bold text-amber-700">1</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Connect eBird</h3>
               <p className="text-gray-600">
@@ -263,8 +263,8 @@ const NextLifer = () => {
             </div>
 
             <div className="bg-white p-8 rounded-2xl shadow-md text-center">
-              <div className="bg-teal-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold text-teal-600">2</span>
+              <div className="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-2xl font-bold text-amber-700">2</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Pick a Place</h3>
               <p className="text-gray-600">
@@ -273,8 +273,8 @@ const NextLifer = () => {
             </div>
 
             <div className="bg-white p-8 rounded-2xl shadow-md text-center">
-              <div className="bg-teal-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold text-teal-600">3</span>
+              <div className="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-2xl font-bold text-amber-700">3</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Go Birding</h3>
               <p className="text-gray-600">
@@ -300,8 +300,8 @@ const NextLifer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {categories.map((feature, index) => (
               <div key={index} className="bg-gray-50 p-8 rounded-2xl hover:shadow-lg transition-shadow duration-200">
-                <div className="bg-teal-100 p-3 rounded-lg inline-block mb-4">
-                  <feature.icon className="h-6 w-6 text-teal-600" />
+                <div className="bg-amber-100 p-3 rounded-lg inline-block mb-4">
+                  <feature.icon className="h-6 w-6 text-amber-700" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{feature.description}</p>
@@ -312,7 +312,7 @@ const NextLifer = () => {
       </section>
 
       {/* Life List Section */}
-      <section className="py-24 bg-gradient-to-br from-teal-50 to-cyan-50">
+      <section className="py-24 bg-gradient-to-br from-slate-50 to-amber-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -325,8 +325,8 @@ const NextLifer = () => {
               </p>
               <div className="space-y-4">
                 <div className="flex items-start">
-                  <div className="bg-teal-100 p-2 rounded-lg mr-4 flex-shrink-0">
-                    <LinkIcon className="h-6 w-6 text-teal-600" />
+                  <div className="bg-amber-100 p-2 rounded-lg mr-4 flex-shrink-0">
+                    <LinkIcon className="h-6 w-6 text-amber-700" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Connect eBird</h4>
@@ -334,8 +334,8 @@ const NextLifer = () => {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <div className="bg-teal-100 p-2 rounded-lg mr-4 flex-shrink-0">
-                    <ArrowPathIcon className="h-6 w-6 text-teal-600" />
+                  <div className="bg-amber-100 p-2 rounded-lg mr-4 flex-shrink-0">
+                    <ArrowPathIcon className="h-6 w-6 text-amber-700" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Refresh Any Time</h4>
@@ -343,8 +343,8 @@ const NextLifer = () => {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <div className="bg-teal-100 p-2 rounded-lg mr-4 flex-shrink-0">
-                    <UserCircleIcon className="h-6 w-6 text-teal-600" />
+                  <div className="bg-amber-100 p-2 rounded-lg mr-4 flex-shrink-0">
+                    <UserCircleIcon className="h-6 w-6 text-amber-700" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">No Sign-Up Required</h4>
@@ -357,27 +357,27 @@ const NextLifer = () => {
               <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Hotspot Pages</h3>
               <ul className="space-y-3 text-gray-600">
                 <li className="flex items-start">
-                  <span className="text-teal-600 mr-2 font-bold">&#10003;</span>
+                  <span className="text-amber-700 mr-2 font-bold">&#10003;</span>
                   <span>Recent species at the hotspot, with your lifers first</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-teal-600 mr-2 font-bold">&#10003;</span>
+                  <span className="text-amber-700 mr-2 font-bold">&#10003;</span>
                   <span>Recent checklists and owl history</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-teal-600 mr-2 font-bold">&#10003;</span>
+                  <span className="text-amber-700 mr-2 font-bold">&#10003;</span>
                   <span>Directions in Apple Maps or Google Maps</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-teal-600 mr-2 font-bold">&#10003;</span>
+                  <span className="text-amber-700 mr-2 font-bold">&#10003;</span>
                   <span>Open the hotspot in eBird with one tap</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-teal-600 mr-2 font-bold">&#10003;</span>
+                  <span className="text-amber-700 mr-2 font-bold">&#10003;</span>
                   <span>Share it with your birding friends</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-teal-600 mr-2 font-bold">&#10003;</span>
+                  <span className="text-amber-700 mr-2 font-bold">&#10003;</span>
                   <span>Star it as a favorite for next time</span>
                 </li>
               </ul>
@@ -400,8 +400,8 @@ const NextLifer = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-2xl shadow-md text-center">
-              <div className="bg-teal-100 p-4 rounded-full w-fit mx-auto mb-6">
-                <MicrophoneIcon className="h-8 w-8 text-teal-600" />
+              <div className="bg-amber-100 p-4 rounded-full w-fit mx-auto mb-6">
+                <MicrophoneIcon className="h-8 w-8 text-amber-700" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Voice Search</h3>
               <p className="text-gray-600 leading-relaxed">
@@ -410,8 +410,8 @@ const NextLifer = () => {
             </div>
 
             <div className="bg-white p-8 rounded-2xl shadow-md text-center">
-              <div className="bg-teal-100 p-4 rounded-full w-fit mx-auto mb-6">
-                <DevicePhoneMobileIcon className="h-8 w-8 text-teal-600" />
+              <div className="bg-amber-100 p-4 rounded-full w-fit mx-auto mb-6">
+                <DevicePhoneMobileIcon className="h-8 w-8 text-amber-700" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Dark by Design</h3>
               <p className="text-gray-600 leading-relaxed">
@@ -420,8 +420,8 @@ const NextLifer = () => {
             </div>
 
             <div className="bg-white p-8 rounded-2xl shadow-md text-center">
-              <div className="bg-teal-100 p-4 rounded-full w-fit mx-auto mb-6">
-                <ShieldCheckIcon className="h-8 w-8 text-teal-600" />
+              <div className="bg-amber-100 p-4 rounded-full w-fit mx-auto mb-6">
+                <ShieldCheckIcon className="h-8 w-8 text-amber-700" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">No Ads, No Tracking</h3>
               <p className="text-gray-600 leading-relaxed">
@@ -438,19 +438,19 @@ const NextLifer = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-teal-700">
+      <section className="py-24 bg-slate-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
             Stop Scrolling. Start Chasing.
           </h2>
-          <p className="text-xl text-teal-100 mb-8">
+          <p className="text-xl text-slate-200 mb-8">
             Next Lifer turns live eBird reports into a short list of birds you actually need — and where to find them.
           </p>
           <AppStoreButton light />
-          <p className="text-teal-200 mt-4 text-sm">
+          <p className="text-slate-300 mt-4 text-sm">
             Free for iPhone. Requires iOS 17.0 or later.
           </p>
-          <p className="text-teal-200 mt-6 text-base">
+          <p className="text-slate-300 mt-6 text-base">
             Need help? Visit our{' '}
             <button
               onClick={() => handleNavigation('/next-lifer/support')}

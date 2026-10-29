@@ -54,7 +54,7 @@ const NextLiferSupport = () => {
     gettingStarted: [
       {
         question: 'What does Next Lifer do?',
-        answer: 'Next Lifer finds potential lifers, year birds, rarities, owls and the best hotspots near any place, using live data from eBird. Pick your current location or type a city, park or address, choose a distance and how many days back to look, and tap "Find birds in this area". Every result category appears as a pill at the top of the results, and you can switch to a map at any time.'
+        answer: 'Next Lifer finds potential lifers, year birds, rarities, owls and the best hotspots near any place, using live data from eBird. Pick your current location or type a city, park or address, choose a distance and how many days back to look, and tap "Find birds". Every result category appears as a pill at the top of the results, and you can switch to a map at any time.'
       },
       {
         question: 'What do I need to use Next Lifer?',
@@ -125,7 +125,7 @@ const NextLiferSupport = () => {
   const FaqGroup = ({ number, title, items, id }) => (
     <div className="mb-12" id={id}>
       <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-        <span className="bg-teal-600 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">{number}</span>
+        <span className="bg-slate-900 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">{number}</span>
         {title}
       </h3>
       <div className="space-y-6">
@@ -142,7 +142,7 @@ const NextLiferSupport = () => {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-teal-50 to-cyan-100 py-24">
+      <section className="bg-gradient-to-br from-slate-50 to-amber-50 py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <img
@@ -152,7 +152,7 @@ const NextLiferSupport = () => {
             />
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Next Lifer
-              <span className="text-teal-600 block">Support</span>
+              <span className="text-amber-700 block">Support</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Get help with Connect eBird, accounts, searches and your data.
@@ -170,10 +170,10 @@ const NextLiferSupport = () => {
               <button
                 key={index}
                 onClick={link.action}
-                className="bg-gray-50 p-8 rounded-2xl hover:shadow-lg transition-all duration-200 text-left hover:bg-teal-50 group"
+                className="bg-gray-50 p-8 rounded-2xl hover:shadow-lg transition-all duration-200 text-left hover:bg-amber-50 group"
               >
-                <div className="bg-teal-100 p-3 rounded-lg inline-block mb-4 group-hover:bg-teal-200 transition-colors duration-200">
-                  <link.icon className="h-6 w-6 text-teal-600" />
+                <div className="bg-amber-100 p-3 rounded-lg inline-block mb-4 group-hover:bg-amber-200 transition-colors duration-200">
+                  <link.icon className="h-6 w-6 text-amber-700" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{link.title}</h3>
                 <p className="text-gray-600">{link.description}</p>
@@ -183,7 +183,7 @@ const NextLiferSupport = () => {
           <div className="mt-8 text-center">
             <button
               onClick={() => handleNavigation('/next-lifer')}
-              className="inline-flex items-center text-teal-600 font-semibold hover:underline"
+              className="inline-flex items-center text-amber-700 font-semibold hover:underline"
             >
               <ArrowLeftIcon className="h-4 w-4 mr-2" />
               Back to Next Lifer overview
@@ -196,8 +196,8 @@ const NextLiferSupport = () => {
       <section className="py-24 bg-gray-50" id="faq">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="bg-teal-100 p-4 rounded-full w-fit mx-auto mb-6">
-              <QuestionMarkCircleIcon className="h-8 w-8 text-teal-600" />
+            <div className="bg-amber-100 p-4 rounded-full w-fit mx-auto mb-6">
+              <QuestionMarkCircleIcon className="h-8 w-8 text-amber-700" />
             </div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
             <p className="text-xl text-gray-600">
@@ -212,7 +212,7 @@ const NextLiferSupport = () => {
           {/* Delete account */}
           <div id="delete-account">
             <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-              <span className="bg-teal-600 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">4</span>
+              <span className="bg-slate-900 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">4</span>
               Deleting Your Account & Data
             </h3>
             <div className="bg-white p-6 rounded-xl shadow-md">
@@ -223,7 +223,7 @@ const NextLiferSupport = () => {
               <ol className="space-y-3 mb-6">
                 {deleteSteps.map((step, index) => (
                   <li key={index} className="flex items-start text-gray-600">
-                    <span className="bg-teal-100 text-teal-700 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mr-3 mt-0.5 flex-shrink-0">{index + 1}</span>
+                    <span className="bg-amber-100 text-amber-800 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mr-3 mt-0.5 flex-shrink-0">{index + 1}</span>
                     <span className="leading-relaxed">{step}</span>
                   </li>
                 ))}
@@ -235,14 +235,14 @@ const NextLiferSupport = () => {
               </p>
               <p className="text-gray-600 leading-relaxed">
                 Can't open the app, or already deleted it? Email{' '}
-                <a href="mailto:support@gobirding.ai?subject=Next%20Lifer%20data%20deletion%20request" className="text-teal-600 font-semibold hover:underline">
+                <a href="mailto:support@gobirding.ai?subject=Next%20Lifer%20data%20deletion%20request" className="text-amber-700 font-semibold hover:underline">
                   support@gobirding.ai
                 </a>{' '}
                 from the email address on your account and we'll delete your data —
                 or send you a copy of it — within 30 days. See our{' '}
                 <button
                   onClick={() => handleNavigation('/next-lifer/privacy')}
-                  className="text-teal-600 font-semibold hover:underline"
+                  className="text-amber-700 font-semibold hover:underline"
                 >
                   Privacy Policy
                 </button>{' '}
@@ -261,8 +261,8 @@ const NextLiferSupport = () => {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="bg-teal-100 p-4 rounded-full w-fit mx-auto mb-6">
-              <WrenchScrewdriverIcon className="h-8 w-8 text-teal-600" />
+            <div className="bg-amber-100 p-4 rounded-full w-fit mx-auto mb-6">
+              <WrenchScrewdriverIcon className="h-8 w-8 text-amber-700" />
             </div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Common Issues & Solutions</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -272,113 +272,113 @@ const NextLiferSupport = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gray-50 p-8 rounded-2xl">
-              <div className="bg-teal-100 p-3 rounded-lg inline-block mb-4">
-                <LinkIcon className="h-6 w-6 text-teal-600" />
+              <div className="bg-amber-100 p-3 rounded-lg inline-block mb-4">
+                <LinkIcon className="h-6 w-6 text-amber-700" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">eBird Sign-In Won't Load</h3>
               <ul className="space-y-2 text-gray-600 text-sm">
                 <li className="flex items-start">
-                  <span className="text-teal-600 mr-2">•</span>
+                  <span className="text-amber-700 mr-2">•</span>
                   <span>Check your internet connection</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-teal-600 mr-2">•</span>
+                  <span className="text-amber-700 mr-2">•</span>
                   <span>Force-quit and reopen Next Lifer</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-teal-600 mr-2">•</span>
+                  <span className="text-amber-700 mr-2">•</span>
                   <span>Import your life list CSV instead</span>
                 </li>
               </ul>
             </div>
 
             <div className="bg-gray-50 p-8 rounded-2xl">
-              <div className="bg-teal-100 p-3 rounded-lg inline-block mb-4">
-                <QuestionMarkCircleIcon className="h-6 w-6 text-teal-600" />
+              <div className="bg-amber-100 p-3 rounded-lg inline-block mb-4">
+                <QuestionMarkCircleIcon className="h-6 w-6 text-amber-700" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Counts Differ from eBird</h3>
               <ul className="space-y-2 text-gray-600 text-sm">
                 <li className="flex items-start">
-                  <span className="text-teal-600 mr-2">•</span>
+                  <span className="text-amber-700 mr-2">•</span>
                   <span>Only full species are counted</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-teal-600 mr-2">•</span>
+                  <span className="text-amber-700 mr-2">•</span>
                   <span>Spuhs, slashes and hybrids are excluded</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-teal-600 mr-2">•</span>
+                  <span className="text-amber-700 mr-2">•</span>
                   <span>Refresh from Settings → eBird life list</span>
                 </li>
               </ul>
             </div>
 
             <div className="bg-gray-50 p-8 rounded-2xl">
-              <div className="bg-teal-100 p-3 rounded-lg inline-block mb-4">
-                <ClockIcon className="h-6 w-6 text-teal-600" />
+              <div className="bg-amber-100 p-3 rounded-lg inline-block mb-4">
+                <ClockIcon className="h-6 w-6 text-amber-700" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Slow First Search</h3>
               <ul className="space-y-2 text-gray-600 text-sm">
                 <li className="flex items-start">
-                  <span className="text-teal-600 mr-2">•</span>
+                  <span className="text-amber-700 mr-2">•</span>
                   <span>New areas take a few seconds the first time</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-teal-600 mr-2">•</span>
+                  <span className="text-amber-700 mr-2">•</span>
                   <span>Repeat searches are much faster</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-teal-600 mr-2">•</span>
+                  <span className="text-amber-700 mr-2">•</span>
                   <span>Smaller distances return sooner</span>
                 </li>
               </ul>
             </div>
 
             <div className="bg-gray-50 p-8 rounded-2xl">
-              <div className="bg-teal-100 p-3 rounded-lg inline-block mb-4">
-                <KeyIcon className="h-6 w-6 text-teal-600" />
+              <div className="bg-amber-100 p-3 rounded-lg inline-block mb-4">
+                <KeyIcon className="h-6 w-6 text-amber-700" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Forgot Password</h3>
               <ul className="space-y-2 text-gray-600 text-sm">
                 <li className="flex items-start">
-                  <span className="text-teal-600 mr-2">•</span>
+                  <span className="text-amber-700 mr-2">•</span>
                   <span>Use "forgot password" on the sign-in screen</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-teal-600 mr-2">•</span>
+                  <span className="text-amber-700 mr-2">•</span>
                   <span>Enter the 6-digit code we email you</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-teal-600 mr-2">•</span>
+                  <span className="text-amber-700 mr-2">•</span>
                   <span>Check spam if it doesn't arrive</span>
                 </li>
               </ul>
             </div>
 
             <div className="bg-gray-50 p-8 rounded-2xl">
-              <div className="bg-teal-100 p-3 rounded-lg inline-block mb-4">
-                <TrashIcon className="h-6 w-6 text-teal-600" />
+              <div className="bg-amber-100 p-3 rounded-lg inline-block mb-4">
+                <TrashIcon className="h-6 w-6 text-amber-700" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Delete Your Data</h3>
               <ul className="space-y-2 text-gray-600 text-sm">
                 <li className="flex items-start">
-                  <span className="text-teal-600 mr-2">•</span>
+                  <span className="text-amber-700 mr-2">•</span>
                   <span>Settings → Account → Delete account</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-teal-600 mr-2">•</span>
+                  <span className="text-amber-700 mr-2">•</span>
                   <span>Works for guest accounts too</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-teal-600 mr-2">•</span>
+                  <span className="text-amber-700 mr-2">•</span>
                   <span>Or email support@gobirding.ai</span>
                 </li>
               </ul>
             </div>
 
             <div className="bg-gray-50 p-8 rounded-2xl">
-              <div className="bg-teal-100 p-3 rounded-lg inline-block mb-4">
-                <EnvelopeIcon className="h-6 w-6 text-teal-600" />
+              <div className="bg-amber-100 p-3 rounded-lg inline-block mb-4">
+                <EnvelopeIcon className="h-6 w-6 text-amber-700" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Still Need Help?</h3>
               <p className="text-gray-600 text-sm mb-4">
@@ -386,7 +386,7 @@ const NextLiferSupport = () => {
               </p>
               <button
                 onClick={() => scrollToId('contact')}
-                className="text-teal-600 font-semibold hover:underline text-sm"
+                className="text-amber-700 font-semibold hover:underline text-sm"
               >
                 Contact Support →
               </button>
@@ -398,8 +398,8 @@ const NextLiferSupport = () => {
       {/* Contact Section */}
       <section className="py-16 bg-gray-900 text-white" id="contact">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-teal-600 p-4 rounded-full w-fit mx-auto mb-6">
-            <EnvelopeIcon className="h-8 w-8 text-white" />
+          <div className="bg-amber-400 p-4 rounded-full w-fit mx-auto mb-6">
+            <EnvelopeIcon className="h-8 w-8 text-slate-900" />
           </div>
           <h2 className="text-2xl font-bold mb-4">Contact Support</h2>
           <p className="text-gray-300 mb-6 leading-relaxed">
@@ -409,7 +409,7 @@ const NextLiferSupport = () => {
           <div className="flex flex-col items-center space-y-4">
             <a
               href="mailto:support@gobirding.ai?subject=Next%20Lifer%20support"
-              className="text-teal-400 text-xl font-semibold hover:text-teal-300 transition-colors duration-200"
+              className="text-amber-400 text-xl font-semibold hover:text-amber-300 transition-colors duration-200"
             >
               support@gobirding.ai
             </a>
@@ -423,14 +423,14 @@ const NextLiferSupport = () => {
               Visit{' '}
               <button
                 onClick={() => handleNavigation('/next-lifer')}
-                className="text-teal-400 hover:text-teal-300 font-semibold"
+                className="text-amber-400 hover:text-amber-300 font-semibold"
               >
                 Next Lifer
               </button>
               {' '}for app information or read the{' '}
               <button
                 onClick={() => handleNavigation('/next-lifer/privacy')}
-                className="text-teal-400 hover:text-teal-300 font-semibold"
+                className="text-amber-400 hover:text-amber-300 font-semibold"
               >
                 Next Lifer Privacy Policy
               </button>

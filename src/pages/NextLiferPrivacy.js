@@ -14,7 +14,7 @@ const NextLiferPrivacy = () => {
     }, 100);
   };
 
-  const linkClass = 'text-teal-700 hover:text-teal-900 underline';
+  const linkClass = 'text-amber-800 hover:text-amber-900 underline';
 
   const dataRows = [
     {
@@ -66,12 +66,12 @@ const NextLiferPrivacy = () => {
               <strong>Effective date:</strong> October 18, 2026
             </p>
             <p className="text-gray-600 mb-6">
-              <strong>Last updated:</strong> October 18, 2026
+              <strong>Last updated:</strong> October 28, 2026
             </p>
 
-            <div className="bg-teal-50 border border-teal-200 rounded-lg p-6 mb-8">
-              <h2 className="text-lg font-semibold text-teal-900 mb-2">Summary</h2>
-              <ul className="list-disc pl-6 text-teal-900 space-y-1">
+            <div className="bg-amber-50 border border-amber-200 rounded-lg p-6 mb-8">
+              <h2 className="text-lg font-semibold text-slate-900 mb-2">Summary</h2>
+              <ul className="list-disc pl-6 text-slate-900 space-y-1">
                 <li>We collect only what's needed to run your account, find birds near you, and sync your setup between devices.</li>
                 <li><strong>No ads, no tracking, no analytics SDKs</strong>, and we never sell your data.</li>
                 <li>Next Lifer never sees your eBird password.</li>
@@ -231,9 +231,16 @@ const NextLiferPrivacy = () => {
                   information.
                 </li>
                 <li>
-                  <strong>Resend</strong> — our email provider, used to send account emails such as password-reset codes to your
-                  email address.{' '}
-                  <a href="https://resend.com/legal/privacy-policy" className={linkClass} target="_blank" rel="noopener noreferrer">Privacy policy</a>
+                  <strong>Twilio SendGrid</strong> — our email provider, used to send account emails such as password-reset codes
+                  to your email address.{' '}
+                  <a href="https://www.twilio.com/en-us/legal/privacy" className={linkClass} target="_blank" rel="noopener noreferrer">Privacy policy</a>
+                </li>
+                <li>
+                  <strong>Cloudflare and Google</strong> — if you email support@gobirding.ai, Cloudflare routes your message to our
+                  support inbox, which is hosted by Google (Gmail). We use your message only to answer you.{' '}
+                  <a href="https://www.cloudflare.com/privacypolicy/" className={linkClass} target="_blank" rel="noopener noreferrer">Cloudflare privacy policy</a>
+                  {' · '}
+                  <a href="https://policies.google.com/privacy" className={linkClass} target="_blank" rel="noopener noreferrer">Google privacy policy</a>
                 </li>
               </ul>
               <p className="text-gray-700 mb-4">

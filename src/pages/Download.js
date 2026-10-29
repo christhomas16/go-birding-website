@@ -137,7 +137,7 @@ const Download = () => {
             </div>
 
             {/* Next Lifer Card */}
-            <div className="bg-white rounded-3xl shadow-2xl p-8 lg:p-10 border-t-4 border-teal-600">
+            <div className="bg-white rounded-3xl shadow-2xl p-8 lg:p-10 border-t-4 border-amber-500">
               <div className="flex flex-col items-center text-center mb-6">
                 <img
                   src="/next-lifer-assets/AppIcon.png"
@@ -145,7 +145,7 @@ const Download = () => {
                   className="w-20 h-20 rounded-2xl shadow-lg mb-4"
                 />
                 <h2 className="text-2xl font-bold text-gray-900 mb-1">Next Lifer</h2>
-                <p className="text-teal-600 font-semibold mb-4">Lifers & Rarities Near You</p>
+                <p className="text-amber-700 font-semibold mb-4">Lifers & Rarities Near You</p>
               </div>
 
               <p className="text-gray-600 mb-6 leading-relaxed text-center">
@@ -155,19 +155,19 @@ const Download = () => {
 
               <div className="space-y-3 mb-8">
                 <div className="flex items-start">
-                  <CheckCircleIcon className="h-5 w-5 text-teal-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <CheckCircleIcon className="h-5 w-5 text-amber-700 mr-3 mt-0.5 flex-shrink-0" />
                   <span className="text-gray-700 text-sm">Connect eBird to import your life & year lists</span>
                 </div>
                 <div className="flex items-start">
-                  <CheckCircleIcon className="h-5 w-5 text-teal-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <CheckCircleIcon className="h-5 w-5 text-amber-700 mr-3 mt-0.5 flex-shrink-0" />
                   <span className="text-gray-700 text-sm">Lifers, year birds, rarities, owls & hotspots</span>
                 </div>
                 <div className="flex items-start">
-                  <CheckCircleIcon className="h-5 w-5 text-teal-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <CheckCircleIcon className="h-5 w-5 text-amber-700 mr-3 mt-0.5 flex-shrink-0" />
                   <span className="text-gray-700 text-sm">Map view, favorites & saved search areas</span>
                 </div>
                 <div className="flex items-start">
-                  <CheckCircleIcon className="h-5 w-5 text-teal-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <CheckCircleIcon className="h-5 w-5 text-amber-700 mr-3 mt-0.5 flex-shrink-0" />
                   <span className="text-gray-700 text-sm">No ads, no tracking — use it as a guest</span>
                 </div>
               </div>
@@ -225,7 +225,7 @@ const Download = () => {
                   <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Feature</th>
                   <th className="px-6 py-4 text-center text-sm font-semibold text-primary-600">Go Birding AI</th>
                   <th className="px-6 py-4 text-center text-sm font-semibold text-green-600">Bird Chatter</th>
-                  <th className="px-6 py-4 text-center text-sm font-semibold text-teal-600">Next Lifer</th>
+                  <th className="px-6 py-4 text-center text-sm font-semibold text-amber-700">Next Lifer</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200">
@@ -317,12 +317,12 @@ const Download = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Download Next Lifer on the App Store"
-                className="bg-teal-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-teal-700 transition-colors duration-200 shadow-lg"
+                className="bg-slate-900 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-slate-800 transition-colors duration-200 shadow-lg"
               >
                 Next Lifer — Free
               </a>
             ) : (
-              <span className="bg-teal-600 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg opacity-80">
+              <span className="bg-slate-900 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg opacity-80">
                 Next Lifer — Coming Soon
               </span>
             )}

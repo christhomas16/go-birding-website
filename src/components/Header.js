@@ -39,11 +39,11 @@ const Dropdown = ({ label, items, isActive, accentColor, onNavigate }) => {
       dropdownActive: 'text-green-600 bg-green-50',
       dropdownHover: 'hover:bg-green-50 hover:text-green-600'
     },
-    teal: {
-      active: 'text-teal-600',
-      hover: 'hover:text-teal-600',
-      dropdownActive: 'text-teal-600 bg-teal-50',
-      dropdownHover: 'hover:bg-teal-50 hover:text-teal-600'
+    amber: {
+      active: 'text-amber-700',
+      hover: 'hover:text-amber-700',
+      dropdownActive: 'text-amber-700 bg-amber-50',
+      dropdownHover: 'hover:bg-amber-50 hover:text-amber-700'
     },
     blue: {
       active: 'text-primary-600',
@@ -165,7 +165,7 @@ const Header = () => {
               label="Next Lifer"
               items={nextLiferItems}
               isActive={isActive('/next-lifer')}
-              accentColor="teal"
+              accentColor="amber"
               onNavigate={handleNavigation}
             />
             <button
@@ -279,8 +279,8 @@ const Header = () => {
                   onClick={() => handleNavigation(item.href)}
                   className={`block w-full text-left px-6 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
                     item.isActive
-                      ? 'text-teal-600 bg-teal-50'
-                      : 'text-gray-700 hover:text-teal-600 hover:bg-gray-50'
+                      ? 'text-amber-700 bg-amber-50'
+                      : 'text-gray-700 hover:text-amber-700 hover:bg-gray-50'
                   }`}
                 >
                   {item.name}

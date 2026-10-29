@@ -161,12 +161,12 @@ const About = () => {
             </div>
 
             {/* Next Lifer */}
-            <div className="bg-gradient-to-br from-teal-50 to-cyan-50 p-8 rounded-2xl border border-teal-100">
+            <div className="bg-gradient-to-br from-slate-50 to-amber-50 p-8 rounded-2xl border border-amber-100">
               <div className="flex items-center space-x-4 mb-6">
                 <img src="/next-lifer-assets/AppIcon.png" alt="Next Lifer" className="h-14 w-14 rounded-xl shadow-sm" />
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900">Next Lifer</h3>
-                  <p className="text-teal-600 font-medium">Lifers & Rarities Near You</p>
+                  <p className="text-amber-700 font-medium">Lifers & Rarities Near You</p>
                 </div>
               </div>
               <p className="text-gray-600 mb-6 leading-relaxed">
@@ -176,7 +176,7 @@ const About = () => {
               </p>
               <button
                 onClick={() => handleNavigation('/next-lifer')}
-                className="text-teal-600 font-semibold hover:text-teal-700 transition-colors"
+                className="text-amber-700 font-semibold hover:text-amber-800 transition-colors"
               >
                 Learn more &rarr;
               </button>

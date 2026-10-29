@@ -206,7 +206,7 @@ const Home = () => {
             </div>
 
             {/* Next Lifer Card */}
-            <div className="bg-gradient-to-br from-teal-50 to-cyan-50 p-8 lg:p-10 rounded-3xl border border-teal-100 hover:shadow-xl transition-shadow duration-200">
+            <div className="bg-gradient-to-br from-slate-50 to-amber-50 p-8 lg:p-10 rounded-3xl border border-amber-100 hover:shadow-xl transition-shadow duration-200">
               <div className="flex items-center mb-6">
                 <img
                   src="/next-lifer-assets/AppIcon.png"
@@ -215,7 +215,7 @@ const Home = () => {
                 />
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900">Next Lifer</h3>
-                  <p className="text-teal-600 font-medium">Find Your Next Lifer</p>
+                  <p className="text-amber-700 font-medium">Find Your Next Lifer</p>
                 </div>
               </div>
               <p className="text-gray-600 mb-6 leading-relaxed">
@@ -223,26 +223,26 @@ const Home = () => {
               </p>
               <div className="space-y-3 mb-8">
                 <div className="flex items-center text-sm text-gray-700">
-                  <StarIcon className="h-5 w-5 text-teal-600 mr-3 flex-shrink-0" />
+                  <StarIcon className="h-5 w-5 text-amber-700 mr-3 flex-shrink-0" />
                   <span>Lifers, year birds, rarities & owls</span>
                 </div>
                 <div className="flex items-center text-sm text-gray-700">
-                  <MapPinIcon className="h-5 w-5 text-teal-600 mr-3 flex-shrink-0" />
+                  <MapPinIcon className="h-5 w-5 text-amber-700 mr-3 flex-shrink-0" />
                   <span>Best hotspots, list or map view</span>
                 </div>
                 <div className="flex items-center text-sm text-gray-700">
-                  <ShieldCheckIcon className="h-5 w-5 text-teal-600 mr-3 flex-shrink-0" />
+                  <ShieldCheckIcon className="h-5 w-5 text-amber-700 mr-3 flex-shrink-0" />
                   <span>No ads, no tracking, delete anytime</span>
                 </div>
                 <div className="flex items-center text-sm text-gray-700">
-                  <DevicePhoneMobileIcon className="h-5 w-5 text-teal-600 mr-3 flex-shrink-0" />
+                  <DevicePhoneMobileIcon className="h-5 w-5 text-amber-700 mr-3 flex-shrink-0" />
                   <span>iPhone | iOS 17+ | Free</span>
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-3">
                 <button
                   onClick={() => handleNavigation('/next-lifer')}
-                  className="bg-teal-600 text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-teal-700 transition-colors duration-200 text-center"
+                  className="bg-slate-900 text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-slate-800 transition-colors duration-200 text-center"
                 >
                   Learn More
                 </button>
@@ -251,12 +251,12 @@ const Home = () => {
                     href={NEXT_LIFER_APP_STORE_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="border-2 border-teal-600 text-teal-600 px-6 py-3 rounded-full text-sm font-semibold hover:bg-teal-50 transition-colors duration-200 text-center"
+                    className="border-2 border-slate-900 text-slate-900 px-6 py-3 rounded-full text-sm font-semibold hover:bg-amber-50 transition-colors duration-200 text-center"
                   >
                     Download — Free
                   </a>
                 ) : (
-                  <span className="border-2 border-teal-600 text-teal-600 px-6 py-3 rounded-full text-sm font-semibold text-center">
+                  <span className="border-2 border-slate-900 text-slate-900 px-6 py-3 rounded-full text-sm font-semibold text-center">
                     Coming Soon
                   </span>
                 )}
