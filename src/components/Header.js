@@ -114,6 +114,7 @@ const Header = () => {
   const birdChatterItems = [
     { name: 'Overview', href: '/bird-chatter', isActive: location.pathname === '/bird-chatter' },
     { name: 'Support', href: '/bird-chatter/support', isActive: location.pathname === '/bird-chatter/support' },
+    { name: 'Privacy Policy', href: '/bird-chatter/privacy', isActive: location.pathname === '/bird-chatter/privacy' },
   ];
 
   const nextLiferItems = [

@@ -49,19 +49,19 @@ const BirdChatterSupport = () => {
     gettingStarted: [
       {
         question: 'How do I download Bird Chatter?',
-        answer: 'Bird Chatter is available for free on the iOS App Store. Search for "Bird Chatter" or visit our Download page. The app requires iOS 18.0 or later and works best on iPhone 14 Plus or newer devices.'
+        answer: 'Bird Chatter is free on the iOS App Store: search for "Bird Chatter" or use the App Store link on this page. It runs on any iPhone with iOS 17.6 or later.'
       },
       {
         question: 'What are the system requirements?',
-        answer: 'Bird Chatter requires iOS 18.0 or later. For the best experience, we recommend iPhone 14 Plus or newer. You\'ll need to grant microphone access for bird detection and location access for improved accuracy.'
+        answer: 'Bird Chatter requires iOS 17.6 or later. You\'ll need to allow microphone access for bird detection and location access so the app can rule out birds that aren\'t found near you.'
       },
       {
         question: 'How do I start detecting birds?',
-        answer: 'Tap the big green microphone button on the main screen. Hold your phone up toward the birds and wait for detections to appear. Species names and points will roll in live on screen as birds are identified.'
+        answer: 'On the Listen tab, tap the big microphone button and hold your phone toward the birds, bottom edge first (that\'s where the microphone is). Species and points appear live. Listening keeps going if your screen locks. Tap Stop Recording when you\'re done, review your birds, then Save.'
       },
       {
         question: 'Do I need to create an account?',
-        answer: 'To participate in leaderboards, you need to sign in with Google or Apple. All bird detection works offline without an account, but signing in lets you compete on leaderboards and sync your stats across devices via Firebase.'
+        answer: 'No. You can play as a guest: bird ID, points, goals and your life list all work on your phone without an account. Sign in with Apple or Google whenever you like to join the leaderboards, add friends and keep your progress across devices; your guest points and birds come with you.'
       },
       {
         question: 'How much does Bird Chatter cost?',
@@ -70,12 +70,28 @@ const BirdChatterSupport = () => {
     ],
     usingTheApp: [
       {
+        question: 'How do I review a session?',
+        answer: 'When you stop listening, each bird shows a confidence bar. Tap ▶ to hear its best 3 seconds, then Confirm it or mark it "Not it" (it won\'t be saved or scored). Tap Save, or Save & listen to start a new session straight away.'
+      },
+      {
+        question: 'Can I save or share a bird\'s recording?',
+        answer: 'Yes. Tap the share button next to ▶ on any bird to save its clip to the Files app or send it anywhere, for example as audio evidence on an eBird checklist. To keep whole sessions, turn on Nest → Recordings → Keep full recordings; they appear in the Files app under On My iPhone → Bird Chatter (about 6 MB per minute).'
+      },
+      {
+        question: 'What are streaks, weekly challenges and milestones?',
+        answer: 'Listen on consecutive days to build a streak, complete a new challenge every week for +100 points, and unlock milestones as your species and session counts grow. Track them all in the Nest tab. Optional reminders (dawn chorus, streak at risk) can be turned on in Nest → Reminders.'
+      },
+      {
+        question: 'How do I add friends?',
+        answer: 'Go to Rankings → Friends. Share your 6-character friend code, or type in a friend\'s code and tap Add. To remove a friend, press and hold their row.'
+      },
+      {
         question: 'What do the different point values mean?',
-        answer: 'Points are awarded based on how rare a detection is for you: World Lifer (first time ever) = 150 points, Country Lifer = 100 points, State Lifer = 75 points, County Lifer = 50 points, Year Lifer bonus = 50 points (stacks with any tier), and Repeat detections = 10 points. A World Lifer that\'s also your first this year earns 200 points total!'
+        answer: 'Points depend on how new a bird is for you: World Lifer (first time ever) = 150, Country Lifer = 100, State Lifer = 75, County Lifer = 50, and a +50 Year bonus for your first of the year (stacks with any tier). Birds you\'ve already found score 10 points once per species per day, plus +20 for your first of the season. Completing the weekly challenge adds +100. Sessions under 30 seconds still score birds but don\'t count toward session goals.'
       },
       {
         question: 'How do leaderboards work?',
-        answer: 'Leaderboards rank you against other birders at four levels: County, State, Country, and World. Rankings are based on total points earned. Each level has both all-time and yearly leaderboards, with yearly boards resetting every January 1st. Your stats sync online via Firebase when you have an internet connection.'
+        answer: 'The Rankings tab ranks signed-in players by points at four levels: County, State, Country and World. Pick a place and a year (or All Time); yearly boards reset every January 1. The Friends tab shows a private leaderboard of you and the friends you\'ve added.'
       },
       {
         question: 'What are Top 10 badges?',
@@ -83,11 +99,11 @@ const BirdChatterSupport = () => {
       },
       {
         question: 'How do I view my life list?',
-        answer: 'Tap the Life List icon in the app. You can filter by world, country, state, or county, view by year or all time, and sort by most recent, first seen, or taxonomic order. Use the search bar to find specific species.'
+        answer: 'Open the Life List tab. Choose a place (World, or a country, state or county you\'ve birded) and a year or All Time, sort by latest, oldest or taxonomic order, and search by name. Each bird shows its scientific name and when you first heard it.'
       },
       {
-        question: 'Can I see what birds others are detecting?',
-        answer: 'No. Bird Chatter is 100% private. You can see leaderboard rankings and your own position, but you cannot see other users\' specific detections, locations, or activity. Privacy is fundamental to how we built the app.'
+        question: 'What can other players see about me?',
+        answer: 'Leaderboards show your display name, photo, points and species count. Friends you add also see your streak. Nobody can see your individual sessions, recordings, email or where you were birding beyond the leaderboard you appear on.'
       },
       {
         question: 'How many species can Bird Chatter identify?',
@@ -95,25 +111,29 @@ const BirdChatterSupport = () => {
       },
       {
         question: 'What languages are supported?',
-        answer: 'Bird Chatter displays species names in 11 languages: English, German, French, Spanish, Portuguese, Dutch, Italian, Japanese, Korean, Chinese (Simplified), and Chinese (Traditional).'
+        answer: 'Species names can be shown in 11 languages: English (US and UK), German, French, Spanish, Portuguese, Dutch, Italian, Japanese, Korean and Chinese. Change it in Nest → Account → Bird names.'
       }
     ],
     technical: [
       {
+        question: 'How do I delete my account?',
+        answer: 'In the app, go to Nest → Account → Delete account. This permanently deletes your profile, sessions, life list, badges, friends and leaderboard entries from our servers. You may be asked to sign in again first. Can\'t access the app? Email support@gobirding.ai from your account email.'
+      },
+      {
         question: 'Why does Bird Chatter need microphone access?',
-        answer: 'Microphone access is required to record bird sounds for identification. All audio processing happens entirely on your device using on-device AI. Audio recordings are stored locally on your device and are never uploaded to any server.'
+        answer: 'The microphone is used only while you\'re listening, to identify birds on your iPhone. Audio is never uploaded. The best 3 seconds of each bird are kept on your phone (last 10 sessions) so you can replay them; full recordings are kept only if you turn that on in Nest → Recordings.'
       },
       {
         question: 'Why does Bird Chatter need location access?',
-        answer: 'Location access improves accuracy by narrowing the 6,500 possible species to those actually found in your area. This dramatically increases identification accuracy. Your location is never uploaded or shared.'
+        answer: 'Location narrows the 6,500 possible species to those likely in your area at this time of year, which greatly improves accuracy. Only your county, state and country are stored with saved sessions (for leaderboards); your precise location is never uploaded.'
       },
       {
         question: 'Is my data private?',
-        answer: 'Audio processing is completely private and happens entirely on your device. Audio recordings stay on your device and are never uploaded. Your leaderboard stats (points, species counts, location region) and life list are stored in Firebase to enable online leaderboards. You can delete all your online data anytime from the Profile page in the app.'
+        answer: 'Audio never leaves your iPhone. If you sign in, your saved sessions (species, points, county), life list and game progress are stored in Firebase so you can be scored and ranked. You can delete your account and all online data anytime in Nest → Account → Delete account. See the Bird Chatter Privacy Policy for details.'
       },
       {
         question: 'Does Bird Chatter work offline?',
-        answer: 'Yes! Once you\'ve downloaded the app and the AI model, Bird Chatter works completely offline. No internet connection is required for bird detection, points, or life list tracking. Leaderboards require an internet connection to sync.'
+        answer: 'Yes. Bird identification runs entirely on your phone, so listening and reviewing work with no signal. When you\'re signed in and offline, saved sessions are queued and uploaded automatically when you\'re back online.'
       },
       {
         question: 'How accurate is the AI?',
@@ -143,7 +163,7 @@ const BirdChatterSupport = () => {
       },
       {
         question: 'My points or life list seem incorrect.',
-        answer: 'If you use multiple devices with iCloud sync enabled, it may take a few moments for data to sync. Ensure you\'re signed in with the same Apple ID on all devices. Contact support if discrepancies persist.'
+        answer: 'Make sure you\'re signed in with the same Apple or Google account on each device. Sessions saved while offline upload when you\'re back online. Contact support if anything still looks wrong.'
       }
     ]
   };
@@ -364,7 +384,7 @@ const BirdChatterSupport = () => {
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-600 mr-2">•</span>
-                  <span>Delete data anytime from Profile</span>
+                  <span>Delete your account anytime in Nest → Account</span>
                 </li>
               </ul>
             </div>
@@ -429,7 +449,7 @@ const BirdChatterSupport = () => {
             </a>
             <p className="text-sm text-gray-400 max-w-2xl">
               Please include details about your issue: device model, iOS version, and steps to reproduce the problem.
-              For leaderboard or account issues, include your Apple ID email.
+              For leaderboard or account issues, include the email you sign in with.
             </p>
           </div>
           <div className="mt-8 pt-8 border-t border-gray-800">
@@ -442,13 +462,22 @@ const BirdChatterSupport = () => {
                 Bird Chatter
               </button>
               {' '}for app information or{' '}
-              <button
-                onClick={() => handleNavigation('/download')}
+              <a
+                href="https://apps.apple.com/app/bird-chatter/id6749836729"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-green-400 hover:text-green-300 font-semibold"
               >
-                Download
+                the App Store
+              </a>
+              {' '}to get the app, and our{' '}
+              <button
+                onClick={() => handleNavigation('/bird-chatter/privacy')}
+                className="text-green-400 hover:text-green-300 font-semibold"
+              >
+                Privacy Policy
               </button>
-              {' '}to get the app
+              {' '}for how your data is handled
             </p>
           </div>
         </div>

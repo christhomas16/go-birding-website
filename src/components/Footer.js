@@ -139,6 +139,14 @@ const Footer = () => {
               </li>
               <li>
                 <button
+                  onClick={() => handleNavigation('/bird-chatter/privacy')}
+                  className="text-gray-300 hover:text-white transition-colors duration-200 text-left"
+                >
+                  Bird Chatter Privacy Policy
+                </button>
+              </li>
+              <li>
+                <button
                   onClick={() => handleNavigation('/next-lifer/privacy')}
                   className="text-gray-300 hover:text-white transition-colors duration-200 text-left"
                 >

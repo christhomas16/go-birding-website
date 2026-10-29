@@ -8,23 +8,27 @@ import {
   ChartBarIcon,
   ShieldCheckIcon,
   TrophyIcon,
-  GlobeAltIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
   ListBulletIcon,
-  UserGroupIcon
+  UserGroupIcon,
+  PlayCircleIcon,
+  FireIcon
 } from '@heroicons/react/24/outline';
+
+const APP_STORE_URL = 'https://apps.apple.com/app/bird-chatter/id6749836729';
 
 const BirdChatter = () => {
   const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const screenshots = [
-    '/birdchatter/S1.png',
-    '/birdchatter/S2.png',
-    '/birdchatter/S3.png',
-    '/birdchatter/S4.png',
-    '/birdchatter/S5.png'
+    '/birdchatter/v2.2/listen.jpg',
+    '/birdchatter/v2.2/review.jpg',
+    '/birdchatter/v2.2/celebrate.jpg',
+    '/birdchatter/v2.2/rankings.jpg',
+    '/birdchatter/v2.2/lifelist.jpg',
+    '/birdchatter/v2.2/nest.jpg'
   ];
 
   const handleNavigation = (path) => {
@@ -63,12 +67,12 @@ const BirdChatter = () => {
     {
       icon: MicrophoneIcon,
       title: 'Real-Time Detection',
-      description: 'Hit the big green mic and watch species names and points roll in live on screen. Every sound is a score.'
+      description: 'Tap the mic and watch species and points roll in live. Listening keeps going with your screen locked.'
     },
     {
       icon: CpuChipIcon,
-      title: 'On-Device AI',
-      description: 'Identifies 6,500+ species using advanced AI. All processing happens on-device — no internet required.'
+      title: 'Replay & Confirm',
+      description: 'Hear the best 3 seconds of every bird, then Confirm it or mark it "Not it" before you save.'
     },
     {
       icon: TrophyIcon,
@@ -77,13 +81,13 @@ const BirdChatter = () => {
     },
     {
       icon: SparklesIcon,
-      title: 'Lifer Bonuses',
-      description: 'World Lifer = 150 pts. Country = 100. State = 75. County = 50. Year bonus = +50 (stacks). Repeats = 10 pts each.'
+      title: 'Points That Pop',
+      description: 'Lifers are worth up to 150 points, and the bigger your haul, the bigger the celebration.'
     },
     {
-      icon: ChartBarIcon,
-      title: 'Badges & Recognition',
-      description: 'Break into the Top 10 at any geographic level and earn badges for species diversity and total observations.'
+      icon: FireIcon,
+      title: 'Streaks & Challenges',
+      description: 'Keep a daily streak, take on a new challenge every week, and unlock milestones and Top 10 badges.'
     },
     {
       icon: ListBulletIcon,
@@ -91,14 +95,14 @@ const BirdChatter = () => {
       description: 'Every species is logged with date and location. Filter by year, location, or taxonomic order. Search by name.'
     },
     {
-      icon: GlobeAltIcon,
-      title: '11 Languages',
-      description: 'Species names in English, German, French, Spanish, Portuguese, Dutch, Italian, Japanese, Korean, Chinese, and more.'
+      icon: PlayCircleIcon,
+      title: 'Share Your Recordings',
+      description: 'Save or share any bird\'s clip (great for eBird evidence), or keep full sessions in the Files app.'
     },
     {
       icon: ShieldCheckIcon,
-      title: 'Privacy-First AI',
-      description: 'All audio processing happens on-device. Audio never leaves your iPhone. Only stats sync for leaderboards.'
+      title: 'Private by Design',
+      description: 'Birds are identified on your iPhone and audio never leaves it. Play as a guest, no account needed.'
     }
   ];
 
@@ -117,7 +121,7 @@ const BirdChatter = () => {
     },
     {
       stat: '100%',
-      label: 'On-Device Privacy'
+      label: 'On-Device Bird ID'
     }
   ];
 
@@ -136,15 +140,17 @@ const BirdChatter = () => {
                 Bird Chatter turns your iPhone into a real-time bird identification machine — powered by on-device AI, running entirely on your device.
               </p>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Identify 6,500+ species. Earn points for every bird. Climb the leaderboard. Can you be #1 in your county this year?
+                Identify 6,500+ species. Earn points for every bird. Climb the leaderboard. Can you be #1 in your county this year? Free, and you can play without an account.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button
-                  onClick={() => handleNavigation('/download')}
+                <a
+                  href={APP_STORE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-green-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-700 transition-colors duration-200 shadow-lg hover:shadow-xl text-center"
                 >
-                  Download for iOS
-                </button>
+                  Download on the App Store
+                </a>
                 <button
                   onClick={() => window.scrollTo({ top: 800, behavior: 'smooth' })}
                   className="border-2 border-green-600 text-green-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-50 transition-colors duration-200 text-center"
@@ -305,7 +311,7 @@ const BirdChatter = () => {
               </h2>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Bird Chatter ranks you against other birders at every level — your county, your state, your country, and the entire world.
-                See exactly who's ahead of you and how close you are to overtaking them.
+                Add friends with a short code and race each other on your own private leaderboard.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start">
@@ -313,8 +319,8 @@ const BirdChatter = () => {
                     <UserGroupIcon className="h-6 w-6 text-green-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Leaderboards at Every Level</h4>
-                    <p className="text-gray-600">County, state, country, and world rankings for points and species count</p>
+                    <h4 className="font-semibold text-gray-900 mb-1">Leaderboards & Friends</h4>
+                    <p className="text-gray-600">County, state, country and world rankings, plus a private friends leaderboard</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -360,9 +366,17 @@ const BirdChatter = () => {
                   <span className="text-gray-700">Year Lifer Bonus</span>
                   <span className="text-blue-600 font-semibold">+50 pts</span>
                 </div>
-                <div className="flex justify-between items-center pb-3">
-                  <span className="text-gray-700">Repeat Detection</span>
+                <div className="flex justify-between items-center border-b border-gray-200 pb-3">
+                  <span className="text-gray-700">Repeat Bird (once per species per day)</span>
                   <span className="text-gray-500 font-semibold">+10 pts</span>
+                </div>
+                <div className="flex justify-between items-center border-b border-gray-200 pb-3">
+                  <span className="text-gray-700">First of the Season</span>
+                  <span className="text-blue-600 font-semibold">+20 pts</span>
+                </div>
+                <div className="flex justify-between items-center pb-3">
+                  <span className="text-gray-700">Weekly Challenge</span>
+                  <span className="text-green-600 font-semibold">+100 pts</span>
                 </div>
                 <div className="mt-4 pt-4 border-t border-gray-200">
                   <p className="text-sm text-gray-600 text-center">Year bonus stacks with lifer tiers (e.g., World + Year = 200 pts)</p>
@@ -413,11 +427,11 @@ const BirdChatter = () => {
             </div>
 
             <div className="bg-gray-50 p-8 rounded-2xl">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Profile & Badges</h3>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Goals & Badges</h3>
               <ul className="space-y-3 text-gray-600">
                 <li className="flex items-start">
                   <span className="text-green-600 mr-2 font-bold">&#10003;</span>
-                  <span>Total points, lifers, year birds, and recent activity</span>
+                  <span>Daily streaks, a new challenge every week, and milestones</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-600 mr-2 font-bold">&#10003;</span>
@@ -429,11 +443,11 @@ const BirdChatter = () => {
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-600 mr-2 font-bold">&#10003;</span>
-                  <span>Dozens of achievements to chase</span>
+                  <span>Optional dawn-chorus and streak reminders</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-600 mr-2 font-bold">&#10003;</span>
-                  <span>Statistics overview in one place</span>
+                  <span>Points, lifers and year birds in one place</span>
                 </li>
               </ul>
             </div>
@@ -460,7 +474,7 @@ const BirdChatter = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">On-Device AI</h3>
               <p className="text-gray-600 leading-relaxed">
-                No internet required. No uploads. AI runs entirely on your iPhone for complete privacy.
+                Bird ID runs entirely on your iPhone, even with no signal. Your audio never leaves your phone.
               </p>
             </div>
 
@@ -478,9 +492,9 @@ const BirdChatter = () => {
               <div className="bg-green-100 p-4 rounded-full w-fit mx-auto mb-6">
                 <MicrophoneIcon className="h-8 w-8 text-green-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Live Waveform</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Built on BirdNET</h3>
               <p className="text-gray-600 leading-relaxed">
-                Watch the waveform pulse as Bird Chatter listens. Species and points appear the moment they're detected.
+                Identification uses BirdNET from the Cornell Lab of Ornithology and Chemnitz University of Technology, trained on a huge library of bird recordings from around the world.
               </p>
             </div>
           </div>
@@ -497,14 +511,16 @@ const BirdChatter = () => {
             Bird Chatter turns every walk, hike, and quiet morning on the porch into a competition.
             The AI identifies the birds. You just need to listen — and try to beat your neighbors.
           </p>
-          <button
-            onClick={() => handleNavigation('/download')}
+          <a
+            href={APP_STORE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-white text-green-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-lg hover:shadow-xl inline-block"
           >
             Start Listening. Start Climbing.
-          </button>
+          </a>
           <p className="text-green-200 mt-4 text-sm">
-            Free on the App Store. Requires iOS 18.0+ with microphone access.
+            Free on the App Store. Requires iOS 17.6 or later.
           </p>
           <p className="text-green-200 mt-6 text-base">
             Need help? Visit our{' '}
@@ -513,6 +529,13 @@ const BirdChatter = () => {
               className="text-white font-semibold hover:underline"
             >
               Support Page
+            </button>
+            {' '}·{' '}
+            <button
+              onClick={() => handleNavigation('/bird-chatter/privacy')}
+              className="text-white font-semibold hover:underline"
+            >
+              Privacy Policy
             </button>
           </p>
         </div>

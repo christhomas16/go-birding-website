@@ -10,6 +10,7 @@ import About from './pages/About';
 import Download from './pages/Download';
 import BirdChatter from './pages/BirdChatter';
 import BirdChatterSupport from './pages/BirdChatterSupport';
+import BirdChatterPrivacy from './pages/BirdChatterPrivacy';
 import NextLifer from './pages/NextLifer';
 import NextLiferSupport from './pages/NextLiferSupport';
 import NextLiferPrivacy from './pages/NextLiferPrivacy';
@@ -30,6 +31,7 @@ function AppContent() {
           <Route path="/download" element={<Download />} />
           <Route path="/bird-chatter" element={<BirdChatter />} />
           <Route path="/bird-chatter/support" element={<BirdChatterSupport />} />
+          <Route path="/bird-chatter/privacy" element={<BirdChatterPrivacy />} />
           <Route path="/next-lifer" element={<NextLifer />} />
           <Route path="/next-lifer/support" element={<NextLiferSupport />} />
           <Route path="/next-lifer/privacy" element={<NextLiferPrivacy />} />
