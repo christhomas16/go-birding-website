@@ -131,10 +131,10 @@ const Footer = () => {
               </li>
               <li>
                 <button
-                  onClick={() => handleNavigation('/privacy')}
+                  onClick={() => handleNavigation('/go-birding-ai/privacy')}
                   className="text-gray-300 hover:text-white transition-colors duration-200 text-left"
                 >
-                  Privacy Policy
+                  Go Birding AI Privacy Policy
                 </button>
               </li>
               <li>

@@ -26,7 +26,7 @@ const Download = () => {
             <div className="bg-white rounded-3xl shadow-2xl p-8 lg:p-10 border-t-4 border-primary-600">
               <div className="flex flex-col items-center text-center mb-6">
                 <img
-                  src="/logo.png"
+                  src="/go-birding-ai-assets/AppIcon.png?v=1"
                   alt="Go Birding AI"
                   className="w-20 h-20 rounded-2xl shadow-lg mb-4"
                 />
@@ -35,14 +35,14 @@ const Download = () => {
               </div>
 
               <p className="text-gray-600 mb-6 leading-relaxed text-center">
-                Voice-powered search for birding locations across 19,200+ hotspots. Interactive map,
-                real-time weather, and complete privacy with on-device AI.
+                Find where to go birding today: good spots near you, rare bird alerts, and voice or
+                text search across 19,200+ hotspots, with an AI guide that runs on your iPhone.
               </p>
 
               <div className="space-y-3 mb-8">
                 <div className="flex items-start">
                   <CheckCircleIcon className="h-5 w-5 text-primary-600 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700 text-sm">Voice-powered location search</span>
+                  <span className="text-gray-700 text-sm">Good spots near you right now</span>
                 </div>
                 <div className="flex items-start">
                   <CheckCircleIcon className="h-5 w-5 text-primary-600 mr-3 mt-0.5 flex-shrink-0" />
@@ -75,7 +75,7 @@ const Download = () => {
               </a>
 
               <p className="text-sm text-gray-500 text-center mt-4">
-                $1.99 • iPhone 11+ • iOS 18.0+
+                $1.99 • iOS 18.0+ • iPhone 15+ recommended
               </p>
             </div>
 
@@ -243,7 +243,7 @@ const Download = () => {
                 </tr>
                 <tr>
                   <td className="px-6 py-4 text-sm text-gray-700">Device</td>
-                  <td className="px-6 py-4 text-sm text-center text-gray-900">iPhone 11+</td>
+                  <td className="px-6 py-4 text-sm text-center text-gray-900">iPhone 15+ recommended</td>
                   <td className="px-6 py-4 text-sm text-center text-gray-900">iPhone 14 Plus+</td>
                   <td className="px-6 py-4 text-sm text-center text-gray-900">iPhone (iOS 17+)</td>
                 </tr>

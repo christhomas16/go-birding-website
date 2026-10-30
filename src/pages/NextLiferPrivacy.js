@@ -91,7 +91,7 @@ const NextLiferPrivacy = () => {
               </p>
               <p className="text-gray-700 mb-4">
                 This policy covers Next Lifer only. Our other apps have their own policies — for example, the{' '}
-                <button onClick={() => handleNavigation('/privacy')} className={linkClass}>Go Birding AI Privacy Policy</button>.
+                <button onClick={() => handleNavigation('/go-birding-ai/privacy')} className={linkClass}>Go Birding AI Privacy Policy</button>.
                 Next Lifer is an independent app and is not affiliated with or endorsed by the Cornell Lab of Ornithology or eBird.
               </p>
             </section>

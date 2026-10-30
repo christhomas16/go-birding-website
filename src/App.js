@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import GoBirdingAI from './pages/GoBirdingAI';
 import GoBirdingAISupport from './pages/GoBirdingAISupport';
-import Features from './pages/Features';
+import GoBirdingAIPrivacy from './pages/GoBirdingAIPrivacy';
 import About from './pages/About';
 import Download from './pages/Download';
 import BirdChatter from './pages/BirdChatter';
@@ -15,7 +15,6 @@ import NextLifer from './pages/NextLifer';
 import NextLiferSupport from './pages/NextLiferSupport';
 import NextLiferPrivacy from './pages/NextLiferPrivacy';
 import TermsOfService from './pages/TermsOfService';
-import PrivacyPolicy from './pages/PrivacyPolicy';
 
 function AppContent() {
   return (
@@ -26,7 +25,8 @@ function AppContent() {
           <Route path="/" element={<Home />} />
           <Route path="/go-birding-ai" element={<GoBirdingAI />} />
           <Route path="/go-birding-ai/support" element={<GoBirdingAISupport />} />
-          <Route path="/features" element={<Features />} />
+          <Route path="/go-birding-ai/privacy" element={<GoBirdingAIPrivacy />} />
+          <Route path="/features" element={<GoBirdingAI />} />
           <Route path="/about" element={<About />} />
           <Route path="/download" element={<Download />} />
           <Route path="/bird-chatter" element={<BirdChatter />} />
@@ -36,7 +36,7 @@ function AppContent() {
           <Route path="/next-lifer/support" element={<NextLiferSupport />} />
           <Route path="/next-lifer/privacy" element={<NextLiferPrivacy />} />
           <Route path="/terms" element={<TermsOfService />} />
-          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/privacy" element={<GoBirdingAIPrivacy />} />
         </Routes>
       </main>
       <Footer />

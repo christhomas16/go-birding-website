@@ -109,6 +109,7 @@ const Header = () => {
   const goBirdingItems = [
     { name: 'Overview', href: '/go-birding-ai', isActive: location.pathname === '/go-birding-ai' },
     { name: 'Support', href: '/go-birding-ai/support', isActive: location.pathname === '/go-birding-ai/support' },
+    { name: 'Privacy Policy', href: '/go-birding-ai/privacy', isActive: location.pathname === '/go-birding-ai/privacy' },
   ];
 
   const birdChatterItems = [

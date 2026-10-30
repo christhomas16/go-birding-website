@@ -87,7 +87,7 @@ const BirdChatterPrivacy = () => {
               </p>
               <p className="text-gray-700 mb-4">
                 This policy covers Bird Chatter only. Our other apps have their own policies — for example, the{' '}
-                <button onClick={() => handleNavigation('/privacy')} className={linkClass}>Go Birding AI Privacy Policy</button> and the{' '}
+                <button onClick={() => handleNavigation('/go-birding-ai/privacy')} className={linkClass}>Go Birding AI Privacy Policy</button> and the{' '}
                 <button onClick={() => handleNavigation('/next-lifer/privacy')} className={linkClass}>Next Lifer Privacy Policy</button>.
               </p>
             </section>

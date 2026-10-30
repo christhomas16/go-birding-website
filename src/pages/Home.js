@@ -109,7 +109,7 @@ const Home = () => {
             <div className="bg-gradient-to-br from-primary-50 to-blue-50 p-8 lg:p-10 rounded-3xl border border-primary-100 hover:shadow-xl transition-shadow duration-200">
               <div className="flex items-center mb-6">
                 <img
-                  src="/logo.png"
+                  src="/go-birding-ai-assets/AppIcon.png?v=1"
                   alt="Go Birding AI"
                   className="w-16 h-16 rounded-2xl shadow-md mr-4"
                 />
@@ -119,12 +119,12 @@ const Home = () => {
                 </div>
               </div>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Voice-powered AI search for 19,200+ birding hotspots across all 50 US states and 7 Canadian provinces. Interactive map, real-time weather, and complete on-device privacy.
+                Where should you go birding today? Good spots near you right now, rare bird alerts, and voice or text search across 19,200+ hotspots in the US and Canada, with an AI guide that runs on your iPhone.
               </p>
               <div className="space-y-3 mb-8">
                 <div className="flex items-center text-sm text-gray-700">
                   <MicrophoneIcon className="h-5 w-5 text-primary-600 mr-3 flex-shrink-0" />
-                  <span>Voice-powered location search</span>
+                  <span>Good spots near you right now</span>
                 </div>
                 <div className="flex items-center text-sm text-gray-700">
                   <MapPinIcon className="h-5 w-5 text-primary-600 mr-3 flex-shrink-0" />
@@ -132,11 +132,11 @@ const Home = () => {
                 </div>
                 <div className="flex items-center text-sm text-gray-700">
                   <CpuChipIcon className="h-5 w-5 text-primary-600 mr-3 flex-shrink-0" />
-                  <span>100% on-device AI, works offline</span>
+                  <span>On-device AI, no account or tracking</span>
                 </div>
                 <div className="flex items-center text-sm text-gray-700">
                   <DevicePhoneMobileIcon className="h-5 w-5 text-primary-600 mr-3 flex-shrink-0" />
-                  <span>iPhone 11+ | iOS 18+ | $1.99</span>
+                  <span>iOS 18+ | $1.99</span>
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-3">

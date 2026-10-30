@@ -53,21 +53,21 @@ const GoBirdingAISupport = () => {
       },
       {
         question: 'What are the system requirements?',
-        answer: 'Go Birding AI requires iOS 18.0 or later. For the best experience, we recommend iPhone 11 or newer. You\'ll need to grant microphone access for voice search and location access for location-based recommendations.'
+        answer: 'Go Birding AI requires iOS 18.0 or later. For the best experience, we recommend iPhone 15 or newer for the on-device AI guide. Location access lets the app suggest spots near you, and microphone access is only needed if you use voice search.'
       },
       {
-        question: 'Why is iPhone 11 or newer recommended?',
-        answer: 'While the app works on iOS 18+ devices, newer iPhones deliver the smoothest voice recognition and fastest on-device AI responses.'
+        question: 'Why is iPhone 15 or newer recommended?',
+        answer: 'Search, hotspots, rare birds and conditions work on any iPhone with iOS 18. The AI guide that explains results runs on your iPhone, and newer models run it fastest.'
       },
       {
         question: 'How do I get started?',
-        answer: 'Download Go Birding AI from the App Store, grant location and microphone permissions, then tap the microphone and speak your first birding query to discover amazing locations!'
+        answer: 'Download Go Birding AI and allow location access. Home immediately shows good birding spots near you right now. To ask for something specific, type in the search bar or tap the mic and say something like "beaches near me".'
       }
     ],
     usingTheApp: [
       {
         question: 'How does the interactive map work?',
-        answer: 'The interactive map shows all 19,200+ birding hotspots with your current location. You can tap any hotspot pin to view details, filter by county, show only favorites, and sort by distance. The map automatically centers on your location and updates as you move.'
+        answer: 'The Hotspots tab shows birding hotspots around you on a map with a list below. Tap a pin or row to see it on the map, tap Saved to show only your saved spots, or type a species ("snowy owl") to see the hotspots where it has been recorded.'
       },
       {
         question: 'How does voice search work?',
@@ -79,25 +79,25 @@ const GoBirdingAISupport = () => {
       },
       {
         question: 'Can I save favorite locations?',
-        answer: 'Yes! Tap the heart icon on any location to save it to your favorites. Access them anytime from the favorites tab without needing to search again.'
+        answer: 'Yes. Tap Save on any hotspot. Saved spots show with the Saved filter on the Hotspots tab, and they get a boost in Home\'s good spots for the day.'
       }
     ],
     technical: [
       {
-        question: 'How big is the AI model download?',
-        answer: 'Approximately 332 MB. The download begins only with your explicit consent.'
+        question: 'Do I need to download the AI model?',
+        answer: 'No. The AI model (about 332 MB) is built into the app, so there is nothing extra to download. It warms up in the background the first time you open the app.'
       },
       {
         question: 'Does it work on older devices?',
-        answer: 'Yes. Older devices automatically use a lighter fallback for explanations to maintain stability.'
+        answer: 'Yes, on any iPhone with iOS 18. On older devices the app may skip the AI guide and show a plain summary instead; search and everything else work the same.'
       },
       {
         question: 'Do you collect my birding data?',
-        answer: 'No. All AI processing happens entirely on your device. We don\'t collect, store, or transmit any of your searches, locations, or usage data.'
+        answer: 'No. There is no account, no analytics, and nothing is sent to us. The AI runs on your iPhone. To show rare birds, weather and tides, the app asks public services like eBird and NOAA for data about your area; see the Privacy Policy for details.'
       },
       {
         question: 'Does it work offline?',
-        answer: 'Yes! Once the AI model is downloaded, voice search and location browsing work completely offline. Weather data requires an internet connection.'
+        answer: 'Mostly. Typed search, the map, hotspot details and the AI guide work offline. Rare bird reports, recent sightings, weather and tides need a connection (the last rare-bird list stays available offline). Voice search may need a connection too.'
       }
     ]
   };

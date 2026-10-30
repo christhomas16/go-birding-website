@@ -7,6 +7,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        // Go Birding AI app icon palette
+        gb: {
+          forest: '#21452B',
+          deep: '#0E1C13',
+          sage: '#C8D4B0',
+          mist: '#F3F5EC',
+          orange: '#F29430',
+          rust: '#A85008',
+        },
         primary: {
           50: '#f0f9ff',
           100: '#e0f2fe',
