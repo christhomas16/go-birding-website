@@ -25,11 +25,11 @@ const NextLifer = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const screenshots = [
-    { src: '/next-lifer-assets/S1.png?v=3', alt: 'Next Lifer lifers near Cape May: Eurasian Wigeon, Golden-crowned Sparrow and Red Crossbill, with distance and time' },
-    { src: '/next-lifer-assets/S2.png?v=3', alt: 'Next Lifer rarities: rare-bird reports near you, newest first' },
-    { src: '/next-lifer-assets/S3.png?v=3', alt: 'Next Lifer owls: owl sightings by species, with Great Horned, Barred, Eastern Screech and Barn Owl' },
-    { src: '/next-lifer-assets/S4.png?v=3', alt: 'Next Lifer hotspot page: map, all-time and recent counts, lifers and rarities, recent checklists and species' },
-    { src: '/next-lifer-assets/S5.png?v=3', alt: 'Next Lifer map view with lifers, hotspots and owls inside the search radius' }
+    { src: '/next-lifer-assets/S1.png?v=4', alt: 'Next Lifer lifers near Cape May: Eurasian Wigeon, Golden-crowned Sparrow and Red Crossbill, with distance and time' },
+    { src: '/next-lifer-assets/S2.png?v=4', alt: 'Next Lifer rarities: rare-bird reports near you, newest first' },
+    { src: '/next-lifer-assets/S3.png?v=4', alt: 'Next Lifer owls: owl sightings by species, with Great Horned, Barred, Eastern Screech and Barn Owl' },
+    { src: '/next-lifer-assets/S4.png?v=4', alt: 'Next Lifer hotspot page: map, all-time and recent counts, lifers and rarities, recent checklists and species' },
+    { src: '/next-lifer-assets/S5.png?v=4', alt: 'Next Lifer map view with lifers, hotspots and owls inside the search radius' }
   ];
 
   const handleNavigation = (path) => {
