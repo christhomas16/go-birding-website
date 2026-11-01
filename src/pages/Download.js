@@ -132,7 +132,7 @@ const Download = () => {
               </a>
 
               <p className="text-sm text-gray-500 text-center mt-4">
-                Free • iPhone 14 Plus+ • iOS 18.0+
+                Free • iPhone • iOS 17.6+
               </p>
             </div>
 
@@ -244,7 +244,7 @@ const Download = () => {
                 <tr>
                   <td className="px-6 py-4 text-sm text-gray-700">Device</td>
                   <td className="px-6 py-4 text-sm text-center text-gray-900">iPhone 15+ recommended</td>
-                  <td className="px-6 py-4 text-sm text-center text-gray-900">iPhone 14 Plus+</td>
+                  <td className="px-6 py-4 text-sm text-center text-gray-900">Any iPhone (iOS 17.6+)</td>
                   <td className="px-6 py-4 text-sm text-center text-gray-900">iPhone (iOS 17+)</td>
                 </tr>
                 <tr className="bg-gray-50">
@@ -328,7 +328,7 @@ const Download = () => {
             )}
           </div>
           <p className="text-gray-400 mt-6 text-sm">
-            Go Birding AI and Bird Chatter require iOS 18.0+; Next Lifer requires iOS 17.0+.
+            Go Birding AI requires iOS 18.0+, Bird Chatter iOS 17.6+ and Next Lifer iOS 17.0+.
           </p>
         </div>
       </section>

@@ -92,7 +92,7 @@ const BirdChatter = () => {
     {
       icon: ListBulletIcon,
       title: 'Life List Tracking',
-      description: 'Every species is logged with date and location. Filter by year, location, or taxonomic order. Search by name.'
+      description: 'Every species is logged with a photo, date and location, and the photos work with no signal. Filter by year, location, or taxonomic order. Search by name.'
     },
     {
       icon: PlayCircleIcon,

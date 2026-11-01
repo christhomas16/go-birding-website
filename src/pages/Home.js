@@ -186,7 +186,7 @@ const Home = () => {
                 </div>
                 <div className="flex items-center text-sm text-gray-700">
                   <DevicePhoneMobileIcon className="h-5 w-5 text-green-600 mr-3 flex-shrink-0" />
-                  <span>iPhone 14 Plus+ | iOS 18+ | Free</span>
+                  <span>iPhone | iOS 17.6+ | Free</span>
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-3">
