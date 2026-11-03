@@ -134,7 +134,7 @@ const Home = () => {
               <div className="space-y-3 mb-8">
                 <div className="flex items-center text-sm text-gray-700">
                   <CpuChipIcon className="h-5 w-5 text-green-600 mr-3 flex-shrink-0" />
-                  <span>6,500+ species, on-device AI</span>
+                  <span>9,800+ species, on-device AI</span>
                 </div>
                 <div className="flex items-center text-sm text-gray-700">
                   <TrophyIcon className="h-5 w-5 text-green-600 mr-3 flex-shrink-0" />

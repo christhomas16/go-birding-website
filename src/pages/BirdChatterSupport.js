@@ -108,7 +108,7 @@ const BirdChatterSupport = () => {
       },
       {
         question: 'How many species can Bird Chatter identify?',
-        answer: 'Bird Chatter can identify over 6,500 bird species from around the world using advanced on-device AI. The AI model is trained to recognize bird calls and songs across a wide variety of species.'
+        answer: 'Bird Chatter can identify over 9,800 bird species from around the world using advanced on-device AI. The AI model is trained to recognize bird calls and songs across a wide variety of species.'
       },
       {
         question: 'What languages are supported?',
@@ -126,7 +126,7 @@ const BirdChatterSupport = () => {
       },
       {
         question: 'Why does Bird Chatter need location access?',
-        answer: 'Location narrows the 6,500 possible species to those likely in your area at this time of year, which greatly improves accuracy. Only your county, state and country are stored with saved sessions (for leaderboards); your precise location is never uploaded.'
+        answer: 'Location narrows the nearly 10,000 possible species to those likely in your area at this time of year, which greatly improves accuracy. Only your county, state and country are stored with saved sessions (for leaderboards); your precise location is never uploaded.'
       },
       {
         question: 'Is my data private?',

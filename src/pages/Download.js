@@ -100,7 +100,7 @@ const Download = () => {
               <div className="space-y-3 mb-8">
                 <div className="flex items-start">
                   <CheckCircleIcon className="h-5 w-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700 text-sm">Identify 6,500+ bird species by sound</span>
+                  <span className="text-gray-700 text-sm">Identify 9,800+ bird species by sound</span>
                 </div>
                 <div className="flex items-start">
                   <CheckCircleIcon className="h-5 w-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
@@ -275,7 +275,7 @@ const Download = () => {
                 <tr className="bg-gray-50">
                   <td className="px-6 py-4 text-sm text-gray-700">Key Stat</td>
                   <td className="px-6 py-4 text-sm text-center text-gray-900">19,200+ locations</td>
-                  <td className="px-6 py-4 text-sm text-center text-gray-900">6,500+ species</td>
+                  <td className="px-6 py-4 text-sm text-center text-gray-900">9,800+ species</td>
                   <td className="px-6 py-4 text-sm text-center text-gray-900">Live eBird data</td>
                 </tr>
               </tbody>

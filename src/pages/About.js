@@ -43,7 +43,7 @@ const About = () => {
 
   const stats = [
     { number: '19,200+', label: 'Birding Locations' },
-    { number: '6,500+', label: 'Bird Species Detected' },
+    { number: '9,800+', label: 'Bird Species Detected' },
     { number: '3', label: 'iOS Birding Apps' },
     { number: '100%', label: 'On-Device AI' }
   ];
@@ -293,7 +293,7 @@ const About = () => {
 
             <p className="mb-6">
               Bird Chatter tackles the second challenge with a competitive twist. Using on-device AI
-              that recognizes over 6,500 bird species by sound in real time, Bird Chatter turns every
+              that recognizes over 9,800 bird species by sound in real time, Bird Chatter turns every
               birding outing into an adventure. Build your life list, earn points for new discoveries
               at the county, state, country, and world level, and compete with birders everywhere
               through leaderboards and badges.

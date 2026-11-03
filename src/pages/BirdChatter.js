@@ -80,7 +80,7 @@ const BirdChatter = () => {
 
   const highlights = [
     {
-      stat: '6,500+',
+      stat: '9,800+',
       label: 'Bird Species'
     },
     {
@@ -113,7 +113,7 @@ const BirdChatter = () => {
                 Bird Chatter turns your iPhone into a real-time bird identification machine — powered by on-device AI, running entirely on your device.
               </p>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Identify 6,500+ species. Earn points for every bird. Climb the leaderboard. Can you be #1 in your county this year? Free, and you can play without an account.
+                Identify 9,800+ species. Earn points for every bird. Climb the leaderboard. Can you be #1 in your county this year? Free, and you can play without an account.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
@@ -416,7 +416,7 @@ const BirdChatter = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">GPS-Powered Accuracy</h3>
               <p className="text-gray-600 leading-relaxed">
-                Location narrows 6,500 species to what's actually near you, dramatically improving identification accuracy.
+                Location narrows nearly 10,000 species to what's actually near you, dramatically improving identification accuracy.
               </p>
             </div>
 
@@ -426,7 +426,7 @@ const BirdChatter = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Built on BirdNET</h3>
               <p className="text-gray-600 leading-relaxed">
-                Identification uses BirdNET from the Cornell Lab of Ornithology and Chemnitz University of Technology, trained on a huge library of bird recordings from around the world.
+                Identification uses BirdNET+ V3.0, the newest model from the Cornell Lab of Ornithology and Chemnitz University of Technology, trained on a huge library of bird recordings from around the world.
               </p>
             </div>
           </div>
