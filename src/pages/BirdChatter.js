@@ -426,7 +426,7 @@ const BirdChatter = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Built on BirdNET</h3>
               <p className="text-gray-600 leading-relaxed">
-                Identification uses BirdNET+ V3.0, the newest model from the Cornell Lab of Ornithology and Chemnitz University of Technology, trained on a huge library of bird recordings from around the world.
+                Identification uses BirdNET from the Cornell Lab of Ornithology and Chemnitz University of Technology, trained on a huge library of bird recordings from around the world.
               </p>
             </div>
           </div>
