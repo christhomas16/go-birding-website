@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   StarIcon,
@@ -13,26 +13,18 @@ import {
   LinkIcon,
   ShieldCheckIcon,
   DevicePhoneMobileIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon,
   UserCircleIcon,
   ArrowPathIcon
 } from '@heroicons/react/24/outline';
+import { Reveal, ScreenshotCarousel, StarField } from '../components/Motion';
+import { NEXT_LIFER_SCREENSHOTS } from '../screenshots';
 import { NEXT_LIFER_APP_STORE_URL } from '../nextLifer';
 import { useSmartAppBanner } from '../appStore';
 
 const NextLifer = () => {
   useSmartAppBanner('nextLifer');
   const navigate = useNavigate();
-  const [currentSlide, setCurrentSlide] = useState(0);
 
-  const screenshots = [
-    { src: '/next-lifer-assets/S1.png?v=4', alt: 'Next Lifer lifers near Cape May: Eurasian Wigeon, Golden-crowned Sparrow and Red Crossbill, with distance and time' },
-    { src: '/next-lifer-assets/S2.png?v=4', alt: 'Next Lifer rarities: rare-bird reports near you, newest first' },
-    { src: '/next-lifer-assets/S3.png?v=4', alt: 'Next Lifer owls: owl sightings by species, with Great Horned, Barred, Eastern Screech and Barn Owl' },
-    { src: '/next-lifer-assets/S4.png?v=4', alt: 'Next Lifer hotspot page: map, all-time and recent counts, lifers and rarities, recent checklists and species' },
-    { src: '/next-lifer-assets/S5.png?v=4', alt: 'Next Lifer map view with lifers, hotspots and owls inside the search radius' }
-  ];
 
   const handleNavigation = (path) => {
     navigate(path);
@@ -44,27 +36,6 @@ const NextLifer = () => {
     }, 100);
   };
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % screenshots.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + screenshots.length) % screenshots.length);
-  };
-
-  const goToSlide = (index) => {
-    setCurrentSlide(index);
-  };
-
-  // Auto-advance carousel every 4 seconds
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % screenshots.length);
-    }, 4000);
-
-    return () => clearInterval(timer);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentSlide]);
 
   const categories = [
     {
@@ -140,7 +111,8 @@ const NextLifer = () => {
     <div className="bg-white">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-slate-50 to-amber-50 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+        <StarField />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center mb-6">
@@ -173,54 +145,11 @@ const NextLifer = () => {
             </div>
             <div className="flex justify-center">
               <div className="relative w-full max-w-sm">
-                {/* Carousel Container */}
-                <div className="relative bg-gray-900 rounded-3xl shadow-2xl overflow-hidden">
-                  {/* Screenshots */}
-                  <div className="relative aspect-[9/19.5]">
-                    {screenshots.map((screenshot, index) => (
-                      <img
-                        key={index}
-                        src={screenshot.src}
-                        alt={screenshot.alt}
-                        className={`absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-500 ${
-                          index === currentSlide ? 'opacity-100' : 'opacity-0'
-                        }`}
-                      />
-                    ))}
-                  </div>
-
-                  {/* Navigation Arrows */}
-                  <button
-                    onClick={prevSlide}
-                    className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110"
-                    aria-label="Previous screenshot"
-                  >
-                    <ChevronLeftIcon className="h-6 w-6" />
-                  </button>
-                  <button
-                    onClick={nextSlide}
-                    className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110"
-                    aria-label="Next screenshot"
-                  >
-                    <ChevronRightIcon className="h-6 w-6" />
-                  </button>
-
-                  {/* Dots Indicator */}
-                  <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
-                    {screenshots.map((_, index) => (
-                      <button
-                        key={index}
-                        onClick={() => goToSlide(index)}
-                        className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                          index === currentSlide
-                            ? 'bg-amber-400 w-8'
-                            : 'bg-white/60 hover:bg-white/80'
-                        }`}
-                        aria-label={`Go to screenshot ${index + 1}`}
-                      />
-                    ))}
-                  </div>
-                </div>
+                <ScreenshotCarousel
+                  images={NEXT_LIFER_SCREENSHOTS}
+                  activeDot="bg-amber-400"
+                  inactiveDot="bg-white/60 hover:bg-white/80"
+                />
               </div>
             </div>
           </div>
@@ -228,7 +157,7 @@ const NextLifer = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-white border-b border-gray-200">
+      <Reveal as="section" className="py-16 bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {highlights.map((item, index) => (
@@ -239,10 +168,10 @@ const NextLifer = () => {
             ))}
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/* How It Works */}
-      <section className="py-24 bg-gray-50">
+      <Reveal as="section" className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -285,10 +214,10 @@ const NextLifer = () => {
             </div>
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/* Features Section */}
-      <section className="py-24 bg-white">
+      <Reveal as="section" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -311,10 +240,10 @@ const NextLifer = () => {
             ))}
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/* Life List Section */}
-      <section className="py-24 bg-gradient-to-br from-slate-50 to-amber-50">
+      <Reveal as="section" className="py-24 bg-gradient-to-br from-slate-50 to-amber-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -386,10 +315,10 @@ const NextLifer = () => {
             </div>
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/* Extras Section */}
-      <section className="py-24 bg-gray-50">
+      <Reveal as="section" className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -437,10 +366,10 @@ const NextLifer = () => {
             affiliated with or endorsed by the Cornell Lab of Ornithology or eBird.
           </p>
         </div>
-      </section>
+      </Reveal>
 
       {/* CTA Section */}
-      <section className="py-24 bg-slate-900">
+      <Reveal as="section" className="py-24 bg-slate-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
             Stop Scrolling. Start Chasing.
@@ -469,7 +398,7 @@ const NextLifer = () => {
             </button>
           </p>
         </div>
-      </section>
+      </Reveal>
     </div>
   );
 };

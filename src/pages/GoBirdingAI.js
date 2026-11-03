@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   MapPinIcon,
@@ -10,10 +10,10 @@ import {
   HeartIcon,
   CpuChipIcon,
   ShieldCheckIcon,
-  EyeIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon
+  EyeIcon
 } from '@heroicons/react/24/outline';
+import { Reveal, ScreenshotCarousel, PinPings } from '../components/Motion';
+import { GO_BIRDING_AI_SCREENSHOTS } from '../screenshots';
 import { appStoreUrl, useSmartAppBanner } from '../appStore';
 
 const APP_STORE_URL = appStoreUrl('goBirdingAI');
@@ -21,15 +21,7 @@ const APP_STORE_URL = appStoreUrl('goBirdingAI');
 const GoBirdingAI = () => {
   useSmartAppBanner('goBirdingAI');
   const navigate = useNavigate();
-  const [currentSlide, setCurrentSlide] = useState(0);
 
-  const screenshots = [
-    { src: '/go-birding-ai-assets/S1.png?v=1', alt: 'Go Birding AI home: good birding spots near you right now, each with one reason' },
-    { src: '/go-birding-ai-assets/S2.png?v=1', alt: 'Go Birding AI search for "beaches near me" with ranked hotspots and a guide summary' },
-    { src: '/go-birding-ai-assets/S3.png?v=1', alt: 'Go Birding AI hotspot page: rare this week and birds recently reported here' },
-    { src: '/go-birding-ai-assets/S4.png?v=1', alt: 'Go Birding AI rare bird alerts near you, newest first' },
-    { src: '/go-birding-ai-assets/S5.png?v=1', alt: 'Go Birding AI map of birding hotspots' }
-  ];
 
   const handleNavigation = (path) => {
     navigate(path);
@@ -41,27 +33,6 @@ const GoBirdingAI = () => {
     }, 100);
   };
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % screenshots.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + screenshots.length) % screenshots.length);
-  };
-
-  const goToSlide = (index) => {
-    setCurrentSlide(index);
-  };
-
-  // Auto-advance carousel every 4 seconds
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % screenshots.length);
-    }, 4000);
-
-    return () => clearInterval(timer);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentSlide]);
 
   const features = [
     {
@@ -129,7 +100,8 @@ const GoBirdingAI = () => {
     <div className="bg-white">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-gb-mist to-orange-50 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+        <PinPings />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center mb-6">
@@ -162,54 +134,7 @@ const GoBirdingAI = () => {
             </div>
             <div className="flex justify-center">
               <div className="relative w-full max-w-sm">
-                {/* Carousel Container */}
-                <div className="relative bg-gray-900 rounded-3xl shadow-2xl overflow-hidden">
-                  {/* Screenshots */}
-                  <div className="relative aspect-[9/19.5]">
-                    {screenshots.map((screenshot, index) => (
-                      <img
-                        key={index}
-                        src={screenshot.src}
-                        alt={screenshot.alt}
-                        className={`absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-500 ${
-                          index === currentSlide ? 'opacity-100' : 'opacity-0'
-                        }`}
-                      />
-                    ))}
-                  </div>
-
-                  {/* Navigation Arrows */}
-                  <button
-                    onClick={prevSlide}
-                    className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110"
-                    aria-label="Previous screenshot"
-                  >
-                    <ChevronLeftIcon className="h-6 w-6" />
-                  </button>
-                  <button
-                    onClick={nextSlide}
-                    className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110"
-                    aria-label="Next screenshot"
-                  >
-                    <ChevronRightIcon className="h-6 w-6" />
-                  </button>
-
-                  {/* Dots Indicator */}
-                  <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
-                    {screenshots.map((_, index) => (
-                      <button
-                        key={index}
-                        onClick={() => goToSlide(index)}
-                        className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                          index === currentSlide
-                            ? 'bg-gb-orange w-8'
-                            : 'bg-gray-400/70 hover:bg-gray-500/80'
-                        }`}
-                        aria-label={`Go to screenshot ${index + 1}`}
-                      />
-                    ))}
-                  </div>
-                </div>
+                <ScreenshotCarousel images={GO_BIRDING_AI_SCREENSHOTS} />
               </div>
             </div>
           </div>
@@ -217,7 +142,7 @@ const GoBirdingAI = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-white border-b border-gray-200">
+      <Reveal as="section" className="py-16 bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {highlights.map((item, index) => (
@@ -228,10 +153,10 @@ const GoBirdingAI = () => {
             ))}
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/* How It Works */}
-      <section className="py-24 bg-gray-50">
+      <Reveal as="section" className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -274,10 +199,10 @@ const GoBirdingAI = () => {
             </div>
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/* Features Section */}
-      <section className="py-24 bg-white">
+      <Reveal as="section" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -300,10 +225,10 @@ const GoBirdingAI = () => {
             ))}
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/* Hotspot Pages Section */}
-      <section className="py-24 bg-gradient-to-br from-gb-mist to-orange-50">
+      <Reveal as="section" className="py-24 bg-gradient-to-br from-gb-mist to-orange-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -371,10 +296,10 @@ const GoBirdingAI = () => {
             </div>
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/* Extras Section */}
-      <section className="py-24 bg-gray-50">
+      <Reveal as="section" className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -422,10 +347,10 @@ const GoBirdingAI = () => {
             affiliated with or endorsed by the Cornell Lab of Ornithology or eBird.
           </p>
         </div>
-      </section>
+      </Reveal>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gb-forest">
+      <Reveal as="section" className="py-24 bg-gb-forest">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
             Find Your Next Morning Out.
@@ -454,7 +379,7 @@ const GoBirdingAI = () => {
             </button>
           </p>
         </div>
-      </section>
+      </Reveal>
     </div>
   );
 };

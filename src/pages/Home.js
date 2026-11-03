@@ -10,6 +10,8 @@ import {
   StarIcon
 } from '@heroicons/react/24/outline';
 import { NEXT_LIFER_APP_STORE_URL } from '../nextLifer';
+import { Reveal, ScreenshotCarousel, Waveform } from '../components/Motion';
+import { GO_BIRDING_AI_SCREENSHOTS, BIRD_CHATTER_SCREENSHOTS, NEXT_LIFER_SCREENSHOTS } from '../screenshots';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -26,52 +28,10 @@ const Home = () => {
 
   return (
     <div className="bg-white">
-      {/* Audio waveform animation */}
-      <style>{`
-        @keyframes waveBar {
-          0%, 100% { transform: scaleY(var(--wave-min)); }
-          50% { transform: scaleY(var(--wave-max)); }
-        }
-      `}</style>
-
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
         {/* Animated audio waveform bars */}
-        <div className="absolute inset-0 pointer-events-none flex items-center" aria-hidden="true">
-          <div className="w-full flex items-center justify-center gap-[4px] sm:gap-[6px] px-4">
-            {Array.from({ length: 80 }).map((_, i) => {
-              const center = 40;
-              const dist = Math.abs(i - center) / center;
-              const baseHeight = Math.max(0.15, 1 - dist * dist);
-              const variation = Math.sin(i * 0.7) * 0.3 + Math.sin(i * 1.3) * 0.2;
-              const minScale = Math.max(0.08, (baseHeight + variation) * 0.25);
-              const maxScale = Math.max(0.15, (baseHeight + variation) * 1.0);
-              const duration = 1.5 + Math.sin(i * 0.5) * 0.8;
-              const delay = (i * 0.06) % 2;
-              const progress = i / 79;
-              const r = Math.round(59 + progress * (34 - 59));
-              const g = Math.round(130 + progress * (197 - 130));
-              const b = Math.round(246 + progress * (94 - 246));
-              return (
-                <div
-                  key={i}
-                  className="rounded-full"
-                  style={{
-                    width: '8px',
-                    height: '200px',
-                    backgroundColor: `rgba(${r}, ${g}, ${b}, 0.18)`,
-                    transform: 'scaleY(0.03)',
-                    '--wave-min': minScale,
-                    '--wave-max': maxScale,
-                    animation: `waveBar ${duration}s ${delay}s ease-in-out infinite`,
-                    animationFillMode: 'backwards',
-                    transformOrigin: 'center',
-                  }}
-                />
-              );
-            })}
-          </div>
-        </div>
+        <Waveform />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
           <div className="relative z-10 text-center">
@@ -106,7 +66,7 @@ const Home = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Go Birding AI Card */}
-            <div className="bg-gradient-to-br from-primary-50 to-blue-50 p-8 lg:p-10 rounded-3xl border border-primary-100 hover:shadow-xl transition-shadow duration-200">
+            <Reveal delay={0} className="bg-gradient-to-br from-primary-50 to-blue-50 p-8 lg:p-10 rounded-3xl border border-primary-100 hover:shadow-xl transition-shadow duration-200">
               <div className="flex items-center mb-6">
                 <img
                   src="/go-birding-ai-assets/AppIcon.png?v=1"
@@ -153,10 +113,10 @@ const Home = () => {
                   Download — $1.99
                 </button>
               </div>
-            </div>
+            </Reveal>
 
             {/* Bird Chatter Card */}
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 lg:p-10 rounded-3xl border border-green-100 hover:shadow-xl transition-shadow duration-200">
+            <Reveal delay={150} className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 lg:p-10 rounded-3xl border border-green-100 hover:shadow-xl transition-shadow duration-200">
               <div className="flex items-center mb-6">
                 <img
                   src="/birdchatter/AppIcon.png"
@@ -203,10 +163,10 @@ const Home = () => {
                   Download — Free
                 </button>
               </div>
-            </div>
+            </Reveal>
 
             {/* Next Lifer Card */}
-            <div className="bg-gradient-to-br from-slate-50 to-amber-50 p-8 lg:p-10 rounded-3xl border border-amber-100 hover:shadow-xl transition-shadow duration-200">
+            <Reveal delay={300} className="bg-gradient-to-br from-slate-50 to-amber-50 p-8 lg:p-10 rounded-3xl border border-amber-100 hover:shadow-xl transition-shadow duration-200">
               <div className="flex items-center mb-6">
                 <img
                   src="/next-lifer-assets/AppIcon.png?v=2"
@@ -261,13 +221,55 @@ const Home = () => {
                   </span>
                 )}
               </div>
-            </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* See them in action */}
+      <section className="py-24 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Reveal className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              See Them in Action
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Real screens from each app. Hover over a phone to pause it.
+            </p>
+          </Reveal>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 lg:gap-16 max-w-5xl mx-auto">
+            {[
+              { name: 'Go Birding AI', path: '/go-birding-ai', images: GO_BIRDING_AI_SCREENSHOTS, frame: 'bg-gray-900', dot: 'bg-gb-orange', idle: 'bg-gray-400/70' },
+              { name: 'Bird Chatter', path: '/bird-chatter', images: BIRD_CHATTER_SCREENSHOTS, frame: 'bg-white', dot: 'bg-green-600', idle: 'bg-white/60', fit: 'object-cover' },
+              { name: 'Next Lifer', path: '/next-lifer', images: NEXT_LIFER_SCREENSHOTS, frame: 'bg-gray-900', dot: 'bg-amber-400', idle: 'bg-white/60' },
+            ].map((app, i) => (
+              <Reveal key={app.name} delay={i * 150} className="flex flex-col items-center">
+                <div className="w-full max-w-[260px]">
+                  <ScreenshotCarousel
+                    images={app.images}
+                    interval={4200 + i * 400}
+                    floatDelay={i * 1.2}
+                    frameClass={app.frame}
+                    imageClass={app.fit || 'object-cover object-top'}
+                    activeDot={app.dot}
+                    inactiveDot={app.idle}
+                    controls={false}
+                  />
+                </div>
+                <button
+                  onClick={() => handleNavigation(app.path)}
+                  className="mt-8 text-lg font-semibold text-gray-900 hover:text-primary-600 transition-colors duration-200"
+                >
+                  {app.name} &rarr;
+                </button>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-24 bg-gray-50">
+      <Reveal as="section" className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -310,10 +312,10 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gray-900">
+      <Reveal as="section" className="py-24 bg-gray-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
             Start Your Birding Adventure
@@ -328,7 +330,7 @@ const Home = () => {
             Get Our Apps
           </button>
         </div>
-      </section>
+      </Reveal>
     </div>
   );
 };

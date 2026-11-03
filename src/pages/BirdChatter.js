@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   MicrophoneIcon,
@@ -8,13 +8,13 @@ import {
   ChartBarIcon,
   ShieldCheckIcon,
   TrophyIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon,
   ListBulletIcon,
   UserGroupIcon,
   PlayCircleIcon,
   FireIcon
 } from '@heroicons/react/24/outline';
+import { Reveal, ScreenshotCarousel, Waveform } from '../components/Motion';
+import { BIRD_CHATTER_SCREENSHOTS } from '../screenshots';
 import { appStoreUrl, useSmartAppBanner } from '../appStore';
 
 const APP_STORE_URL = appStoreUrl('birdChatter');
@@ -22,16 +22,7 @@ const APP_STORE_URL = appStoreUrl('birdChatter');
 const BirdChatter = () => {
   useSmartAppBanner('birdChatter');
   const navigate = useNavigate();
-  const [currentSlide, setCurrentSlide] = useState(0);
 
-  const screenshots = [
-    '/birdchatter/v2.2/listen.jpg',
-    '/birdchatter/v2.2/review.jpg',
-    '/birdchatter/v2.2/celebrate.jpg',
-    '/birdchatter/v2.2/rankings.jpg',
-    '/birdchatter/v2.2/lifelist.jpg',
-    '/birdchatter/v2.2/nest.jpg'
-  ];
 
   const handleNavigation = (path) => {
     navigate(path);
@@ -43,27 +34,6 @@ const BirdChatter = () => {
     }, 100);
   };
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % screenshots.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + screenshots.length) % screenshots.length);
-  };
-
-  const goToSlide = (index) => {
-    setCurrentSlide(index);
-  };
-
-  // Auto-advance carousel every 4 seconds
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % screenshots.length);
-    }, 4000);
-
-    return () => clearInterval(timer);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentSlide]);
 
   const features = [
     {
@@ -131,7 +101,8 @@ const BirdChatter = () => {
     <div className="bg-white">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-green-50 to-emerald-100 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+        <Waveform from={[22, 163, 74]} to={[16, 185, 129]} opacity={0.16} />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
@@ -163,54 +134,13 @@ const BirdChatter = () => {
             </div>
             <div className="flex justify-center">
               <div className="relative w-full max-w-sm">
-                {/* Carousel Container */}
-                <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden">
-                  {/* Screenshots */}
-                  <div className="relative aspect-[9/19.5]">
-                    {screenshots.map((screenshot, index) => (
-                      <img
-                        key={index}
-                        src={screenshot}
-                        alt={`Bird Chatter Screenshot ${index + 1}`}
-                        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
-                          index === currentSlide ? 'opacity-100' : 'opacity-0'
-                        }`}
-                      />
-                    ))}
-                  </div>
-
-                  {/* Navigation Arrows */}
-                  <button
-                    onClick={prevSlide}
-                    className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110"
-                    aria-label="Previous screenshot"
-                  >
-                    <ChevronLeftIcon className="h-6 w-6" />
-                  </button>
-                  <button
-                    onClick={nextSlide}
-                    className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110"
-                    aria-label="Next screenshot"
-                  >
-                    <ChevronRightIcon className="h-6 w-6" />
-                  </button>
-
-                  {/* Dots Indicator */}
-                  <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
-                    {screenshots.map((_, index) => (
-                      <button
-                        key={index}
-                        onClick={() => goToSlide(index)}
-                        className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                          index === currentSlide
-                            ? 'bg-green-600 w-8'
-                            : 'bg-white/60 hover:bg-white/80'
-                        }`}
-                        aria-label={`Go to screenshot ${index + 1}`}
-                      />
-                    ))}
-                  </div>
-                </div>
+                <ScreenshotCarousel
+                  images={BIRD_CHATTER_SCREENSHOTS}
+                  frameClass="bg-white"
+                  imageClass="object-cover"
+                  activeDot="bg-green-600"
+                  inactiveDot="bg-white/60 hover:bg-white/80"
+                />
               </div>
             </div>
           </div>
@@ -218,7 +148,7 @@ const BirdChatter = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-white border-b border-gray-200">
+      <Reveal as="section" className="py-16 bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {highlights.map((item, index) => (
@@ -229,10 +159,10 @@ const BirdChatter = () => {
             ))}
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/* How It Works */}
-      <section className="py-24 bg-gray-50">
+      <Reveal as="section" className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -275,10 +205,10 @@ const BirdChatter = () => {
             </div>
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/* Features Section */}
-      <section className="py-24 bg-white">
+      <Reveal as="section" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -301,10 +231,10 @@ const BirdChatter = () => {
             ))}
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/* Competition Section */}
-      <section className="py-24 bg-gradient-to-br from-green-50 to-emerald-50">
+      <Reveal as="section" className="py-24 bg-gradient-to-br from-green-50 to-emerald-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -387,10 +317,10 @@ const BirdChatter = () => {
             </div>
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/* Life List & Profile Section */}
-      <section className="py-24 bg-white">
+      <Reveal as="section" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -455,10 +385,10 @@ const BirdChatter = () => {
             </div>
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/* Technology Section */}
-      <section className="py-24 bg-gray-50">
+      <Reveal as="section" className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -501,10 +431,10 @@ const BirdChatter = () => {
             </div>
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/* CTA Section */}
-      <section className="py-24 bg-green-600">
+      <Reveal as="section" className="py-24 bg-green-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
             Your Backyard Is a Battlefield
@@ -541,7 +471,7 @@ const BirdChatter = () => {
             </button>
           </p>
         </div>
-      </section>
+      </Reveal>
     </div>
   );
 };
