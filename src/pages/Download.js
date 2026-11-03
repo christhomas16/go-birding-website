@@ -4,6 +4,7 @@ import {
   CheckCircleIcon
 } from '@heroicons/react/24/outline';
 import { NEXT_LIFER_APP_STORE_URL } from '../nextLifer';
+import { appStoreUrl } from '../appStore';
 
 const Download = () => {
   return (
@@ -59,7 +60,7 @@ const Download = () => {
               </div>
 
               <a
-                href="https://apps.apple.com/us/app/go-birding-ai/id6747407940"
+                href={appStoreUrl('goBirdingAI')}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Download Go Birding AI on the App Store"
@@ -116,7 +117,7 @@ const Download = () => {
               </div>
 
               <a
-                href="https://apps.apple.com/us/app/bird-chatter/id6749836729"
+                href={appStoreUrl('birdChatter')}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Download Bird Chatter on the App Store"
@@ -294,7 +295,7 @@ const Download = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://apps.apple.com/us/app/go-birding-ai/id6747407940"
+              href={appStoreUrl('goBirdingAI')}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Download Go Birding AI on the App Store"
@@ -303,7 +304,7 @@ const Download = () => {
               Go Birding AI — $1.99
             </a>
             <a
-              href="https://apps.apple.com/us/app/bird-chatter/id6749836729"
+              href={appStoreUrl('birdChatter')}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Download Bird Chatter on the App Store"

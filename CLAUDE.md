@@ -46,10 +46,13 @@ npm run deploy
 
 ### Image Assets
 Located in [public/](public/) directory:
-- `hero-banner.jpg` - Homepage hero
 - `about.jpg` - About page hero
-- Feature images: `voice-search.jpg`, `advanced-ai.jpg`, `location-database.jpg`, etc.
+- App screenshots: `go-birding-ai-assets/`, `birdchatter/v2.2/`, `next-lifer-assets/` (bump the `?v=` on a replaced image so Cloudflare serves the new one)
 - Images use responsive sizing with `max-w-full h-auto` classes
+
+### App Store Links
+- Build every App Store link with `appStoreUrl()` from [src/appStore.js](src/appStore.js): it adds the "website" campaign (`pt`/`ct`), so installs from the site show in App Store Connect > Analytics > Campaigns
+- Each app page calls `useSmartAppBanner()` so Safari on iPhone shows that app's "Get" banner
 
 ## Deployment
 

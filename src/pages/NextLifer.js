@@ -19,8 +19,10 @@ import {
   ArrowPathIcon
 } from '@heroicons/react/24/outline';
 import { NEXT_LIFER_APP_STORE_URL } from '../nextLifer';
+import { useSmartAppBanner } from '../appStore';
 
 const NextLifer = () => {
+  useSmartAppBanner('nextLifer');
   const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
 

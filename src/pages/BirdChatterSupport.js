@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { appStoreUrl } from '../appStore';
 import {
   QuestionMarkCircleIcon,
   EnvelopeIcon,
@@ -463,7 +464,7 @@ const BirdChatterSupport = () => {
               </button>
               {' '}for app information or{' '}
               <a
-                href="https://apps.apple.com/app/bird-chatter/id6749836729"
+                href={appStoreUrl('birdChatter')}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-green-400 hover:text-green-300 font-semibold"

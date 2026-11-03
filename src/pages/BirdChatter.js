@@ -15,10 +15,12 @@ import {
   PlayCircleIcon,
   FireIcon
 } from '@heroicons/react/24/outline';
+import { appStoreUrl, useSmartAppBanner } from '../appStore';
 
-const APP_STORE_URL = 'https://apps.apple.com/app/bird-chatter/id6749836729';
+const APP_STORE_URL = appStoreUrl('birdChatter');
 
 const BirdChatter = () => {
+  useSmartAppBanner('birdChatter');
   const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
 

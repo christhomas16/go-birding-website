@@ -14,10 +14,12 @@ import {
   ChevronLeftIcon,
   ChevronRightIcon
 } from '@heroicons/react/24/outline';
+import { appStoreUrl, useSmartAppBanner } from '../appStore';
 
-const APP_STORE_URL = 'https://apps.apple.com/us/app/go-birding-ai/id6747407940';
+const APP_STORE_URL = appStoreUrl('goBirdingAI');
 
 const GoBirdingAI = () => {
+  useSmartAppBanner('goBirdingAI');
   const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
 
