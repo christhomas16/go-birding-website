@@ -117,7 +117,7 @@ const NextLifer = () => {
             <div>
               <div className="flex items-center mb-6">
                 <img
-                  src="/next-lifer-assets/AppIcon.png?v=2"
+                  src="/next-lifer-assets/AppIcon.png?v=3"
                   alt="Next Lifer"
                   className="w-16 h-16 rounded-2xl shadow-md mr-4"
                 />
