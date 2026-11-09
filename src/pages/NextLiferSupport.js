@@ -69,8 +69,8 @@ const NextLiferSupport = () => {
         answer: 'The first search in a new area gathers recent sightings, notable reports, hotspots and owl history from eBird, which can take a few seconds. Our server keeps a short-lived copy of that public eBird data, so later searches in the same area — by you or anyone else — come back much faster. Your own life list is applied on top, so results are still personal to you.'
       },
       {
-        question: 'How do saved areas work?',
-        answer: 'From any results screen, tap "Save area" to keep that location and distance. Saved areas and your favorite hotspots (tap the star on a hotspot page) appear on the home screen, so you can re-run a search with one tap. Your last few searches also appear under Recent searches. If you have an account, favorites and saved areas sync across your devices.'
+        question: 'How do saved searches work?',
+        answer: 'On any results screen, tap the (i) button, then "Save area" to keep that place and distance. Saved places appear under Favorite searches on the home screen, so you can re-run one with one tap. Your last few searches also appear under Recent searches. If you have an account, favorite searches sync across your devices.'
       }
     ],
     connectEBird: [

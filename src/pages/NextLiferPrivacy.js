@@ -33,8 +33,8 @@ const NextLiferPrivacy = () => {
       basis: 'Your choice; needed to provide the app'
     },
     {
-      data: 'Favorite hotspots and saved search areas (name, coordinates, distance)',
-      why: 'So you can re-run searches with one tap, on any of your devices',
+      data: 'Favorite hotspots and saved search areas (name, coordinates, distance, region, and whether rare bird alerts are on)',
+      why: 'So you can re-run searches with one tap, on any of your devices, and get the alerts you turn on',
       basis: 'Your choice; needed to provide the features you ask for'
     },
     {
@@ -66,7 +66,7 @@ const NextLiferPrivacy = () => {
               <strong>Effective date:</strong> October 18, 2026
             </p>
             <p className="text-gray-600 mb-6">
-              <strong>Last updated:</strong> October 28, 2026
+              <strong>Last updated:</strong> November 9, 2026
             </p>
 
             <div className="bg-amber-50 border border-amber-200 rounded-lg p-6 mb-8">
@@ -156,11 +156,16 @@ const NextLiferPrivacy = () => {
                 <li>Cached data such as the eBird species list and bird photos</li>
               </ul>
 
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">2.5 Notifications (if offered)</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">2.5 Rare bird alerts (push notifications)</h3>
               <p className="text-gray-700 mb-4">
-                Rare bird alerts are not available yet. If we add them and you turn them on, we will store your device's push
-                notification token with your account so we can send the alerts you asked for. You can remove it at any time by
-                turning alerts off or deleting your account.
+                Rare bird alerts are optional, and we send them only for saved places you turn them on for. If you allow
+                notifications for Next Lifer, we store your device's push notification token with your account. We also keep a
+                record of the alerts we send you (the place, species, eBird location and sighting time) so we don't repeat them
+                or send too many, and we delete that record after 30 days.
+              </p>
+              <p className="text-gray-700 mb-4">
+                You can stop alerts at any time by turning them off for a place, or by turning off notifications for Next Lifer
+                in iOS Settings. Your device token is removed from our servers when you sign out or delete your account.
               </p>
 
               <h3 className="text-xl font-semibold text-gray-900 mb-3">2.6 What we don't collect</h3>
@@ -176,6 +181,7 @@ const NextLiferPrivacy = () => {
               <ul className="list-disc pl-6 text-gray-700 mb-4">
                 <li>Provide the app: sign you in, run searches, and show which birds are new for you</li>
                 <li>Sync your life list, favorites, saved areas and settings across your devices</li>
+                <li>Send the rare bird alerts you turn on</li>
                 <li>Send account emails you ask for, such as password-reset codes</li>
                 <li>Answer your support requests</li>
                 <li>Keep the service secure, prevent abuse, and fix problems</li>
@@ -216,8 +222,9 @@ const NextLiferPrivacy = () => {
                   <a href="https://www.birds.cornell.edu/home/privacy/" className={linkClass} target="_blank" rel="noopener noreferrer">Privacy policy</a>
                 </li>
                 <li>
-                  <strong>Apple</strong> — Sign in with Apple (if you use it), place search and geocoding, Apple Maps, and on-device
-                  speech recognition for voice search.{' '}
+                  <strong>Apple</strong> — Sign in with Apple (if you use it), place search and geocoding, Apple Maps, on-device
+                  speech recognition for voice search, and push notifications. To deliver a rare bird alert, our server sends
+                  Apple your device token and the alert's text.{' '}
                   <a href="https://www.apple.com/legal/privacy/" className={linkClass} target="_blank" rel="noopener noreferrer">Privacy policy</a>
                 </li>
                 <li>
@@ -254,6 +261,7 @@ const NextLiferPrivacy = () => {
               <ul className="list-disc pl-6 text-gray-700 mb-4">
                 <li>Your account and profile data are kept until you delete your account, or ask us to delete it.</li>
                 <li>When you delete your account, your data is removed from our active database right away.</li>
+                <li>The record of rare bird alerts we've sent you is deleted after 30 days.</li>
                 <li>
                   Our server keeps short-lived caches of <strong>public eBird data</strong> (recent sightings, hotspots, taxonomy)
                   to make searches faster. These caches are about areas and birds, not about you, and are not linked to your account.
@@ -275,7 +283,7 @@ const NextLiferPrivacy = () => {
                 <li><strong>Correct</strong> your data — edit favorites and saved areas, re-import your life list, or change your settings in the app</li>
                 <li><strong>Delete</strong> your data — in the app (see section 8) or by email</li>
                 <li><strong>Export</strong> your data (portability) — email us and we'll send it in a common machine-readable format</li>
-                <li><strong>Withdraw consent</strong> — turn off location access in iOS Settings, or use Disconnect eBird</li>
+                <li><strong>Withdraw consent</strong> — turn off location access or notifications in iOS Settings, or use Disconnect eBird</li>
                 <li><strong>Object or complain</strong> — contact us, or your local data-protection authority</li>
               </ul>
               <p className="text-gray-700 mb-4">
@@ -297,7 +305,7 @@ const NextLiferPrivacy = () => {
               </ol>
               <p className="text-gray-700 mb-4">
                 This permanently deletes your sign-in, your profile, your life list and year list, your favorites and saved areas,
-                any saved eBird API key, and any device tokens from our servers, and clears Next Lifer's data (including your eBird
+                any saved eBird API key, and any device tokens and alert history from our servers, and clears Next Lifer's data (including your eBird
                 sign-in session) from your iPhone. It can't be undone. Your eBird account and checklists at ebird.org are separate
                 and are not affected.
               </p>

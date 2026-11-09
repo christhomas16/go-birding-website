@@ -75,8 +75,8 @@ const NextLifer = () => {
     },
     {
       icon: BookmarkIcon,
-      title: 'Favorites & Saved Areas',
-      description: 'Star hotspots, save search areas, and jump back into your last few searches with one tap. Your latest results stay on your phone for places with no signal.'
+      title: 'Favorite Searches',
+      description: 'Save the places you search most, and jump back into your last few searches with one tap. Your latest results stay on your phone for places with no signal.'
     }
   ];
 
@@ -306,10 +306,6 @@ const NextLifer = () => {
                 <li className="flex items-start">
                   <span className="text-amber-700 mr-2 font-bold">&#10003;</span>
                   <span>Share it with your birding friends</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-amber-700 mr-2 font-bold">&#10003;</span>
-                  <span>Star it as a favorite for next time</span>
                 </li>
               </ul>
             </div>
