@@ -46,6 +46,11 @@ const NextLiferPrivacy = () => {
       data: 'A personal eBird API key, only if you saved one in an earlier version or under Settings → Advanced',
       why: 'Lets searches run directly from your phone if our server is unavailable',
       basis: 'Your choice'
+    },
+    {
+      data: 'Search activity — when you first and last searched, how many searches you\'ve run, and on how many days (never where you searched)',
+      why: 'To see whether Next Lifer is working for people, such as whether new birders get as far as a search and come back, so we can improve it',
+      basis: 'Our legitimate interest in improving the app'
     }
   ];
 
@@ -66,7 +71,7 @@ const NextLiferPrivacy = () => {
               <strong>Effective date:</strong> October 18, 2026
             </p>
             <p className="text-gray-600 mb-6">
-              <strong>Last updated:</strong> November 9, 2026
+              <strong>Last updated:</strong> November 12, 2026
             </p>
 
             <div className="bg-amber-50 border border-amber-200 rounded-lg p-6 mb-8">
@@ -182,6 +187,7 @@ const NextLiferPrivacy = () => {
                 <li>Provide the app: sign you in, run searches, and show which birds are new for you</li>
                 <li>Sync your life list, favorites, saved areas and settings across your devices</li>
                 <li>Send the rare bird alerts you turn on</li>
+                <li>Understand how the app is used, from the search activity above, so we can improve it</li>
                 <li>Send account emails you ask for, such as password-reset codes</li>
                 <li>Answer your support requests</li>
                 <li>Keep the service secure, prevent abuse, and fix problems</li>
@@ -305,7 +311,7 @@ const NextLiferPrivacy = () => {
               </ol>
               <p className="text-gray-700 mb-4">
                 This permanently deletes your sign-in, your profile, your life list and year list, your favorites and saved areas,
-                any saved eBird API key, and any device tokens and alert history from our servers, and clears Next Lifer's data (including your eBird
+                any saved eBird API key, and any device tokens, alert history and search activity from our servers, and clears Next Lifer's data (including your eBird
                 sign-in session) from your iPhone. It can't be undone. Your eBird account and checklists at ebird.org are separate
                 and are not affected.
               </p>
