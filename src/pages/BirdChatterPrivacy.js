@@ -18,7 +18,7 @@ const BirdChatterPrivacy = () => {
 
   const dataRows = [
     {
-      data: 'Account identifiers — a user ID, your display name and profile photo from Google or Apple, and your email address (stored privately, never shown to other players; Sign in with Apple may give us a private relay address)',
+      data: 'Account identifiers — a user ID, your display name and profile photo from Apple or Google (if you sign in with them), and your email address (stored privately, never shown to other players; Sign in with Apple may give us a private relay address)',
       why: 'To sign you in, keep your points and birds attached to your account, and show your name on leaderboards',
       basis: 'Needed to provide the app'
     },
@@ -38,7 +38,12 @@ const BirdChatterPrivacy = () => {
       basis: 'Your choice'
     },
     {
-      data: 'Basic app analytics — sign-in events and which screens are opened, with a random app-instance identifier (Google Analytics for Firebase)',
+      data: 'Notifications, if you turn them on — your choices, your device\'s push token and your time zone offset',
+      why: 'To tell you when another player passes you on a leaderboard and to send your Sunday recap, never at night',
+      basis: 'Your choice'
+    },
+    {
+      data: 'Basic app usage events — app opens, sign-in steps and which screens are opened, with a random per-install identifier, your app and iOS version, and your account ID when you\'re signed in. Stored in our own database (no analytics SDK); kept for up to 400 days',
       why: 'To understand whether sign-in works and which parts of the app are used, so we can fix and improve it',
       basis: 'Our interest in improving the app; never used for ads or tracking'
     }
@@ -61,7 +66,7 @@ const BirdChatterPrivacy = () => {
               <strong>Effective date:</strong> October 28, 2026
             </p>
             <p className="text-gray-600 mb-6">
-              <strong>Last updated:</strong> October 28, 2026
+              <strong>Last updated:</strong> November 23, 2026
             </p>
 
             <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-8">
@@ -71,7 +76,8 @@ const BirdChatterPrivacy = () => {
                 <li>You can play as a guest without an account; guest data stays on your phone.</li>
                 <li>If you sign in, we store your sessions' species list, points and county so we can score them and rank you.</li>
                 <li><strong>No ads, no tracking, and we never sell your data.</strong></li>
-                <li>You can delete your account and all of its online data in the app at any time: <strong>Nest → Account → Delete account</strong>.</li>
+                <li>One GoBirding account works in Bird Chatter and our Next Lifer app.</li>
+                <li>In the app you can remove your Bird Chatter data, or delete your whole account, at any time: <strong>Nest → Account</strong>.</li>
               </ul>
             </div>
 
@@ -119,8 +125,10 @@ const BirdChatterPrivacy = () => {
 
               <h3 className="text-xl font-semibold text-gray-900 mb-3">2.4 Information stored with your account</h3>
               <p className="text-gray-700 mb-4">
-                Signing in with Google or Apple is optional and lets you appear on leaderboards, add friends and keep your progress
-                across devices. When you are signed in, we store:
+                Signing in with Apple, Google or your email (we email you a 6-digit code, no password) is optional and lets you
+                appear on leaderboards, add friends and keep your progress across devices. Your account is a <strong>GoBirding
+                account</strong>: the same sign-in also works in our Next Lifer app, and each app keeps its own data. When you are
+                signed in, we store:
               </p>
               <div className="overflow-x-auto mb-4">
                 <table className="w-full text-sm border border-gray-200">
@@ -180,8 +188,13 @@ const BirdChatterPrivacy = () => {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">4. Where Your Data Is Stored</h2>
               <p className="text-gray-700 mb-4">
-                Account and game data is stored in Google Firebase (Cloud Firestore and Cloud Functions) in the United States.
-                Data is encrypted in transit (HTTPS) and at rest.
+                Your account and game data are stored with our hosting provider, Supabase, in the United States (US East). If you
+                use Bird Chatter from outside the United States, your information will be transferred to and processed in the
+                United States. Data is encrypted in transit (HTTPS) and at rest.
+              </p>
+              <p className="text-gray-700 mb-4">
+                Until November 2026 Bird Chatter used Google Firebase. Accounts and game data were copied to Supabase when we
+                moved; the Firebase copy is deleted within 60 days of the move.
               </p>
             </section>
 
@@ -189,17 +202,23 @@ const BirdChatterPrivacy = () => {
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">5. Third Parties and Service Providers</h2>
               <ul className="list-disc pl-6 text-gray-700 mb-4 space-y-2">
                 <li>
-                  <strong>Google Firebase</strong> — sign-in (Firebase Authentication), database (Cloud Firestore), server-side scoring
-                  (Cloud Functions), basic analytics (Google Analytics for Firebase) and app integrity checks (Firebase App Check).
-                  See the{' '}
-                  <a href="https://firebase.google.com/support/privacy" className={linkClass} target="_blank" rel="noopener noreferrer">Firebase privacy information</a>.
+                  <strong>Supabase</strong> — hosting, database, sign-in and server-side scoring, US East.{' '}
+                  <a href="https://supabase.com/privacy" className={linkClass} target="_blank" rel="noopener noreferrer">Privacy policy</a>
                 </li>
                 <li>
-                  <strong>Google Sign-In</strong> and <strong>Sign in with Apple</strong> — if you choose to sign in with them.
+                  <strong>Sign in with Apple</strong> and <strong>Sign in with Google</strong> — if you choose to sign in with them.
                 </li>
                 <li>
-                  <strong>Apple</strong> — App Attest and DeviceCheck (to confirm requests come from the genuine app) and Apple's
-                  place-name lookup, which turns your location into a county and state name.
+                  <strong>Twilio SendGrid</strong> — our email provider, used to send sign-in codes to your email address.{' '}
+                  <a href="https://www.twilio.com/en-us/legal/privacy" className={linkClass} target="_blank" rel="noopener noreferrer">Privacy policy</a>
+                </li>
+                <li>
+                  <strong>Apple</strong> — the place-name lookup that turns your location into a county and state name, and push
+                  notifications (to deliver one, our server sends Apple your device token and the message).
+                </li>
+                <li>
+                  <strong>Google Firebase</strong> — our previous provider, until the data from older versions of the app is deleted
+                  (see section 4).
                 </li>
               </ul>
               <p className="text-gray-700 mb-4">
@@ -212,8 +231,8 @@ const BirdChatterPrivacy = () => {
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">6. How Long We Keep Your Data</h2>
               <p className="text-gray-700 mb-4">
                 We keep your account and game data for as long as you have an account. When you delete your account, your online data
-                is deleted from our active systems right away. Analytics data is kept by Google for a limited period under our
-                Firebase settings and is not linked to your name or email.
+                is deleted from our active systems right away. App usage events are kept for up to 400 days and are deleted with
+                your account.
               </p>
             </section>
 
@@ -223,6 +242,7 @@ const BirdChatterPrivacy = () => {
                 <li>Play as a guest — no account and nothing stored online</li>
                 <li>Turn microphone or location access off at any time in iPhone Settings → Bird Chatter</li>
                 <li>Change your display name and photo in your Google or Apple account</li>
+                <li>Turn leaderboard and Sunday recap notifications on or off in Nest → Reminders</li>
                 <li>Remove friends at any time (press and hold a friend on the Friends leaderboard)</li>
                 <li>Ask us for a copy of your data, or to correct or delete it, by emailing{' '}
                   <a href="mailto:support@gobirding.ai" className={linkClass}>support@gobirding.ai</a></li>
@@ -236,9 +256,11 @@ const BirdChatterPrivacy = () => {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">8. Deleting Your Account and Data</h2>
               <p className="text-gray-700 mb-4">
-                In the app, go to <strong>Nest → Account → Delete account</strong>. This permanently deletes your profile, sessions,
-                species, badges, friends and leaderboard entries from our servers, and signs you out. You may be asked to sign in again
-                first to confirm it's you. Clips and recordings on your phone are removed when you delete the app.
+                In the app, go to <strong>Nest → Account</strong>. <strong>Remove my Bird Chatter data</strong> permanently deletes
+                your profile, sessions, species, badges, friends, notification settings and leaderboard entries from our servers
+                and keeps your GoBirding account. <strong>Delete GoBirding account</strong> deletes the account itself and everything
+                stored with it, including your Next Lifer data, and signs you out. Clips and recordings on your phone are removed
+                when you delete the app.
               </p>
               <p className="text-gray-700 mb-4">
                 If you can't access the app, email{' '}

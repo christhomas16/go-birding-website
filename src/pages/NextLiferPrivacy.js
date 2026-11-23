@@ -18,7 +18,7 @@ const NextLiferPrivacy = () => {
 
   const dataRows = [
     {
-      data: 'Account identifiers — a random user ID; your email address if you create an account (or Apple\'s private relay address if you use Sign in with Apple and choose to hide your email)',
+      data: 'Account identifiers — a random user ID; your email address if you create an account (or Apple\'s private relay address if you use Sign in with Apple and choose to hide your email); and, if you sign in with Google, the name and profile photo on your Google account',
       why: 'To sign you in and keep your data attached to your account',
       basis: 'Needed to provide the app'
     },
@@ -56,6 +56,11 @@ const NextLiferPrivacy = () => {
       data: 'Search activity — when you first and last searched, how many searches you\'ve run, and on how many days (never where you searched)',
       why: 'To see whether Next Lifer is working for people, such as whether new birders get as far as a search and come back, so we can improve it',
       basis: 'Our legitimate interest in improving the app'
+    },
+    {
+      data: 'App usage events — app opens, onboarding and sign-in steps, with a random per-install identifier, your app and iOS version, and your account ID (never where you are or what you search for). Stored in our own database; kept for up to 400 days',
+      why: 'To see whether sign-in and the app work for people, so we can fix and improve them',
+      basis: 'Our legitimate interest in improving the app; never used for ads or tracking'
     }
   ];
 
@@ -76,7 +81,7 @@ const NextLiferPrivacy = () => {
               <strong>Effective date:</strong> October 18, 2026
             </p>
             <p className="text-gray-600 mb-6">
-              <strong>Last updated:</strong> November 22, 2026
+              <strong>Last updated:</strong> November 23, 2026
             </p>
 
             <div className="bg-amber-50 border border-amber-200 rounded-lg p-6 mb-8">
@@ -112,8 +117,10 @@ const NextLiferPrivacy = () => {
               <h3 className="text-xl font-semibold text-gray-900 mb-3">2.1 Information stored with your account</h3>
               <p className="text-gray-700 mb-4">
                 You can use Next Lifer as a <strong>guest</strong> without giving us an email address. A guest account is an
-                anonymous account identified only by a random user ID. If you choose to create an account (email and password)
-                or use Sign in with Apple, you can keep your data across devices. In either case, we store:
+                anonymous account identified only by a random user ID. If you choose to sign in with Apple, Google or your email
+                (we email you a 6-digit code; accounts made before November 2026 may also use a password), you can keep your data
+                across devices. Your account is a <strong>GoBirding account</strong>: the same sign-in also works in our Bird Chatter
+                app, and each app keeps its own data. In either case, we store:
               </p>
               <div className="overflow-x-auto mb-4">
                 <table className="w-full text-sm border border-gray-200">
@@ -193,7 +200,7 @@ const NextLiferPrivacy = () => {
                 <li>Sync your life list, Want to see list, favorites, saved areas and settings across your devices</li>
                 <li>Send the rare bird alerts you turn on</li>
                 <li>Understand how the app is used, from the search activity above, so we can improve it</li>
-                <li>Send account emails you ask for, such as password-reset codes</li>
+                <li>Send account emails you ask for, such as sign-in and password-reset codes</li>
                 <li>Answer your support requests</li>
                 <li>Keep the service secure, prevent abuse, and fix problems</li>
                 <li>Comply with legal obligations</li>
@@ -249,7 +256,11 @@ const NextLiferPrivacy = () => {
                   information.
                 </li>
                 <li>
-                  <strong>Twilio SendGrid</strong> — our email provider, used to send account emails such as password-reset codes
+                  <strong>Google</strong> — Sign in with Google (if you use it).{' '}
+                  <a href="https://policies.google.com/privacy" className={linkClass} target="_blank" rel="noopener noreferrer">Privacy policy</a>
+                </li>
+                <li>
+                  <strong>Twilio SendGrid</strong> — our email provider, used to send account emails such as sign-in and password-reset codes
                   to your email address.{' '}
                   <a href="https://www.twilio.com/en-us/legal/privacy" className={linkClass} target="_blank" rel="noopener noreferrer">Privacy policy</a>
                 </li>
@@ -318,7 +329,8 @@ const NextLiferPrivacy = () => {
                 This permanently deletes your sign-in, your profile, your life list, year list and Want to see list, your favorites and saved areas,
                 any saved eBird API key, and any device tokens, alert history and search activity from our servers, and clears Next Lifer's data (including your eBird
                 sign-in session) from your iPhone. It can't be undone. Your eBird account and checklists at ebird.org are separate
-                and are not affected.
+                and are not affected. Because your GoBirding account is shared, deleting it also deletes your Bird Chatter data
+                (Bird Chatter can remove just its own data instead, under Nest → Account).
               </p>
               <p className="text-gray-700 mb-4">
                 To remove only the eBird sign-in session from your phone, use <strong>Disconnect eBird</strong> in Settings. Deleting
