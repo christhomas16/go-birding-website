@@ -28,6 +28,11 @@ const NextLiferPrivacy = () => {
       basis: 'Needed to provide the features you ask for'
     },
     {
+      data: 'Want to see list — the eBird species codes of birds you add to it',
+      why: 'To put those birds at the top of your results when they\'re reported, and to sync the list across your devices',
+      basis: 'Your choice; needed to provide the features you ask for'
+    },
+    {
       data: 'eBird username, if you provide one',
       why: 'Associated with your imported life list',
       basis: 'Your choice; needed to provide the app'
@@ -71,7 +76,7 @@ const NextLiferPrivacy = () => {
               <strong>Effective date:</strong> October 18, 2026
             </p>
             <p className="text-gray-600 mb-6">
-              <strong>Last updated:</strong> November 12, 2026
+              <strong>Last updated:</strong> November 22, 2026
             </p>
 
             <div className="bg-amber-50 border border-amber-200 rounded-lg p-6 mb-8">
@@ -185,7 +190,7 @@ const NextLiferPrivacy = () => {
               <p className="text-gray-700 mb-4">We use the information above only to:</p>
               <ul className="list-disc pl-6 text-gray-700 mb-4">
                 <li>Provide the app: sign you in, run searches, and show which birds are new for you</li>
-                <li>Sync your life list, favorites, saved areas and settings across your devices</li>
+                <li>Sync your life list, Want to see list, favorites, saved areas and settings across your devices</li>
                 <li>Send the rare bird alerts you turn on</li>
                 <li>Understand how the app is used, from the search activity above, so we can improve it</li>
                 <li>Send account emails you ask for, such as password-reset codes</li>
@@ -285,8 +290,8 @@ const NextLiferPrivacy = () => {
                 Wherever you live, you can:
               </p>
               <ul className="list-disc pl-6 text-gray-700 mb-4">
-                <li><strong>Access</strong> your data — your life list, favorites, saved areas and settings are visible in the app, or email us for a copy</li>
-                <li><strong>Correct</strong> your data — edit favorites and saved areas, re-import your life list, or change your settings in the app</li>
+                <li><strong>Access</strong> your data — your life list, Want to see list, favorites, saved areas and settings are visible in the app, or email us for a copy</li>
+                <li><strong>Correct</strong> your data — edit your Want to see list, favorites and saved areas, re-import your life list, or change your settings in the app</li>
                 <li><strong>Delete</strong> your data — in the app (see section 8) or by email</li>
                 <li><strong>Export</strong> your data (portability) — email us and we'll send it in a common machine-readable format</li>
                 <li><strong>Withdraw consent</strong> — turn off location access or notifications in iOS Settings, or use Disconnect eBird</li>
@@ -310,7 +315,7 @@ const NextLiferPrivacy = () => {
                 <li>Review what will be deleted and tap <strong>Delete my account</strong>.</li>
               </ol>
               <p className="text-gray-700 mb-4">
-                This permanently deletes your sign-in, your profile, your life list and year list, your favorites and saved areas,
+                This permanently deletes your sign-in, your profile, your life list, year list and Want to see list, your favorites and saved areas,
                 any saved eBird API key, and any device tokens, alert history and search activity from our servers, and clears Next Lifer's data (including your eBird
                 sign-in session) from your iPhone. It can't be undone. Your eBird account and checklists at ebird.org are separate
                 and are not affected.
